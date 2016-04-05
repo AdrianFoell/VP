@@ -1,0 +1,16 @@
+{
+    "mode": "modules",
+    "out": "doc",
+    "theme": "default",
+    "ignoreCompilerErrors": "true",
+    "target": "ES6",
+    "module": "system",
+    "moduleResolution": "node",
+    "noEmitHelpers": false,
+    "emitDecoratorMetadata": "true",
+    "experimentalDecorators": "true",
+    "noImplicitAny": true,
+    "preserveConstEnums": "true",
+    "suppressExcessPropertyErrors": "true",
+    "suppressImplicitAnyIndexErrors": "true"
+}

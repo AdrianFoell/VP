@@ -1,0 +1,39 @@
+[
+    {
+        "name": "admin",
+        "roles": [
+            "admin",
+            "mitarbeiter",
+            "abteilungsleiter",
+            "kunde"
+        ]
+    },
+    {
+        "name": "adriana.alpha",
+        "roles": [
+            "admin",
+            "mitarbeiter",
+            "kunde"
+        ]
+    },
+    {
+        "name": "alfred.alpha",
+        "roles": [
+            "mitarbeiter",
+            "kunde"
+        ]
+    },
+    {
+        "name": "anton.alpha",
+        "roles": [
+            "mitarbeiter",
+            "kunde"
+        ]
+    },
+    {
+        "name": "dirk.delta",
+        "roles": [
+            "kunde"
+        ]
+    }
+]

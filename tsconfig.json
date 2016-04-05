@@ -1,0 +1,22 @@
+{
+    "version": "1.8.9",
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": false,
+        "noImplicitAny": true,
+        "outDir": "dist",
+        "rootDir": "src"
+    },
+    "exclude": [
+        "node_modules",
+        "typings/browser",
+        "typings/browser.d.ts",
+        "dist",
+        "config/typings"
+    ]
+}

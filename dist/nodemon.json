@@ -1,0 +1,17 @@
+{
+    "verbose": true,
+    "execMap": {
+        "js": "node --harmony --harmony_destructuring --harmony_default_parameters index.js"
+    },
+    "ext": "js",
+    "watch": [
+        "*.js",
+        "*.json"
+    ],
+    "env": {
+        "NODE_ENV": "development"
+    },
+    "ignore": [
+        ".git"
+    ]
+}

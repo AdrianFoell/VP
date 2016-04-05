@@ -1,0 +1,10 @@
+{
+    "_id": ObjectId("100000000000000000000001"),
+    "roles": [
+        "admin",
+        "mitarbeiter",
+        "abteilungsleiter",
+        "kunde"
+    ],
+    "__v": 0
+}

@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "experimentalDecorators": true,
+        "locale": "de"
+    },
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}

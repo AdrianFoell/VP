@@ -1,0 +1,4 @@
+{
+    "httpProxy": "http://USERNAME:PASSWORD@proxy.hs-karlsruhe.de:8888",
+    "httpsProxy": "http://USERNAME:PASSWORD@proxy.hs-karlsruhe.de:8888"
+}

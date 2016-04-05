@@ -1,0 +1,203 @@
+= Hinweise zum Programmierbeispiel
+
+Jürgen Zimmermann <Juergen.Zimmermann@HS-Karlsruhe.de>
+
+////
+Für AsciiDoctor gibt es z.B. für Chrome die Erweiterung "Asciidoctor.js Live Preview":
+https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia?hl=de
+Nach der Installation muss man in Chrome die URL chrome://extensions/ eingeben
+und dann bei "Asciidoctor.js Live Preview" den Haken bei "Zugriff auf Datei-URLs
+zulassen" setzen.
+////
+
+<<<
+
+== Vorbereitung der Installation
+
+* Das Beispiel _nicht_ in einem Pfad mit Leerzeichen installieren.
+  Viele Javascript-Bibliotheken werden unter Linux entwickelt und dort benutzt
+  man keine Leerzeichen in Pfaden. Ebenso würde ich das Beispiel nicht auf dem
+  Desktop auspacken bzw. installieren.
+
+* Bei https://github.com registrieren, falls man dort noch nicht registriert ist.
+
+* überprüfen, ob _Node_ (und _npm_) in der aktuellen Version 5.8.0 (3.7.3)
+  installiert ist. +
+  In einer Eingabeaufforderung ("cmd"):
+....
+    node --version
+    npm --version
+....
+
+* _Proxy_ für die Installation an der _Hochschule_ in einer Eingabeaufforderung
+  konfigurieren: +
+  USERNAME ist der Platzhalter für die Benutzerkennung für die Poolrechner,
+  PASSWORD für das zugehörige Passwort
+....
+    npm c set proxy http://USERNAME:PASSWORD@proxy.hs-karlsruhe.de:8888
+    npm c set https-proxy http://USERNAME:PASSWORD@proxy.hs-karlsruhe.de:8888
+    git config --global http.proxy http://USERNAME:PASSWORD@proxy.hs-karlsruhe.de:8888
+    git config --global https.proxy http://USERNAME:PASSWORD@proxy.hs-karlsruhe.de:8888
+    git config --global url."http://".insteadOf git://
+....
+
+<<<
+
+== Installation
+
+* Installation durch npm (Node Package Manager) in einer Eingabeaufforderung (s.u.). +
+  Die Installation der Software-Pakete erfolgt i.a. über http://www.npmjs.com
+  und damit über den Port 80 (oder 443 bei https). Lediglich gulp wird von
+  git://github.com/gulpjs/gulp installiert. Dabei ruft `npm` das Kommano `git`
+  auf, das wiederum `ssh` aufruft und deshalb _Port 22_ benötigt. +
+  Dieser Port kann am Hochschul-Proxy evtl. nicht freigeschaltet sein, genauso
+  wie eine persönliche Firewall o.ä. evtl. diese Port blockieren kann.
+  Dann funktioniert die Installation natürlich _nicht_ und man muss z.B.
+  die eigene Firewall geeignet konfigurieren.
+....
+    npm i -dd
+....
+
+
+* Distribution in einer Eingabeaufforderung erstellen: +
+  Codequalitämit _tslint_ und _clang-format_ prüfen, +
+  TypeScript durch _tsc_ in das Verzeichnis `dist` übersetzen, +
+  JSON-Dateien für das _Identity and Access Management_ in das Verzeichnis
+  `dist` kopieren, +
+  usw.
+....
+    gulp
+....
+
+<<<
+
+== Künftige Routineaufgaben
+
+=== Starten und Herunterfahren von MongoDB
+....
+gulp mongostart
+gulp mongostop
+....
+
+=== JSON-Datensätze in MongoDB importieren und exportieren
+....
+gulp mongoimport
+gulp mongoexport
+....
+Beim Importieren wird die Datei `mongoimport\buecher.json` verwendet.
+Beim Importieren darf der DB-Browser _Mongo Express_ (s.u.) nicht gestartet sein.
+
+=== DB-Browser _Mongo Express_ starten
+....
+gulp mongoexpress
+....
+Dabei wird ein Webserver gestartet, der über TCP/IP auf _MongoDB_ zugreift.
+Deshalb ist eine aktive Internet-Verbindung erforderlich.
+über einen Webbrowser kann dann mit der URI `http://localhost:8081/db/buchdb/buecher`
+auf die Collection `buecher` in der Datenbank `buchdb` zugegriffen werden.
+
+Wenn _Mongo Express_ läuft, funktioniert mongoimport _nicht_.
+
+=== Kommandozeile für MongoDB in einer Eingabeaufforderung
+....
+mongo -u zimmermann -p p buchdb
+....
+
+=== Starten des Appservers (mit Node.js und Express)
+....
+gulp nodemon
+....
+Durch _nodemon_ (= Node Monitor) wird der Appserver so gestartet, dass er
+künftig aktualisierte JavaScript-Dateien im laufenden Betrieb nachlädt.
+Beim Starten des Appservers wird mit _mongoose_ auf _MongoDB_ zugegriffen,
+weshalb eine aktive Internet-Verbindung erforderlich ist.
+
+=== Geänderte TypeScript-Dateien in JavaScript übersetzen
+....
+gulp ts
+....
+
+=== Umformatieren einer einzelnen Datei mit clang-format, z.B.:
+....
+.\node_modules\clang-format\bin\win32\clang-format -i -style="file" src\...\myfile.ts
+....
+
+<<<
+
+== Empfohlene Entwicklungsumgebung
+
+=== Visual Studio Code oder WebStorm
+
+Visual Studio Code kann man von https://code.visualstudio.com/Download
+herunterladen.
+
+Für WebStorm gibt es bei http://jetbrains.com/student eine Studenten-Lizenz, die
+für 1 Jahr gültig ist.
+
+=== Chrome mit Erweiterungen
+
+==== Postman als REST-Client
+
+In https://chrome.google.com/webstore sucht man nach _Postman_ und wählt
+_www.getpostman.com_ aus.
+
+Die Dokumentation zu Postman gibt es bei https://www.getpostman.com/docs.
+
+==== Recx Security Analyzer für Sicherheitslücken
+
+Aus https://chrome.google.com/webstore installieren.
+
+==== JSONView für GET-Requests
+
+Aus https://chrome.google.com/webstore installieren.
+
+<<<
+
+== Sonstiges
+
+=== ID eines Datensatzes in MongoDB
+Die ID eines Datensatzes in MongoDB ist eine 24-stellige HEX-Zahl in der
+Property `_id`, d.h. keine UUID.
+
+=== Endlosrekursion bei `JSON.stringify(obj)`
+Ein JSON-Objekt kann eine rekursive Datenstruktur haben, wie z.B.:
+....
+const obj: any = {
+    id: 4711,
+    foo: {
+        bar: 'a string',
+        rek: obj
+    }
+}
+....
+
+Bei einer solchen rekursiven Datenstruktur gibt es beim Aufruf von
+`JSON.stringify(obj)` eine Endlosrekursion und damit einen Programmabbruch.
+Bei den _Request_- und _Response_-Objekten von _Express_ gibt es rekursive
+Datenstrukturen.
+
+Mit der Function `inspect` von Node.js kann man dennoch ein Objekt mit
+einer rekursiven Datenstruktur in einen String konvertieren:
+
+....
+import {inspect} from 'util';   // util ist Bestandteil von Node.js
+...
+inspect(obj);
+....
+
+=== Mocking statt Zugriff auf MongoDB
+In der Datei `src\shared\constants.ts` die Konstante `mongoMock` auf `true`
+setzen.
+
+=== Debugging mit Visual Studio Code
+
+https://github.com/Microsoft/vscode-docs/blob/vnext/release-notes/vJanuary.md#nodejs-debugging
+https://github.com/Microsoft/vscode-docs/blob/vnext/release-notes/vFebruary.md#support-for-nodejs-nodemon-development-setup
+
+<<<
+
+== Proxy-Einstellungen für die Hochschule setzen und ausschalten
+....
+gulp proxy
+gulp noproxy
+....

@@ -1,0 +1,48 @@
+[
+    {
+        "username": "admin",
+        "password": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==",
+        "roles": [
+            "admin",
+            "mitarbeiter",
+            "abteilungsleiter",
+            "kunde"
+        ]
+    },
+    {
+        "username": "adriana.alpha",
+        "password": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==",
+        "roles": [
+            "admin",
+            "mitarbeiter",
+            "kunde"
+        ]
+    },
+    {
+        "username": "alfred.alpha",
+        "password": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==",
+        "roles": [
+            "mitarbeiter",
+            "kunde"
+        ]
+    },
+    {
+        "username": "anton.alpha",
+        "password": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==",
+        "roles": [
+            "mitarbeiter",
+            "kunde"
+        ]
+    },
+    {
+        "username": "dirk.delta",
+        "password": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==",
+        "roles": [
+            "kunde"
+        ]
+    },
+    {
+        "username": "emil.epsilon",
+        "password": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ=="
+    }
+]

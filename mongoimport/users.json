@@ -1,0 +1,58 @@
+{
+    "_id": ObjectId("200000000000000000000001"),
+    "name": "admin",
+    "pass": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==",
+    "roles": [
+        "admin",
+        "mitarbeiter",
+        "abteilungsleiter",
+        "kunde"
+    ],
+    "__v": 0
+}
+{
+    "_id": ObjectId("200000000000000000000002"),
+    "name": "adriana.alpha",
+    "pass": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==",
+    "roles": [
+        "admin",
+        "mitarbeiter",
+        "kunde"
+    ],
+    "__v": 0
+}
+{
+    "_id": ObjectId("200000000000000000000003"),
+    "name": "alfred.alpha",
+    "pass": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==",
+    "roles": [
+        "mitarbeiter",
+        "kunde"
+    ],
+    "__v": 0
+}
+{
+    "_id": ObjectId("200000000000000000000004"),
+    "name": "anton.alpha",
+    "pass": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==",
+    "roles": [
+        "mitarbeiter",
+        "kunde"
+    ],
+    "__v": 0
+}
+{
+    "_id": ObjectId("200000000000000000000005"),
+    "name": "dirk.delta",
+    "pass": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==",
+    "roles": [
+        "kunde"
+    ],
+    "__v": 0
+}
+{
+    "_id": ObjectId("200000000000000000000006"),
+    "name": "emil.epsilon",
+    "pass": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==",
+    "__v": 0
+}

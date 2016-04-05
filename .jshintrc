@@ -1,0 +1,8 @@
+{
+    "curly": true,
+    "eqeqeq": true,
+    "strict": true,
+    "undef": true,
+    "unused": true,
+    "esnext": true
+}
