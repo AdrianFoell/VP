@@ -36,58 +36,6 @@ export const contentType: string = 'content-type';
 export const applicationJson: string = 'application/json';
 
 // ----------------------------------------------------------
-// B u e c h e r
-// ----------------------------------------------------------
-export const MAX_RATING: number = 5;
-
-// ----------------------------------------------------------
-// I A M
-// ----------------------------------------------------------
-export const rolesUsers: string = 'files';
-// export const rolesUsers: string = 'db';
-// export const rolesUsers: string = 'ldap';
-// export const rolesUsers: string = 'keycloak';
-
-// export const iam: string = 'basic-auth';
-export const iam: string = 'jwt';
-// export const iam: string = 'oauth2';
-
-export const issuerJwt: string = 'Juergen Zimmermann';
-export const secretJwt: string = 'p';
-export const audienceJwt: string = 'hska.de';
-export const expirationJwt: number = 1;  // Tage
-
-// ----------------------------------------------------------
-// m o n g o o s e
-// ----------------------------------------------------------
-export const mongoMock: boolean = false;
-
-// In Produktion auf false setzen
-export const autoIndex: boolean = true;
-
-// http://mongoosejs.com/docs/connections.html
-// https://github.com/mongodb/node-mongodb-native
-// Defaultwerte
-//      Port        27017
-//      Poolsize    5
-const dbUser: string = 'zimmermann';
-const dbPassword: string = 'p';
-const dbHost: string = 'localhost';
-const dbName: string = 'buchdb';
-const dbUrl: string = `mongodb://${dbUser}:${dbPassword}@${dbHost}/${dbName}`;
-
-export let dbConn: Connection = null;
-if (!mongoMock) {
-    // Voraussetzung: Internet-Verbindung
-    connect(dbUrl);
-    dbConn = connection;
-    dbConn.on(
-        'error',
-        console.error.bind(
-            console, 'FEHLER beim Aufbau der Datenbank-Verbindung:\n'));
-}
-
-// ----------------------------------------------------------
 // w i n s t o n
 // ----------------------------------------------------------
 // https://github.com/winstonjs/winston/blob/master/docs/transports.md
@@ -108,3 +56,35 @@ export const logOptions: any = {
         zippedArchive: true
     }
 };
+
+export const MAX_RATING: number = 5;
+
+// ----------------------------------------------------------
+// m o n g o o s e
+// ----------------------------------------------------------
+export const mongoMock: boolean = false;
+
+// In Produktion auf false setzen
+export const autoIndex: boolean = true;
+
+// http://mongoosejs.com/docs/connections.html
+// https://github.com/mongodb/node-mongodb-native
+// Defaultwerte
+//      Port        27017
+//      Poolsize    5
+const dbUser: string = 'zimmermann';
+const dbPassword: string = 'p';
+const dbHost: string = 'localhost';
+const dbName: string = 'videodb';
+const dbUrl: string = `mongodb://${dbUser}:${dbPassword}@${dbHost}/${dbName}`;
+
+export let dbConn: Connection = null;
+if (!mongoMock) {
+    // Voraussetzung: Internet-Verbindung
+    connect(dbUrl);
+    dbConn = connection;
+    dbConn.on(
+        'error',
+        console.error.bind(
+            console, 'FEHLER beim Aufbau der Datenbank-Verbindung:\n'));
+}

@@ -43,6 +43,58 @@ class SharedRequestHandler {
     }
 
     @log
+    /* tslint:disable:max-line-length */
+    addSecurityHeader(req: Request, res: Response, next: NextFunction): void {
+        // HSTS = HTTP Strict Transport Security
+        // https://www.owasp.org/index.php/HTTP_Strict_Transport_Security
+        res.setHeader(
+            'Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+
+        // CORS = Cross Origin Resource Sharing
+        // http://www.html5rocks.com/en/tutorials/cors
+        res.setHeader('Access-Control-Allow-Origin', 'https://localhost');
+        res.setHeader('Access-Control-Allow-Credentials', 'true');
+        res.setHeader(
+            'Access-Control-Allow-Methods',
+            'OPTIONS, GET, POST, PUT, DELETE, HEAD');
+        res.setHeader(
+            'Access-Control-Allow-Headers',
+            'origin, content-type, accept, authorization, access-control-allow-origin, access-control-allow-methods, access-control-allow-headers, allow, content-length, date, last-modified, if-modified-since');
+        res.setHeader('Access-Control-Max-Age', '1728000');
+
+        // CSP = Content Security Policy
+        // http://www.html5rocks.com/en/tutorials/security/content-security-policy
+        res.setHeader(
+            'Content-Security-Policy',
+            'default-src https:; script-src https: \'self\'; img-src https: \'self\'; media-src https: \'self\'');
+
+        // XSS = Cross Site Scripting
+        // https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet
+        res.setHeader('X-XSS-Protection', '1; mode=block');
+
+        // Clickjacking
+        // http://tools.ietf.org/html/draft-ietf-websec-x-frame-options-01
+        // https://www.owasp.org/index.php/Clickjacking
+        res.setHeader('X-Frame-Options', 'deny');
+
+        // MIME-sniffing
+        // https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update
+        res.setHeader('X-Content-Type-Options', 'nosniff');
+
+        res.setHeader(
+            'Cache-Control',
+            'private,no-cache,no-store,max-age=0,no-transform');
+        res.setHeader('Expires', '-1');
+        res.setHeader('Pragma', 'no-cache');
+
+        res.setHeader('X-Provided-By', 'Juergen Zimmermann');
+
+        // Request-Verarbeitung fortsetzen
+        next();
+    }
+    /* tslint:enable:max-line-length */
+
+    @log
     validateMongoId(req: Request, res: Response, next: NextFunction, id: any):
         void {
         logger.debug(`id = ${id}`);
@@ -82,6 +134,12 @@ export function logRequestHeader(
     req: Request, res: Response, next: NextFunction): void {
     'use strict';
     new SharedRequestHandler().logRequestHeader(req, res, next);
+}
+
+export function addSecurityHeader(
+    req: Request, res: Response, next: NextFunction): void {
+    'use strict';
+    new SharedRequestHandler().addSecurityHeader(req, res, next);
 }
 
 export function validateMongoId(

@@ -24,7 +24,7 @@ import {videoMock, videosMock} from './videos_mock';
 import {log, isEmpty, isBlank, isPresent, generateMongoId} from '../../../shared/shared';
 /* tslint:enable:max-line-length */
 
-export interface IGenre {
+/*export interface IGenre {
     _id?: string|ObjectID;
     name: string;
 }
@@ -33,7 +33,7 @@ export interface IKanal {
     _id?: string|ObjectID;
     name: string;
     beschreibung: string;
-}
+}*/
 
 export interface IVideo {
     _id?: string|ObjectID;
@@ -42,9 +42,9 @@ export interface IVideo {
     beschreibung: string;
     altersbeschränkung: number;
     videopfad: string;
-    genre?: Array<IGenre>;
-    kanal?: IKanal;
- }
+    //genre?: IGenre;
+    //kanal?: IKanal;
+}
 
 /* tslint:disable:no-empty */
 export class VideoMock implements MDocument, IVideo {
@@ -56,9 +56,9 @@ export class VideoMock implements MDocument, IVideo {
     // wird i.a. nicht direkt aufgerufen, sondern Buch.fromServer oder
     // Buch.fromForm
     constructor(
-        public _id: string, public titel: string, public erscheinungsdatum: string,
-        public beschreibung: string, public altersbeschränkung: number,
-        public videopfad: string) {
+        public _id: string, public titel: string,
+        public erscheinungsdatum: string, public beschreibung: string,
+        public altersbeschränkung: number, public videopfad: string) {
         this._id = _id || null;
         this.titel = titel || null;
         this.erscheinungsdatum = erscheinungsdatum || null;
@@ -131,13 +131,12 @@ export default class MockVideosService implements IVideosService {
     find(query?: any): Promise<Array<MDocument>> {
         if (isBlank(query)) {
             const videos: Array<MDocument> =
-                videosMock.map((b: IVideo) => VideoMock.fromJson(b));
+                videosMock.map((v: IVideo) => VideoMock.fromJson(v));
             return Promise.resolve(videos);
         }
 
-        const {titel, erscheinungsdatum, beschreibung,
-               altersbeschränkung, videopfad}: any =
-            query;
+        const {titel, erscheinungsdatum, beschreibung, altersbeschränkung,
+               videopfad}: any = query;
 
         let videosJson: Array<IVideo> = videosMock;
         if (!isEmpty(titel)) {
@@ -146,24 +145,22 @@ export default class MockVideosService implements IVideosService {
                     video.titel.toLowerCase().includes(titel.toLowerCase()));
         }
         if (!isEmpty(erscheinungsdatum) && isPresent(videosJson)) {
-            videosJson =
-                videosJson.filter((video: VideoMock) =>
-                video.erscheinungsdatum === erscheinungsdatum);
+            videosJson = videosJson.filter(
+                (video: VideoMock) =>
+                    video.erscheinungsdatum === erscheinungsdatum);
         }
         if (isPresent(beschreibung) && isPresent(videosJson)) {
-            videosJson =
-                videosJson.filter((video: VideoMock) =>
-                video.beschreibung === beschreibung);
+            videosJson = videosJson.filter(
+                (video: VideoMock) => video.beschreibung === beschreibung);
         }
         if (!isEmpty(altersbeschränkung) && isPresent(videosJson)) {
-            videosJson =
-                videosJson.filter((video: VideoMock) =>
-                video.altersbeschränkung === altersbeschränkung);
+            videosJson = videosJson.filter(
+                (video: VideoMock) =>
+                    video.altersbeschränkung === altersbeschränkung);
         }
         if (!isEmpty(videopfad) && isPresent(videosJson)) {
-            videosJson =
-                videosJson.filter((video: VideoMock) =>
-                video.videopfad === videopfad);
+            videosJson = videosJson.filter(
+                (video: VideoMock) => video.videopfad === videopfad);
         }
 
         const videos: Array<VideoMock> = isPresent(videosJson) ?

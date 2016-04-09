@@ -90,21 +90,11 @@ class IamServiceJwt extends abstract_iam_service_1.default {
         }
         const token = authParts[1];
         // Verifikation des Tokens
-        // try {
-        //     jwt.verify(
-        //         token, secretJwt, {issuer: issuerJwt, audience: audienceJwt});
-        // } catch (err) {
-        //     logger.error(`Fehler bei JWT.verify(): ${JSON.stringify(err)}`);
-        //     return false;
-        // }
-        let verified = true;
-        jwt.verify(token, shared_1.secretJwt, { issuer: shared_1.issuerJwt, audience: shared_1.audienceJwt }, (err, decoded) => {
-            if (err) {
-                shared_1.logger.error(`Fehler bei JWT.verify(): ${JSON.stringify(err)}`);
-                verified = false;
-            }
-        });
-        if (!verified) {
+        try {
+            jwt.verify(token, shared_1.secretJwt, { issuer: shared_1.issuerJwt, audience: shared_1.audienceJwt });
+        }
+        catch (err) {
+            shared_1.logger.error(`Fehler bei JWT.verify(): ${JSON.stringify(err)}`);
             return false;
         }
         const decodedToken = jwt.decode(token, { complete: true });

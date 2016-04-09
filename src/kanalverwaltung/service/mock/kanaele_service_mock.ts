@@ -47,8 +47,7 @@ export class KanalMock implements MDocument, IKanal {
 
     // JSON-Daten von einem REST-Client bei einem POST-oder PUT-Request
     static fromJson(kanal: IKanal): KanalMock {
-        return new KanalMock(
-            <string>kanal._id, kanal.name, kanal.beschreibung);
+        return new KanalMock(<string>kanal._id, kanal.name, kanal.beschreibung);
     }
 
     // Dummy-Methoden fuer das Interface Document von mongoose
@@ -113,8 +112,7 @@ export default class MockKanaeleService implements IKanaeleService {
             return Promise.resolve(kanaele);
         }
 
-        const {name, beschreibung}: any =
-            query;
+        const {name, beschreibung}: any = query;
 
         let kanaeleJson: Array<IKanal> = kanaeleMock;
         if (!isEmpty(name)) {
@@ -123,9 +121,8 @@ export default class MockKanaeleService implements IKanaeleService {
                     kanal.name.toLowerCase().includes(name.toLowerCase()));
         }
         if (isPresent(beschreibung) && isPresent(kanaeleJson)) {
-            kanaeleJson =
-                kanaeleJson.filter((kanal: KanalMock) =>
-                kanal.beschreibung === beschreibung);
+            kanaeleJson = kanaeleJson.filter(
+                (kanal: KanalMock) => kanal.beschreibung === beschreibung);
         }
 
         const kanaele: Array<KanalMock> = isPresent(kanaeleJson) ?

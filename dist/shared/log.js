@@ -95,6 +95,5 @@ function isResponse(arg) {
 }
 function isPromise(result) {
     'use strict';
-    return util_2.isPresent(result) && result.model !== undefined
-        && result.schema !== undefined;
+    return result.model !== undefined && result.schema !== undefined;
 }

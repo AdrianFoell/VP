@@ -17,10 +17,10 @@
 
 /* tslint:disable:max-line-length */
 import {Schema, Model, model, Document as MDocument} from 'mongoose';
-import {autoIndex, isMongoId, isEmpty} from '../../shared/shared';
+import {autoIndex, isMongoId, isEmpty, isPresent} from '../../shared/shared';
 /* tslint:enable:max-line-length */
 
-// Eine Collection in MongoDB besteht aus Dokumenten im BSON-Format
+// Eine Collection in MongoDB besteht aus Dokumenten im JSON-Format
 
 // Ein Schema in Mongoose ist definiert die Struktur und Methoden fuer die
 // Dokumente in einer Collection.
@@ -30,7 +30,7 @@ import {autoIndex, isMongoId, isEmpty} from '../../shared/shared';
 
 // Im 2. Argument des Konstruktors wird der Name der Collection festgelegt.
 // Der Default-Name der Collection ist der Plural zum Namen des Models (s.u.),
-// d.h. die Collection haette den Namen "Buchs".
+// d.h. die Collection haette den Namen "Videos".
 const videoSchema: Schema = new Schema(
     {
       titel: {type: String, index: true},
@@ -38,7 +38,7 @@ const videoSchema: Schema = new Schema(
       beschreibung: String,
       altersbeschränkung: Number,
       viedopfad: String,
-      genere: [Schema.Types.Mixed],
+      genre: [Schema.Types.Mixed],
       kanal: [Schema.Types.Mixed]
     },
     {collection: 'videos'});
@@ -65,18 +65,34 @@ export function validateVideo(video: any): any {
         err.id = 'Das Video hat eine ungueltige ID';
         invalid = true;
     }
+    if (isEmpty(video.titel)) {
+        err.titel = 'Ein Video muss einen Titel haben';
+        invalid = true;
+    }
+    if (isPresent(video.erscheinungsdatum)) {
+        err.erscheinungsdatum = 'Ein Video benötigt ein Erscheinungsdatum';
+        invalid = true;
+    }
     if (isEmpty(video.altersbeschränkung)) {
-        err.titel = 'Ein Video muss einen Alteersbeschränkung besitzen';
+        err.altersbeschränkung = 'Ein Video muss einen Altersbeschränkung besitzen';
+        invalid = true;
+    }
+    if (isEmpty(video.videopfad)) {
+        err.videopfad = 'Ein Video muss eine Pfad besitzen';
+        invalid = true;
+    }
+    if (isPresent(video.genre)) {
+        err.genre = 'Ein Video muss einem Genre zugeordnet sein';
+        invalid = true;
+    }
+    if (isPresent(video.kanal)) {
+        err.kanal = 'Ein Video muss einem Kanal zugeordnet sein';
         invalid = true;
     }
 
     return invalid ? err : null;
 };
 
-// buchSchema.statics.findByTitel = function(
-//     titel: string, cb: Function): Array<mongoose.Document> {
-//     return this.find({titel: titel}, cb);
-// };
 
 // Ein Model ist ein uebersetztes Schema und stellt die CRUD-Operationen fuer
 // die Dokumente bereit, d.h. das Pattern "Active Record" wird realisiert.

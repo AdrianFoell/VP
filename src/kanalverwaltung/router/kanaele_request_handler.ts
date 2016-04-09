@@ -20,14 +20,7 @@ import {Document as MDocument} from 'mongoose';
 
 import KanaeleService from '../service/kanaele_service';
 import {Kanal, validateKanal} from '../model/kanal';
-import {
-    getBaseUri,
-    contentType,
-    applicationJson,
-    isBlank,
-    log,
-    logger
-} from '../../shared/shared';
+import {getBaseUri, contentType, applicationJson, isBlank, log, logger} from '../../shared/shared';
 
 class KanaeleRequestHandler {
     private _kanaeleService: KanaeleService = new KanaeleService();

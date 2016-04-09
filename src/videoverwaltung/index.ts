@@ -21,17 +21,8 @@ import {Router} from 'express';
 // Einlesen von application/json im Request-Rumpf
 import {json} from 'body-parser';
 
-import {
-    getById,
-    getByQuery,
-    post,
-    put,
-    deleteFn
-} from './router/videos_request_handler';
-import {
-    isAdmin,
-    isAdminMitarbeiter
-} from '../iam/router/iam_request_handler';
+import {getById, getByQuery, post, put, deleteFn} from './router/videos_request_handler';
+import {isAdmin, isAdminMitarbeiter} from '../iam/router/iam_request_handler';
 import {validateMongoId} from '../shared/shared';
 
 // http://expressjs.com/en/api.html

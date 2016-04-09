@@ -60,8 +60,8 @@ const morgan = require('morgan');
 /* tslint:disable:no-var-requires */
 const responseTime = require('response-time');
 /* tslint:enable:no-var-requires */
-const index_1 = require('./buchverwaltung/router/index');
-const index_2 = require('./verlagverwaltung/router/index');
+const index_1 = require('./videoverwaltung/router/index');
+const index_2 = require('./kanalverwaltung/router/index');
 const index_3 = require('./iam/router/index');
 const shared_1 = require('./shared/shared');
 /* tslint:enable:max-line-length */
@@ -104,8 +104,8 @@ class Server {
             /* tslint:enable:max-line-length */
             maxAge: 86400
         }), compression())
-            .use('/buecher', index_1.default)
-            .use('/verlage', index_2.default)
+            .use('/videos', index_1.default)
+            .use('/kanaele', index_2.default)
             .use('/login', index_3.default);
         return app;
     }

@@ -10,7 +10,7 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
@@ -21,51 +21,105 @@ import {IVideo} from './videos_service_mock';
 export const videoMock: IVideo = {
     _id: new ObjectID('000000000000000000000001'),
     titel: 'Alpha',
-    erscheinungsdatum : '2015-02-01',
+    erscheinungsdatum: '2015-02-01',
     beschreibung: 'Das ist ein Tiervideo',
     altersbeschränkung: 0,
-    videopfad: 'C:/Videos'
+    videopfad: 'C:/Videos',
+    /*genre: {
+        _id: new ObjectID('300000000000000000000001'),
+        name: 'Tierfilm'
+    },
+    kanal: {
+        _id: new ObjectID('400000000000000000000001'),
+        name: 'BananaCup',
+        beschreibung: 'Das ist ein Kanal für Tierfilme'
+    }*/
 };
 
 export const videosMock: Array<IVideo> = [
     {
-      _id: new ObjectID('000000000000000000000001'),
-    titel: 'Beta',
-    erscheinungsdatum : '2015-02-03',
-    beschreibung: 'Das ist ein Actionvideo',
-    altersbeschränkung: 12,
-    videopfad: 'C:/Videos'
-    },
-    {
       _id: new ObjectID('000000000000000000000002'),
-    titel: 'Gamma',
-    erscheinungsdatum : '2015-02-01',
-    beschreibung: 'Das ist ein Horrorvideo',
-    altersbeschränkung: 18,
-    videopfad: 'C:/Videos'
+      titel: 'Beta',
+      erscheinungsdatum: '2015-02-03',
+      beschreibung: 'Das ist ein Actionvideo',
+      altersbeschränkung: 12,
+      videopfad: 'C:/Videos',
+      /*genre: {
+        _id: new ObjectID('300000000000000000000002'),
+        name: 'Actionfilm'
+    },
+    kanal: {
+        _id: new ObjectID('400000000000000000000002'),
+        name: 'AppleTree',
+        beschreibung: 'Das ist ein Kanal für Actionfilme'
+    }*/
     },
     {
       _id: new ObjectID('000000000000000000000003'),
-    titel: 'Hugo',
-    erscheinungsdatum : '2015-02-02',
-    beschreibung: 'Das ist ein Sportvideo',
-    altersbeschränkung: 0,
-    videopfad: 'C:/Videos',
+      titel: 'Gamma',
+      erscheinungsdatum: '2015-02-01',
+      beschreibung: 'Das ist ein Horrorvideo',
+      altersbeschränkung: 18,
+      videopfad: 'C:/Videos',
+      /*genre: {
+        _id: new ObjectID('300000000000000000000003'),
+        name: 'Horrorfilm'
+    },
+    kanal: {
+        _id: new ObjectID('400000000000000000000003'),
+        name: 'GammaTV',
+        beschreibung: 'Das ist ein Kanal für Horrorfilme'
+    }*/
     },
     {
       _id: new ObjectID('000000000000000000000004'),
-    titel: 'Karl',
-    erscheinungsdatum : '2015-02-01',
-    beschreibung: 'Das ist ein Modevideo',
-    altersbeschränkung: 0,
-    videopfad: 'C:/Videos'
+      titel: 'Hugo',
+      erscheinungsdatum: '2015-02-02',
+      beschreibung: 'Das ist ein Sportvideo',
+      altersbeschränkung: 0,
+      videopfad: 'C:/Videos',
+      /*genre: {
+        _id: new ObjectID('300000000000000000000004'),
+        name: 'Sport'
+    },
+    kanal: {
+        _id: new ObjectID('400000000000000000000004'),
+        name: 'HugoSport',
+        beschreibung: 'Das ist ein Kanal für Sportvideos'
+    }*/
     },
     {
       _id: new ObjectID('000000000000000000000005'),
-    titel: 'Otto',
-    erscheinungsdatum : '2015-02-05',
-    beschreibung: 'Das ist ein Tiervideo',
-    altersbeschränkung: 0,
-    videopfad: 'C:/Videos'
+      titel: 'Karl',
+      erscheinungsdatum: '2015-02-01',
+      beschreibung: 'Das ist ein Modevideo',
+      altersbeschränkung: 0,
+      videopfad: 'C:/Videos',
+      /*genre: {
+        _id: new ObjectID('300000000000000000000005'),
+        name: 'Mode'
+    },
+    kanal: {
+        _id: new ObjectID('400000000000000000000005'),
+        name: 'BananaCup',
+        beschreibung: 'Das ist ein Kanal für Mode'
+    }*/
+    },
+    {
+      _id: new ObjectID('000000000000000000000006'),
+      titel: 'Otto',
+      erscheinungsdatum: '2015-02-05',
+      beschreibung: 'Das ist ein Tiervideo',
+      altersbeschränkung: 0,
+      videopfad: 'C:/Videos',
+      /*genre: {
+        _id: new ObjectID('300000000000000000000006'),
+        name: 'Tierfilm'
+    },
+    kanal: {
+        _id: new ObjectID('400000000000000000000006'),
+        name: 'BananaCup',
+        beschreibung: 'Das ist ein Kanal für Tierfilme'
+    }*/
     }
 ];

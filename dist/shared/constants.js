@@ -32,47 +32,6 @@ exports.httpsCert = fs_1.readFileSync('https/cert.cer');
 exports.contentType = 'content-type';
 exports.applicationJson = 'application/json';
 // ----------------------------------------------------------
-// B u e c h e r
-// ----------------------------------------------------------
-exports.MAX_RATING = 5;
-// ----------------------------------------------------------
-// I A M
-// ----------------------------------------------------------
-exports.rolesUsers = 'files';
-// export const rolesUsers: string = 'db';
-// export const rolesUsers: string = 'ldap';
-// export const rolesUsers: string = 'keycloak';
-// export const iam: string = 'basic-auth';
-exports.iam = 'jwt';
-// export const iam: string = 'oauth2';
-exports.issuerJwt = 'Juergen Zimmermann';
-exports.secretJwt = 'p';
-exports.audienceJwt = 'hska.de';
-exports.expirationJwt = 1; // Tage
-// ----------------------------------------------------------
-// m o n g o o s e
-// ----------------------------------------------------------
-exports.mongoMock = false;
-// In Produktion auf false setzen
-exports.autoIndex = true;
-// http://mongoosejs.com/docs/connections.html
-// https://github.com/mongodb/node-mongodb-native
-// Defaultwerte
-//      Port        27017
-//      Poolsize    5
-const dbUser = 'zimmermann';
-const dbPassword = 'p';
-const dbHost = 'localhost';
-const dbName = 'buchdb';
-const dbUrl = `mongodb://${dbUser}:${dbPassword}@${dbHost}/${dbName}`;
-exports.dbConn = null;
-if (!exports.mongoMock) {
-    // Voraussetzung: Internet-Verbindung
-    mongoose_1.connect(dbUrl);
-    exports.dbConn = mongoose_1.connection;
-    exports.dbConn.on('error', console.error.bind(console, 'FEHLER beim Aufbau der Datenbank-Verbindung:\n'));
-}
-// ----------------------------------------------------------
 // w i n s t o n
 // ----------------------------------------------------------
 // https://github.com/winstonjs/winston/blob/master/docs/transports.md
@@ -93,3 +52,27 @@ exports.logOptions = {
         zippedArchive: true
     }
 };
+exports.MAX_RATING = 5;
+// ----------------------------------------------------------
+// m o n g o o s e
+// ----------------------------------------------------------
+exports.mongoMock = false;
+// In Produktion auf false setzen
+exports.autoIndex = true;
+// http://mongoosejs.com/docs/connections.html
+// https://github.com/mongodb/node-mongodb-native
+// Defaultwerte
+//      Port        27017
+//      Poolsize    5
+const dbUser = 'zimmermann';
+const dbPassword = 'p';
+const dbHost = 'localhost';
+const dbName = 'videodb';
+const dbUrl = `mongodb://${dbUser}:${dbPassword}@${dbHost}/${dbName}`;
+exports.dbConn = null;
+if (!exports.mongoMock) {
+    // Voraussetzung: Internet-Verbindung
+    mongoose_1.connect(dbUrl);
+    exports.dbConn = mongoose_1.connection;
+    exports.dbConn.on('error', console.error.bind(console, 'FEHLER beim Aufbau der Datenbank-Verbindung:\n'));
+}

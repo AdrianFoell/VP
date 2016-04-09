@@ -100,7 +100,7 @@ Wenn _Mongo Express_ läuft, funktioniert mongoimport _nicht_.
 
 === Kommandozeile für MongoDB in einer Eingabeaufforderung
 ....
-mongo -u zimmermann -p p buchdb
+mongo -u zimmermann -p p videodb
 ....
 
 === Starten des Appservers (mit Node.js und Express)

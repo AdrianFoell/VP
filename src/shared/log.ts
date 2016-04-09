@@ -105,6 +105,5 @@ function isResponse(arg: any): boolean {
 
 function isPromise(result: any): boolean {
     'use strict';
-    return isPresent(result) && result.model !== undefined
-        && result.schema !== undefined;
+    return result.model !== undefined && result.schema !== undefined;
 }

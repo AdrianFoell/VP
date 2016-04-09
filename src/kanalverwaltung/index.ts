@@ -17,13 +17,9 @@
 
 import {Router} from 'express';
 
-import {
-    addSecurityHeader,
-    logRequestHeader,
-    notYetImplemented
-} from '../shared/shared';
+import {addSecurityHeader, logRequestHeader, notYetImplemented} from '../shared/shared';
 
-const verlageRouter: Router = Router();
-verlageRouter.get('/', logRequestHeader, addSecurityHeader, notYetImplemented);
+const kanaeleRouter: Router = Router();
+kanaeleRouter.get('/', logRequestHeader, addSecurityHeader, notYetImplemented);
 
-export default verlageRouter;
+export default kanaeleRouter;

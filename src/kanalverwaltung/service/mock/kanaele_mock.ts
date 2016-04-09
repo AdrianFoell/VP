@@ -10,7 +10,7 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
@@ -26,28 +26,28 @@ export const kanalMock: IKanal = {
 
 export const kanaeleMock: Array<IKanal> = [
     {
-    _id: new ObjectID('000000000000000000000001'),
-    name: 'Beta',
-    beschreibung: 'Das ist ein Actionvideo'
+      _id: new ObjectID('000000000000000000000001'),
+      name: 'Beta',
+      beschreibung: 'Das ist ein Actionvideo'
     },
     {
-    _id: new ObjectID('000000000000000000000002'),
-    name: 'Gamma',
-    beschreibung: 'Das ist ein Horrprvideo'
+      _id: new ObjectID('000000000000000000000002'),
+      name: 'Gamma',
+      beschreibung: 'Das ist ein Horrorvideo'
     },
     {
-    _id: new ObjectID('000000000000000000000003'),
-    name: 'Hugo',
-    beschreibung: 'Das ist ein Sportvideo'
+      _id: new ObjectID('000000000000000000000003'),
+      name: 'Hugo',
+      beschreibung: 'Das ist ein Sportvideo'
     },
     {
-    _id: new ObjectID('000000000000000000000004'),
-    name: 'Karl',
-    beschreibung: 'Das ist ein Modevideo'
+      _id: new ObjectID('000000000000000000000004'),
+      name: 'Karl',
+      beschreibung: 'Das ist ein Modevideo'
     },
     {
-    _id: new ObjectID('000000000000000000000005'),
-    name: 'Otto',
-    beschreibung: 'Das ist ein Tiervideo',
+      _id: new ObjectID('000000000000000000000005'),
+      name: 'Otto',
+      beschreibung: 'Das ist ein Tiervideo',
     }
 ];

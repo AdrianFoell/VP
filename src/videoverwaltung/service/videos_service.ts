@@ -21,7 +21,7 @@ import {Document as MDocument, Query} from 'mongoose';
 
 import IVideosService from './ivideos_service';
 import {Video} from '../model/video';
-import {log, isBlank, isEmpty} from '../../shared/shared';
+import {log, isBlank, isEmpty, isPresent} from '../../shared/shared';
 
 // API-Dokumentation zu mongoose:
 // http://mongoosejs.com/docs/api.html
@@ -38,13 +38,13 @@ export default class VideosService implements IVideosService {
 
     @log
     findById(id: string): Promise<MDocument> {
-        // ein Buch zur gegebenen ID asynchron suchen
+        // ein Video zur gegebenen ID asynchron suchen
         return <Promise<MDocument>>Video.findById(id);
     }
 
     @log
     find(query?: any): Promise<Array<MDocument>> {
-        // alle Buecher asynchron suchen und aufsteigend nach titel sortieren
+        // alle Videos asynchron suchen und aufsteigend nach titel sortieren
         // nach _id sortieren: Timestamp des INSERTs (Basis: Sek)
         // https://docs.mongodb.org/manual/reference/object-id
         if (isBlank(query) || Object.keys(query).length === 0) {
@@ -62,12 +62,21 @@ export default class VideosService implements IVideosService {
             delete query.titel;
             titelQuery = {titel: new RegExp(titel, 'i')};
         }
+        let erscheinungsdatumQuery: any = null;
+        const erscheinungsdatum: Date = query.erscheinungsdatum;
+        if (!isPresent(erscheinungsdatum)) {
+            // Titel in der Query: Teilstring des Titels,
+            // d.h. "LIKE" als regulaerer Ausdruck
+            // 'i': keine Unterscheidung zw. Gross- u. Kleinschreibung
+            delete query.titel;
+            erscheinungsdatumQuery = {titel: new RegExp(titel, 'i')};
+        }
 
         // z.B. {schnulze: true, scienceFiction: true}
-        let schnulzeQuery: any = null;
-        if (query.schnulze === 'true') {
+        /*let erscheinungsdatumQuery: any = null;
+        if (query.erscheinungsdatum === 'true') {
             delete query.schnulze;
-            schnulzeQuery = {schlagwoerter: 'SCHNULZE'};
+            erscheinungsdatumQuery = {schlagwoerter: 'SCHNULZE'};
         }
         let scienceFictionQuery: any = null;
         if (query.scienceFiction === 'true') {
@@ -75,14 +84,14 @@ export default class VideosService implements IVideosService {
             scienceFictionQuery = {schlagwoerter: 'SCIENCE_FICTION'};
         }
         let schlagwoerterQuery: any = null;
-        if (schnulzeQuery !== null && scienceFictionQuery !== null) {
+        if (erscheinungsdatumQuery !== null && scienceFictionQuery !== null) {
             schlagwoerterQuery = {
                 schlagwoerter: ['SCHNULZE', 'SCIENCE_FICTION']
             };
             // OR statt AND
             // schlagwoerterQuery = {$or: [schnulzeQuery, scienceFictionQuery]};
-        } else if (schnulzeQuery !== null) {
-            schlagwoerterQuery = schnulzeQuery;
+        } else if (erscheinungsdatumQuery !== null) {
+            schlagwoerterQuery = erscheinungsdatumQuery;
         } else if (scienceFictionQuery !== null) {
             schlagwoerterQuery = scienceFictionQuery;
         }
@@ -101,7 +110,7 @@ export default class VideosService implements IVideosService {
             return <Promise<Array<MDocument>>>(
                 tmpQuery.and([query, schlagwoerterQuery]));
         }
-
+*/
         return <Promise<Array<MDocument>>>(Video.find(query));
         // Buch.findOne(query), falls das Suchkriterium eindeutig ist
     }

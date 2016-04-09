@@ -20,14 +20,7 @@ import {Document as MDocument} from 'mongoose';
 
 import VideosService from '../service/videos_service';
 import {Video, validateVideo} from '../model/video';
-import {
-    getBaseUri,
-    contentType,
-    applicationJson,
-    isBlank,
-    log,
-    logger
-} from '../../shared/shared';
+import {getBaseUri, contentType, applicationJson, isBlank, log, logger} from '../../shared/shared';
 
 class VideosRequestHandler {
     private _videosService: VideosService = new VideosService();
@@ -77,7 +70,7 @@ class VideosRequestHandler {
             // Auswertung des async. Aufrufs
             .then((videos: Array<MDocument>) => {
                 logger.debug(
-                    `getByQuery(): buecher = ${JSON.stringify(videos)}`);
+                    `getByQuery(): videos = ${JSON.stringify(videos)}`);
 
                 if (videos.length === 0) {
                     // Alternative: https://www.npmjs.com/package/http-errors
@@ -187,8 +180,7 @@ class VideosRequestHandler {
 // -----------------------------------------------------------------------
 // E x p o r t i e r t e   F u n c t i o n s
 // -----------------------------------------------------------------------
-const videosRequestHandler: VideosRequestHandler =
-    new VideosRequestHandler();
+const videosRequestHandler: VideosRequestHandler = new VideosRequestHandler();
 export function getById(req: Request, res: Response): void {
     'use strict';
     videosRequestHandler.getById(req, res);

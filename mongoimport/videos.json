@@ -1,0 +1,48 @@
+{
+    "_id": ObjectId("000000000000000000000001"),
+    "titel": "Alpha",
+    "erscheinungsdatum": ISODate("2015-02-01T00:00:00.000Z"),
+    "beschreibung": "Das ist ein Tiervideo",
+    "altersbeschränkung": 0,
+    "videopfad": "C:/Videos"
+}
+{
+      "_id": ObjectId("000000000000000000000002"),
+      "titel": "Beta",
+      "erscheinungsdatum": ISODate("2015-02-01T00:00:00.000Z"),
+      "beschreibung": "Das ist ein Actionvideo",
+      "altersbeschränkung": 12,
+      "videopfad": "C:/Videos"
+}
+{
+      "_id": ObjectId("000000000000000000000003"),
+      "titel": "Gamma",
+      "erscheinungsdatum": ISODate("2015-02-01T00:00:00.000Z"),
+      "beschreibung": "Das ist ein Horrorvideo",
+      "altersbeschränkung": 18,
+      "videopfad": "C:/Videos"
+}
+{
+      "_id": ObjectId("000000000000000000000004"),
+      "titel": "Hugo",
+      "erscheinungsdatum": ISODate("2015-02-01T00:00:00.000Z"),
+      "beschreibung": "Das ist ein Sportvideo",
+      "altersbeschränkung": 0,
+      "videopfad": "C:/Videos"
+}
+{
+      "_id": ObjectId("000000000000000000000005"),
+      "titel": "Karl",
+      "erscheinungsdatum": ISODate("2015-02-01T00:00:00.000Z"),
+      "beschreibung": "Das ist ein Modevideo",
+      "altersbeschränkung": 0,
+      "videopfad": "C:/Videos" 
+}
+{
+      "_id": ObjectId("000000000000000000000006"),
+      "titel": "Otto",
+      "erscheinungsdatum": ISODate("2015-02-01T00:00:00.000Z"),
+      "beschreibung": "Das ist ein Tiervideo",
+      "altersbeschränkung": 0,
+      "videopfad": "C:/Videos"
+}

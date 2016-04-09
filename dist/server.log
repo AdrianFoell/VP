@@ -2376,3 +2376,123 @@
 2016-04-02T18:00:36.712Z - debug: Request: hostname="localhost"
 2016-04-02T18:00:36.713Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
 2016-04-02T18:00:36.713Z - debug: Response time: 1.9556239999999998 ms
+2016-04-04T14:52:15.684Z - info: Logging durch Winston ist konfiguriert
+2016-04-04T14:52:15.811Z - debug: > Server.start()
+2016-04-04T14:52:15.824Z - debug: < Server.start(): result = void || undefined
+2016-04-04T14:52:15.834Z - info: Der Server ist gestartet: https://localhost:8443
+2016-04-04T14:52:15.935Z - info: Die Verbindung zu MongoDB ist hergestellt
+2016-04-04T14:53:56.625Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-04T14:53:56.626Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "authorization": "Basic Og==",
+  "cache-control": "no-cache",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
+  "postman-token": "ab73979f-076e-1255-ba89-00d7a4b8e41f",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-04T14:53:56.626Z - debug: Request: protocol="https"
+2016-04-04T14:53:56.627Z - debug: Request: hostname="localhost"
+2016-04-04T14:53:56.634Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-04T14:53:56.634Z - debug: queryParams = {}
+2016-04-04T14:53:56.634Z - debug: > VideosService.find(): args = [{}]
+2016-04-04T14:53:56.636Z - debug: < VideosService.find(): result = <Promise>
+2016-04-04T14:53:56.637Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-04T14:53:56.637Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-04T14:53:56.643Z - debug: getByQuery(): buecher = []
+2016-04-04T14:53:56.643Z - debug: status = 404
+2016-04-04T14:54:46.499Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-04T14:54:46.499Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "authorization": "Basic Og==",
+  "cache-control": "no-cache",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
+  "postman-token": "4b382560-f472-7c54-1249-10abe0df8a7e",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-04T14:54:46.499Z - debug: Request: protocol="https"
+2016-04-04T14:54:46.499Z - debug: Request: hostname="localhost"
+2016-04-04T14:54:46.501Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-04T14:55:00.014Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-04T14:55:00.014Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "authorization": "Basic Og==",
+  "cache-control": "no-cache",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
+  "postman-token": "b1bf5f44-73fe-b342-79e8-8304a4b6cc93",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-04T14:55:00.014Z - debug: Request: protocol="https"
+2016-04-04T14:55:00.014Z - debug: Request: hostname="localhost"
+2016-04-04T14:55:00.016Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-04T14:55:11.502Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-04T14:55:11.502Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "authorization": "Basic Og==",
+  "cache-control": "no-cache",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
+  "postman-token": "9f7ccc17-ecca-63ef-2677-16a263dd9746",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-04T14:55:11.502Z - debug: Request: protocol="https"
+2016-04-04T14:55:11.502Z - debug: Request: hostname="localhost"
+2016-04-04T14:55:11.503Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-04T14:57:41.860Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-04T14:57:41.861Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "authorization": "Basic YWRtaW5wOg==",
+  "cache-control": "no-cache",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
+  "postman-token": "991391eb-60f1-add3-3c96-ca3c2eb702d3",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-04T14:57:41.861Z - debug: Request: protocol="https"
+2016-04-04T14:57:41.861Z - debug: Request: hostname="localhost"
+2016-04-04T14:57:41.862Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-04T14:57:41.862Z - debug: queryParams = {}
+2016-04-04T14:57:41.862Z - debug: > VideosService.find(): args = [{}]
+2016-04-04T14:57:41.863Z - debug: < VideosService.find(): result = <Promise>
+2016-04-04T14:57:41.863Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-04T14:57:41.863Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-04T14:57:41.865Z - debug: getByQuery(): buecher = []
+2016-04-04T14:57:41.865Z - debug: status = 404
+2016-04-08T16:45:25.048Z - info: Logging durch Winston ist konfiguriert
+2016-04-08T16:45:27.205Z - debug: > Server.start()
+2016-04-08T16:45:27.218Z - debug: < Server.start(): result = void || undefined
+2016-04-08T16:45:27.229Z - info: Der Server ist gestartet: https://localhost:8443
+2016-04-08T16:45:27.336Z - info: Die Verbindung zu MongoDB ist hergestellt
+2016-04-08T16:46:14.298Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-08T16:46:14.298Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "authorization": "Basic YWRtaW46cA==",
+  "cache-control": "no-cache",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
+  "postman-token": "5a0bde2e-51ef-b2aa-bc26-e627e88a1e24",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-08T16:46:14.298Z - debug: Request: protocol="https"
+2016-04-08T16:46:14.299Z - debug: Request: hostname="localhost"
+2016-04-08T16:46:14.312Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-08T16:46:14.312Z - debug: queryParams = {}
+2016-04-08T16:46:14.312Z - debug: > VideosService.find(): args = [{}]
+2016-04-08T16:46:14.314Z - debug: < VideosService.find(): result = <Promise>
+2016-04-08T16:46:14.315Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-08T16:46:14.315Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-08T16:46:14.327Z - debug: getByQuery(): buecher = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","kanal":[],"genere":[]},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos","kanal":[],"genere":[]},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","kanal":[],"genere":[]},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos","kanal":[],"genere":[]},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos","kanal":[],"genere":[]},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","kanal":[],"genere":[]}]

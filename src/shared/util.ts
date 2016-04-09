@@ -15,9 +15,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {Request, Response} from 'express';
-import {logger} from './logger';
-
 /**
  * Abfrage, ob ein Objekt weder <code>null</code> noch <code>undefined</code>
  * ist.
@@ -51,11 +48,6 @@ export function isString(obj: any): boolean {
     'use strict';
     return typeof obj === 'string';
 }
-
-export const responseTimeFn: (req: Request, res: Response, time: number) =>
-    void = (req: Request, res: Response, time: number): void => {
-        logger.debug(`Response time: ${time} ms`);
-    };
 
 /**
  * Ein Benutzernamen und ein Passwort werden zu einem String zusammengefasst und
