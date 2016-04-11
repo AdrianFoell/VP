@@ -19,7 +19,7 @@
 const mongoose_1 = require('mongoose');
 const shared_1 = require('../../shared/shared');
 /* tslint:enable:max-line-length */
-// Eine Collection in MongoDB besteht aus Dokumenten im BSON-Format
+// Eine Collection in MongoDB besteht aus Dokumenten im JSON-Format
 // Ein Schema in Mongoose ist definiert die Struktur und Methoden fuer die
 // Dokumente in einer Collection.
 // Ein Schluessel im Schema definiert eine Property fuer jedes Dokument.
@@ -27,15 +27,15 @@ const shared_1 = require('../../shared/shared');
 // der Property fest.
 // Im 2. Argument des Konstruktors wird der Name der Collection festgelegt.
 // Der Default-Name der Collection ist der Plural zum Namen des Models (s.u.),
-// d.h. die Collection haette den Namen "Buchs".
+// d.h. die Collection haette den Namen "Videos".
 const videoSchema = new mongoose_1.Schema({
     titel: { type: String, index: true },
     erscheinungsdatum: Date,
     beschreibung: String,
     altersbeschränkung: Number,
     viedopfad: String,
-    genere: [mongoose_1.Schema.Types.Mixed],
-    kanal: [mongoose_1.Schema.Types.Mixed]
+    genre: String,
+    kanal: mongoose_1.Schema.Types.Mixed
 }, { collection: 'videos' });
 // automat. Validierung der Indexe beim 1. Zugriff
 videoSchema.set('autoIndex', shared_1.autoIndex);
@@ -53,18 +53,35 @@ function validateVideo(video) {
         err.id = 'Das Video hat eine ungueltige ID';
         invalid = true;
     }
+    if (shared_1.isEmpty(video.titel)) {
+        err.titel = 'Ein Video muss einen Titel haben';
+        invalid = true;
+    }
+    if (shared_1.isPresent(video.erscheinungsdatum)) {
+        err.erscheinungsdatum = 'Ein Video benötigt ein Erscheinungsdatum';
+        invalid = true;
+    }
     if (shared_1.isEmpty(video.altersbeschränkung)) {
-        err.titel = 'Ein Video muss einen Alteersbeschränkung besitzen';
+        err.altersbeschränkung =
+            'Ein Video muss einen Altersbeschränkung besitzen';
+        invalid = true;
+    }
+    if (shared_1.isEmpty(video.videopfad)) {
+        err.videopfad = 'Ein Video muss eine Pfad besitzen';
+        invalid = true;
+    }
+    if (shared_1.isEmpty(video.genre)) {
+        err.genre = 'Ein Video muss einem Genre zugeordnet sein';
+        invalid = true;
+    }
+    if (shared_1.isPresent(video.kanal)) {
+        err.kanal = 'Ein Video muss einem Kanal zugeordnet sein';
         invalid = true;
     }
     return invalid ? err : null;
 }
 exports.validateVideo = validateVideo;
 ;
-// buchSchema.statics.findByTitel = function(
-//     titel: string, cb: Function): Array<mongoose.Document> {
-//     return this.find({titel: titel}, cb);
-// };
 // Ein Model ist ein uebersetztes Schema und stellt die CRUD-Operationen fuer
 // die Dokumente bereit, d.h. das Pattern "Active Record" wird realisiert.
 exports.Video = mongoose_1.model(MODEL_NAME, videoSchema);

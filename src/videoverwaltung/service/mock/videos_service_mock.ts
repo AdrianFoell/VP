@@ -24,12 +24,7 @@ import {videoMock, videosMock} from './videos_mock';
 import {log, isEmpty, isBlank, isPresent, generateMongoId} from '../../../shared/shared';
 /* tslint:enable:max-line-length */
 
-/*export interface IGenre {
-    _id?: string|ObjectID;
-    name: string;
-}
-
-export interface IKanal {
+/*export interface IKanal {
     _id?: string|ObjectID;
     name: string;
     beschreibung: string;
@@ -42,8 +37,8 @@ export interface IVideo {
     beschreibung: string;
     altersbeschränkung: number;
     videopfad: string;
-    //genre?: IGenre;
-    //kanal?: IKanal;
+    // genre?: IGenre;
+    // kanal?: IKanal;
 }
 
 /* tslint:disable:no-empty */
@@ -149,11 +144,11 @@ export default class MockVideosService implements IVideosService {
                 (video: VideoMock) =>
                     video.erscheinungsdatum === erscheinungsdatum);
         }
-        if (isPresent(beschreibung) && isPresent(videosJson)) {
+        if (!isEmpty(beschreibung) && isPresent(videosJson)) {
             videosJson = videosJson.filter(
                 (video: VideoMock) => video.beschreibung === beschreibung);
         }
-        if (!isEmpty(altersbeschränkung) && isPresent(videosJson)) {
+        if (isPresent(altersbeschränkung) && isPresent(videosJson)) {
             videosJson = videosJson.filter(
                 (video: VideoMock) =>
                     video.altersbeschränkung === altersbeschränkung);

@@ -22,27 +22,27 @@ exports.videoMock = {
     erscheinungsdatum: '2015-02-01',
     beschreibung: 'Das ist ein Tiervideo',
     altersbeschränkung: 0,
-    videopfad: 'C:/Videos'
+    videopfad: 'C:/Videos',
 };
 exports.videosMock = [
     {
-        _id: new mongodb_1.ObjectID('000000000000000000000001'),
+        _id: new mongodb_1.ObjectID('000000000000000000000002'),
         titel: 'Beta',
         erscheinungsdatum: '2015-02-03',
         beschreibung: 'Das ist ein Actionvideo',
         altersbeschränkung: 12,
-        videopfad: 'C:/Videos'
+        videopfad: 'C:/Videos',
     },
     {
-        _id: new mongodb_1.ObjectID('000000000000000000000002'),
+        _id: new mongodb_1.ObjectID('000000000000000000000003'),
         titel: 'Gamma',
         erscheinungsdatum: '2015-02-01',
         beschreibung: 'Das ist ein Horrorvideo',
         altersbeschränkung: 18,
-        videopfad: 'C:/Videos'
+        videopfad: 'C:/Videos',
     },
     {
-        _id: new mongodb_1.ObjectID('000000000000000000000003'),
+        _id: new mongodb_1.ObjectID('000000000000000000000004'),
         titel: 'Hugo',
         erscheinungsdatum: '2015-02-02',
         beschreibung: 'Das ist ein Sportvideo',
@@ -50,19 +50,19 @@ exports.videosMock = [
         videopfad: 'C:/Videos',
     },
     {
-        _id: new mongodb_1.ObjectID('000000000000000000000004'),
+        _id: new mongodb_1.ObjectID('000000000000000000000005'),
         titel: 'Karl',
         erscheinungsdatum: '2015-02-01',
         beschreibung: 'Das ist ein Modevideo',
         altersbeschränkung: 0,
-        videopfad: 'C:/Videos'
+        videopfad: 'C:/Videos',
     },
     {
-        _id: new mongodb_1.ObjectID('000000000000000000000005'),
+        _id: new mongodb_1.ObjectID('000000000000000000000006'),
         titel: 'Otto',
         erscheinungsdatum: '2015-02-05',
         beschreibung: 'Das ist ein Tiervideo',
         altersbeschränkung: 0,
-        videopfad: 'C:/Videos'
+        videopfad: 'C:/Videos',
     }
 ];

@@ -63,7 +63,7 @@ class VideosRequestHandler {
         this._videosService
             .find(query)
             .then((videos) => {
-            shared_1.logger.debug(`getByQuery(): buecher = ${JSON.stringify(videos)}`);
+            shared_1.logger.debug(`getByQuery(): videos = ${JSON.stringify(videos)}`);
             if (videos.length === 0) {
                 // Alternative: https://www.npmjs.com/package/http-errors
                 // Damit wird aber auch der Stacktrace zum Client

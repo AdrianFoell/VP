@@ -1,1 +1,109 @@
 2016-03-29T21:54:24.100Z - info: Die Verbindung zu MongoDB ist hergestellt
+2016-04-10T11:13:21.324Z - debug: getByQuery(): buecher = [{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","kanal":[],"genere":[]}]
+2016-04-10T11:13:26.384Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-10T11:13:26.384Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "authorization": "Basic Og==",
+  "cache-control": "no-cache",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
+  "postman-token": "12b488bf-6cf1-325b-ac20-6b326cb39c07",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-10T11:13:26.384Z - debug: Request: protocol="https"
+2016-04-10T11:13:26.384Z - debug: Request: hostname="localhost"
+2016-04-10T11:13:26.387Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-10T11:13:26.388Z - debug: queryParams = {"titel":"Gamm"}
+2016-04-10T11:13:26.388Z - debug: > VideosService.find(): args = [{"titel":"Gamm"}]
+2016-04-10T11:13:26.389Z - debug: < VideosService.find(): result = <Promise>
+2016-04-10T11:13:26.389Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-10T11:13:26.389Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-10T11:13:26.395Z - debug: getByQuery(): buecher = [{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","kanal":[],"genere":[]}]
+2016-04-10T11:13:41.007Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-10T11:13:41.007Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "authorization": "Basic Og==",
+  "cache-control": "no-cache",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
+  "postman-token": "91f63dec-c695-76e9-7cd4-eb535190f6fd",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-10T11:13:41.007Z - debug: Request: protocol="https"
+2016-04-10T11:13:41.007Z - debug: Request: hostname="localhost"
+2016-04-10T11:13:41.008Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-10T11:13:41.008Z - debug: queryParams = {"titel":"K"}
+2016-04-10T11:13:41.008Z - debug: > VideosService.find(): args = [{"titel":"K"}]
+2016-04-10T11:13:41.008Z - debug: < VideosService.find(): result = <Promise>
+2016-04-10T11:13:41.009Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-10T11:13:41.009Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-10T11:13:41.011Z - debug: getByQuery(): buecher = [{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos","kanal":[],"genere":[]}]
+2016-04-10T11:13:49.741Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-10T11:13:49.741Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "authorization": "Basic Og==",
+  "cache-control": "no-cache",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
+  "postman-token": "11a57c76-d38e-97d3-e102-64d4b4fff511",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-10T11:13:49.741Z - debug: Request: protocol="https"
+2016-04-10T11:13:49.741Z - debug: Request: hostname="localhost"
+2016-04-10T11:13:49.745Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-10T11:13:49.745Z - debug: queryParams = {"titel":"Z"}
+2016-04-10T11:13:49.745Z - debug: > VideosService.find(): args = [{"titel":"Z"}]
+2016-04-10T11:13:49.745Z - debug: < VideosService.find(): result = <Promise>
+2016-04-10T11:13:49.746Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-10T11:13:49.746Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-10T11:13:49.750Z - debug: getByQuery(): buecher = []
+2016-04-10T11:13:49.751Z - debug: status = 404
+2016-04-10T11:14:27.896Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-10T11:14:27.897Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "authorization": "Basic Og==",
+  "cache-control": "no-cache",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
+  "postman-token": "354dfbba-9700-53c5-c392-4f02163d6518",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-10T11:14:27.897Z - debug: Request: protocol="https"
+2016-04-10T11:14:27.897Z - debug: Request: hostname="localhost"
+2016-04-10T11:14:27.898Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-10T11:14:27.898Z - debug: queryParams = {"altersbeschränkung":"11"}
+2016-04-10T11:14:27.898Z - debug: > VideosService.find(): args = [{"altersbeschränkung":"11"}]
+2016-04-10T11:14:27.898Z - debug: < VideosService.find(): result = <Promise>
+2016-04-10T11:14:27.898Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-10T11:14:27.898Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-10T11:14:27.900Z - debug: getByQuery(): buecher = []
+2016-04-10T11:14:27.900Z - debug: status = 404
+2016-04-10T11:14:50.280Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-10T11:14:50.281Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "authorization": "Basic Og==",
+  "cache-control": "no-cache",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
+  "postman-token": "d4cddba8-d6be-7c93-c270-5a1977f128b2",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-10T11:14:50.282Z - debug: Request: protocol="https"
+2016-04-10T11:14:50.282Z - debug: Request: hostname="localhost"
+2016-04-10T11:14:50.283Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-10T11:14:50.283Z - debug: queryParams = {}
+2016-04-10T11:14:50.283Z - debug: > VideosService.find(): args = [{}]
+2016-04-10T11:14:50.285Z - debug: < VideosService.find(): result = <Promise>
+2016-04-10T11:14:50.285Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-10T11:14:50.285Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-10T11:14:50.293Z - debug: getByQuery(): buecher = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","kanal":[],"genere":[]},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos","kanal":[],"genere":[]},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","kanal":[],"genere":[]},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos","kanal":[],"genere":[]},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos","kanal":[],"genere":[]},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","kanal":[],"genere":[]}]

@@ -21,7 +21,7 @@ import {Document as MDocument, Query} from 'mongoose';
 
 import IVideosService from './ivideos_service';
 import {Video} from '../model/video';
-import {log, isBlank, isEmpty, isPresent} from '../../shared/shared';
+import {log, isBlank, isEmpty} from '../../shared/shared';
 
 // API-Dokumentation zu mongoose:
 // http://mongoosejs.com/docs/api.html
@@ -62,55 +62,36 @@ export default class VideosService implements IVideosService {
             delete query.titel;
             titelQuery = {titel: new RegExp(titel, 'i')};
         }
-        let erscheinungsdatumQuery: any = null;
+        /*let erscheinungsdatumQuery: any = null;
         const erscheinungsdatum: Date = query.erscheinungsdatum;
         if (!isPresent(erscheinungsdatum)) {
             // Titel in der Query: Teilstring des Titels,
             // d.h. "LIKE" als regulaerer Ausdruck
             // 'i': keine Unterscheidung zw. Gross- u. Kleinschreibung
-            delete query.titel;
-            erscheinungsdatumQuery = {titel: new RegExp(titel, 'i')};
+            delete query.erscheinungsdatum;
+            erscheinungsdatumQuery = {erscheinungsdatum: new
+        RegExp(erscheinungsdatum, 'i')};
+        }
+        let altersbeschränkungQuery: any = null;
+        const altersbeschränkung: Number = query.altersbeschränkung;
+        if (!isPresent(altersbeschränkung)) {
+            // Titel in der Query: Teilstring des Titels,
+            // d.h. "LIKE" als regulaerer Ausdruck
+            // 'i': keine Unterscheidung zw. Gross- u. Kleinschreibung
+            delete query.altersbeschränkung;
+            altersbeschränkungQuery = {altersbeschränkung: new
+        RegExp(altersbeschränkung, 'i')};
+        }*/
+        let videopfadQuery: any = null;
+        const videopfad: string = query.videopfad;
+        if (!isEmpty(videopfad)) {
+            // Titel in der Query: Teilstring des Titels,
+            // d.h. "LIKE" als regulaerer Ausdruck
+            // 'i': keine Unterscheidung zw. Gross- u. Kleinschreibung
+            delete query.videopfad;
+            videopfadQuery = {videopfad: new RegExp(videopfad, 'i')};
         }
 
-        // z.B. {schnulze: true, scienceFiction: true}
-        /*let erscheinungsdatumQuery: any = null;
-        if (query.erscheinungsdatum === 'true') {
-            delete query.schnulze;
-            erscheinungsdatumQuery = {schlagwoerter: 'SCHNULZE'};
-        }
-        let scienceFictionQuery: any = null;
-        if (query.scienceFiction === 'true') {
-            delete query.scienceFiction;
-            scienceFictionQuery = {schlagwoerter: 'SCIENCE_FICTION'};
-        }
-        let schlagwoerterQuery: any = null;
-        if (erscheinungsdatumQuery !== null && scienceFictionQuery !== null) {
-            schlagwoerterQuery = {
-                schlagwoerter: ['SCHNULZE', 'SCIENCE_FICTION']
-            };
-            // OR statt AND
-            // schlagwoerterQuery = {$or: [schnulzeQuery, scienceFictionQuery]};
-        } else if (erscheinungsdatumQuery !== null) {
-            schlagwoerterQuery = erscheinungsdatumQuery;
-        } else if (scienceFictionQuery !== null) {
-            schlagwoerterQuery = scienceFictionQuery;
-        }
-
-        if (titelQuery !== null && schlagwoerterQuery !== null) {
-            const tmpQuery: Query<MDocument> = <Query<MDocument>>Video.find();
-            return <Promise<Array<MDocument>>>tmpQuery.and(
-                [query, titelQuery, schlagwoerterQuery]);
-        }
-        if (titelQuery !== null) {
-            const tmpQuery: Query<MDocument> = <Query<MDocument>>Video.find();
-            return <Promise<Array<MDocument>>>tmpQuery.and([query, titelQuery]);
-        }
-        if (schlagwoerterQuery !== null) {
-            const tmpQuery: Query<MDocument> = <Query<MDocument>>Video.find();
-            return <Promise<Array<MDocument>>>(
-                tmpQuery.and([query, schlagwoerterQuery]));
-        }
-*/
         return <Promise<Array<MDocument>>>(Video.find(query));
         // Buch.findOne(query), falls das Suchkriterium eindeutig ist
     }

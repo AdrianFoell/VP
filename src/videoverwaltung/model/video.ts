@@ -38,8 +38,8 @@ const videoSchema: Schema = new Schema(
       beschreibung: String,
       altersbeschränkung: Number,
       viedopfad: String,
-      genre: [Schema.Types.Mixed],
-      kanal: [Schema.Types.Mixed]
+      genre: String,
+      // kanal: Schema.Types.Mixed
     },
     {collection: 'videos'});
 
@@ -74,21 +74,22 @@ export function validateVideo(video: any): any {
         invalid = true;
     }
     if (isEmpty(video.altersbeschränkung)) {
-        err.altersbeschränkung = 'Ein Video muss einen Altersbeschränkung besitzen';
+        err.altersbeschränkung =
+            'Ein Video muss einen Altersbeschränkung besitzen';
         invalid = true;
     }
     if (isEmpty(video.videopfad)) {
         err.videopfad = 'Ein Video muss eine Pfad besitzen';
         invalid = true;
     }
-    if (isPresent(video.genre)) {
+    if (isEmpty(video.genre)) {
         err.genre = 'Ein Video muss einem Genre zugeordnet sein';
         invalid = true;
     }
-    if (isPresent(video.kanal)) {
+    /*if (isPresent(video.kanal)) {
         err.kanal = 'Ein Video muss einem Kanal zugeordnet sein';
         invalid = true;
-    }
+    }*/
 
     return invalid ? err : null;
 };

@@ -38,11 +38,11 @@ class VideosService {
     //           Promise-Objekt wird nicht den Status "fulfilled" erreichen.
     //           Stattdessen ist im Promise-Objekt die Fehlerursache enthalten.
     findById(id) {
-        // ein Buch zur gegebenen ID asynchron suchen
+        // ein Video zur gegebenen ID asynchron suchen
         return video_1.Video.findById(id);
     }
     find(query) {
-        // alle Buecher asynchron suchen und aufsteigend nach titel sortieren
+        // alle Videos asynchron suchen und aufsteigend nach titel sortieren
         // nach _id sortieren: Timestamp des INSERTs (Basis: Sek)
         // https://docs.mongodb.org/manual/reference/object-id
         if (shared_1.isBlank(query) || Object.keys(query).length === 0) {
@@ -59,40 +59,34 @@ class VideosService {
             delete query.titel;
             titelQuery = { titel: new RegExp(titel, 'i') };
         }
-        // z.B. {schnulze: true, scienceFiction: true}
-        let schnulzeQuery = null;
-        if (query.schnulze === 'true') {
-            delete query.schnulze;
-            schnulzeQuery = { schlagwoerter: 'SCHNULZE' };
+        /*let erscheinungsdatumQuery: any = null;
+        const erscheinungsdatum: Date = query.erscheinungsdatum;
+        if (!isPresent(erscheinungsdatum)) {
+            // Titel in der Query: Teilstring des Titels,
+            // d.h. "LIKE" als regulaerer Ausdruck
+            // 'i': keine Unterscheidung zw. Gross- u. Kleinschreibung
+            delete query.erscheinungsdatum;
+            erscheinungsdatumQuery = {erscheinungsdatum: new
+        RegExp(erscheinungsdatum, 'i')};
         }
-        let scienceFictionQuery = null;
-        if (query.scienceFiction === 'true') {
-            delete query.scienceFiction;
-            scienceFictionQuery = { schlagwoerter: 'SCIENCE_FICTION' };
-        }
-        let schlagwoerterQuery = null;
-        if (schnulzeQuery !== null && scienceFictionQuery !== null) {
-            schlagwoerterQuery = {
-                schlagwoerter: ['SCHNULZE', 'SCIENCE_FICTION']
-            };
-        }
-        else if (schnulzeQuery !== null) {
-            schlagwoerterQuery = schnulzeQuery;
-        }
-        else if (scienceFictionQuery !== null) {
-            schlagwoerterQuery = scienceFictionQuery;
-        }
-        if (titelQuery !== null && schlagwoerterQuery !== null) {
-            const tmpQuery = video_1.Video.find();
-            return tmpQuery.and([query, titelQuery, schlagwoerterQuery]);
-        }
-        if (titelQuery !== null) {
-            const tmpQuery = video_1.Video.find();
-            return tmpQuery.and([query, titelQuery]);
-        }
-        if (schlagwoerterQuery !== null) {
-            const tmpQuery = video_1.Video.find();
-            return (tmpQuery.and([query, schlagwoerterQuery]));
+        let altersbeschränkungQuery: any = null;
+        const altersbeschränkung: Number = query.altersbeschränkung;
+        if (!isPresent(altersbeschränkung)) {
+            // Titel in der Query: Teilstring des Titels,
+            // d.h. "LIKE" als regulaerer Ausdruck
+            // 'i': keine Unterscheidung zw. Gross- u. Kleinschreibung
+            delete query.altersbeschränkung;
+            altersbeschränkungQuery = {altersbeschränkung: new
+        RegExp(altersbeschränkung, 'i')};
+        }*/
+        let videopfadQuery = null;
+        const videopfad = query.videopfad;
+        if (!shared_1.isEmpty(videopfad)) {
+            // Titel in der Query: Teilstring des Titels,
+            // d.h. "LIKE" als regulaerer Ausdruck
+            // 'i': keine Unterscheidung zw. Gross- u. Kleinschreibung
+            delete query.videopfad;
+            videopfadQuery = { videopfad: new RegExp(videopfad, 'i') };
         }
         return (video_1.Video.find(query));
         // Buch.findOne(query), falls das Suchkriterium eindeutig ist

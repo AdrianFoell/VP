@@ -20,7 +20,7 @@ import {Schema, Model, model, Document} from 'mongoose';
 import {autoIndex} from '../../shared/shared';
 
 export interface IUser {
-    _id?: string | ObjectID;
+    _id?: string|ObjectID;
     vorname: string;
     nachname: string;
     pass: string;

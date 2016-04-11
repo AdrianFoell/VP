@@ -87,7 +87,7 @@ class MockVideosService {
     }
     find(query) {
         if (shared_1.isBlank(query)) {
-            const videos = videos_mock_1.videosMock.map((b) => VideoMock.fromJson(b));
+            const videos = videos_mock_1.videosMock.map((v) => VideoMock.fromJson(v));
             return Promise.resolve(videos);
         }
         const { titel, erscheinungsdatum, beschreibung, altersbeschränkung, videopfad } = query;
@@ -98,10 +98,10 @@ class MockVideosService {
         if (!shared_1.isEmpty(erscheinungsdatum) && shared_1.isPresent(videosJson)) {
             videosJson = videosJson.filter((video) => video.erscheinungsdatum === erscheinungsdatum);
         }
-        if (shared_1.isPresent(beschreibung) && shared_1.isPresent(videosJson)) {
+        if (!shared_1.isEmpty(beschreibung) && shared_1.isPresent(videosJson)) {
             videosJson = videosJson.filter((video) => video.beschreibung === beschreibung);
         }
-        if (!shared_1.isEmpty(altersbeschränkung) && shared_1.isPresent(videosJson)) {
+        if (shared_1.isPresent(altersbeschränkung) && shared_1.isPresent(videosJson)) {
             videosJson = videosJson.filter((video) => video.altersbeschränkung === altersbeschränkung);
         }
         if (!shared_1.isEmpty(videopfad) && shared_1.isPresent(videosJson)) {
