@@ -26,9 +26,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const shared_1 = require('../../../shared/shared');
 class UsersServiceDb {
-    findByUserName(username) {
+    findByUsername(username) {
         throw new Error('Not yet implemented');
     }
+    findByEmail(email) { throw new Error('Not yet implemented'); }
     toString() { return 'UsersServiceDb'; }
 }
 __decorate([
@@ -36,6 +37,12 @@ __decorate([
     __metadata('design:type', Function), 
     __metadata('design:paramtypes', [String]), 
     __metadata('design:returntype', Object)
-], UsersServiceDb.prototype, "findByUserName", null);
+], UsersServiceDb.prototype, "findByUsername", null);
+__decorate([
+    shared_1.log, 
+    __metadata('design:type', Function), 
+    __metadata('design:paramtypes', [String]), 
+    __metadata('design:returntype', Object)
+], UsersServiceDb.prototype, "findByEmail", null);
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = UsersServiceDb;

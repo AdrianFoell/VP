@@ -26,6 +26,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const iam_service_1 = require('../service/iam_service');
 const shared_1 = require('../../shared/shared');
+/* tslint:enable:max-line-length */
 class IamRequestHandler {
     constructor() {
         this._iamService = new iam_service_1.default();
@@ -40,10 +41,22 @@ class IamRequestHandler {
         res.json(rollen);
     }
     validateJwt(req, res, next) {
-        if (!this._iamService.validateJwt(req)) {
-            shared_1.logger.debug('401');
-            res.sendStatus(401);
-            return;
+        const tokenStatus = this._iamService.validateJwt(req);
+        switch (tokenStatus) {
+            case shared_1.TOKEN_INVALID:
+                shared_1.logger.debug('401');
+                res.sendStatus(401);
+                return;
+            case shared_1.TOKEN_EXPIRED:
+                shared_1.logger.debug('401');
+                res.header('WWW-Authenticate', 
+                /* tslint:disable:max-line-length */
+                'Bearer realm="hska.de", error="invalid_token", error_description="The access token expired"');
+                /* tslint:enable:max-line-length */
+                res.status(401).send('The access token expired');
+                return;
+            default:
+                break;
         }
         next();
     }
@@ -71,6 +84,7 @@ class IamRequestHandler {
         next();
     }
     toString() { return 'IamRequestHandler'; }
+    // Spread-Parameter ab ES 2015
     _hasRolle(req, res, ...roles) {
         shared_1.logger.debug(`Rollen = ${JSON.stringify(roles)}`);
         if (!this._iamService.isLoggedIn(req)) {

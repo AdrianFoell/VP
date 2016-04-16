@@ -32,22 +32,24 @@ const shared_1 = require('../../../shared/shared');
 class VideoMock {
     // wird i.a. nicht direkt aufgerufen, sondern Buch.fromServer oder
     // Buch.fromForm
-    constructor(_id, titel, erscheinungsdatum, beschreibung, altersbeschränkung, videopfad) {
+    constructor(_id, titel, erscheinungsdatum, beschreibung, altersbeschränkung, videopfad, genre) {
         this._id = _id;
         this.titel = titel;
         this.erscheinungsdatum = erscheinungsdatum;
         this.beschreibung = beschreibung;
         this.altersbeschränkung = altersbeschränkung;
         this.videopfad = videopfad;
+        this.genre = genre;
         this._id = _id || null;
         this.titel = titel || null;
         this.erscheinungsdatum = erscheinungsdatum || null;
         this.beschreibung = beschreibung || null;
         this.videopfad = videopfad || null;
+        this.genre = genre || null;
     }
     // JSON-Daten von einem REST-Client bei einem POST-oder PUT-Request
     static fromJson(video) {
-        return new VideoMock(video._id, video.titel, video.erscheinungsdatum, video.beschreibung, video.altersbeschränkung, video.videopfad);
+        return new VideoMock(video._id, video.titel, video.erscheinungsdatum, video.beschreibung, video.altersbeschränkung, video.videopfad, video.genre);
     }
     // Dummy-Methoden fuer das Interface Document von mongoose
     equals(doc) { return false; }
@@ -90,12 +92,12 @@ class MockVideosService {
             const videos = videos_mock_1.videosMock.map((v) => VideoMock.fromJson(v));
             return Promise.resolve(videos);
         }
-        const { titel, erscheinungsdatum, beschreibung, altersbeschränkung, videopfad } = query;
+        const { titel, erscheinungsdatum, beschreibung, altersbeschränkung, videopfad, genre } = query;
         let videosJson = videos_mock_1.videosMock;
         if (!shared_1.isEmpty(titel)) {
             videosJson = videosJson.filter((video) => video.titel.toLowerCase().includes(titel.toLowerCase()));
         }
-        if (!shared_1.isEmpty(erscheinungsdatum) && shared_1.isPresent(videosJson)) {
+        if (shared_1.isPresent(erscheinungsdatum) && shared_1.isPresent(videosJson)) {
             videosJson = videosJson.filter((video) => video.erscheinungsdatum === erscheinungsdatum);
         }
         if (!shared_1.isEmpty(beschreibung) && shared_1.isPresent(videosJson)) {
@@ -104,8 +106,12 @@ class MockVideosService {
         if (shared_1.isPresent(altersbeschränkung) && shared_1.isPresent(videosJson)) {
             videosJson = videosJson.filter((video) => video.altersbeschränkung === altersbeschränkung);
         }
-        if (!shared_1.isEmpty(videopfad) && shared_1.isPresent(videosJson)) {
+        if (!shared_1.isEmpty(genre) && shared_1.isPresent(videosJson)) {
             videosJson = videosJson.filter((video) => video.videopfad === videopfad);
+        }
+        if (!shared_1.isEmpty(genre) && shared_1.isPresent(videosJson)) {
+            videosJson =
+                videosJson.filter((video) => video.genre === genre);
         }
         const videos = shared_1.isPresent(videosJson) ?
             videosJson.map((b) => VideoMock.fromJson(b)) :

@@ -18,6 +18,6 @@
 const constants_1 = require('./constants');
 function getBaseUri(req) {
     'use strict';
-    return `${req.protocol}://${req.hostname}:${constants_1.port}${req.originalUrl}`;
+    return `${req.protocol}://${req.hostname}:${constants_1.PORT}${req.originalUrl}`;
 }
 exports.getBaseUri = getBaseUri;

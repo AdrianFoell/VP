@@ -20,14 +20,14 @@ import {Request} from 'express';
 import AbstractIamService from './abstract_iam_service';
 import IamServiceJwt from './jwt/iam_service_jwt';
 import IamServiceBasicAuth from './basic_auth/iam_service_basic_auth';
-import {log, iam} from '../../shared/shared';
+import {log, AUTH_METHOD} from '../../shared/shared';
 
 export default class IamService extends AbstractIamService {
     private _impl: AbstractIamService;
 
     constructor() {
         super();
-        switch (iam) {
+        switch (AUTH_METHOD) {
             case 'jwt':
                 this._impl = new IamServiceJwt();
                 break;
@@ -46,7 +46,7 @@ export default class IamService extends AbstractIamService {
     login(req: Request): any { return this._impl.login(req); }
 
     @log
-    validateJwt(req: Request): boolean { return this._impl.validateJwt(req); }
+    validateJwt(req: Request): number { return this._impl.validateJwt(req); }
 
     @log
     isLoggedIn(req: Request): boolean { return this._impl.isLoggedIn(req); }

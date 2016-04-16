@@ -31,7 +31,7 @@ const shared_1 = require('../../shared/shared');
 class AbstractIamService {
     // JWT: ueberladen bzw. neu implementieren
     // Basic Authentifiizierung: irrelevant, d.h. kein ueberladen
-    validateJwt(req) { return true; }
+    validateJwt(req) { return shared_1.TOKEN_OK; }
     // JWT: bereits erledigt durch Validierung des Tokens
     // Basic Authentifiizierung: ueberladen bzw. neu implementieren
     isLoggedIn(req) { return true; }
@@ -65,7 +65,7 @@ __decorate([
     shared_1.log, 
     __metadata('design:type', Function), 
     __metadata('design:paramtypes', [Object]), 
-    __metadata('design:returntype', Boolean)
+    __metadata('design:returntype', Number)
 ], AbstractIamService.prototype, "validateJwt", null);
 __decorate([
     shared_1.log, 

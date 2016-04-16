@@ -30,8 +30,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 const fs_1 = require('fs');
 const shared_1 = require('../../../shared/shared');
 class UsersServiceFile {
-    findByUserName(username) {
+    findByUsername(username) {
         const user = UsersServiceFile._USERS.find((u) => u.username === username);
+        return user === undefined ? null : user;
+    }
+    findByEmail(email) {
+        const user = UsersServiceFile._USERS.find((u) => u.email === email);
         return user === undefined ? null : user;
     }
     toString() { return 'UsersServiceFile'; }
@@ -42,6 +46,12 @@ __decorate([
     __metadata('design:type', Function), 
     __metadata('design:paramtypes', [String]), 
     __metadata('design:returntype', Object)
-], UsersServiceFile.prototype, "findByUserName", null);
+], UsersServiceFile.prototype, "findByUsername", null);
+__decorate([
+    shared_1.log, 
+    __metadata('design:type', Function), 
+    __metadata('design:paramtypes', [String]), 
+    __metadata('design:returntype', Object)
+], UsersServiceFile.prototype, "findByEmail", null);
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = UsersServiceFile;

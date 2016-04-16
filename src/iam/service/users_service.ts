@@ -18,13 +18,13 @@
 import IUsersService from './iusers_service';
 import UsersServiceDb from './db/users_service_db';
 import UsersServiceFile from './file/users_service_file';
-import {rolesUsers, log} from '../../shared/shared';
+import {ROLES_USERS, log} from '../../shared/shared';
 
 export default class UsersService implements IUsersService {
     private _impl: IUsersService;
 
     constructor() {
-        switch (rolesUsers) {
+        switch (ROLES_USERS) {
             case 'db':
                 this._impl = new UsersServiceDb();
                 break;
@@ -37,9 +37,12 @@ export default class UsersService implements IUsersService {
     }
 
     @log
-    findByUserName(username: string): any {
-        return this._impl.findByUserName(username);
+    findByUsername(username: string): any {
+        return this._impl.findByUsername(username);
     }
+
+    @log
+    findByEmail(email: string): any { return this._impl.findByEmail(email); }
 
     toString(): string { return 'UsersService'; }
 }

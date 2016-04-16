@@ -17,7 +17,7 @@
 
 /* tslint:disable:max-line-length */
 import {Schema, Model, model, Document as MDocument} from 'mongoose';
-import {autoIndex, isMongoId, isEmpty, isPresent} from '../../shared/shared';
+import {AUTO_INDEX, isMongoId, isEmpty, isPresent} from '../../shared/shared';
 /* tslint:enable:max-line-length */
 
 // Eine Collection in MongoDB besteht aus Dokumenten im JSON-Format
@@ -37,14 +37,14 @@ const videoSchema: Schema = new Schema(
       erscheinungsdatum: Date,
       beschreibung: String,
       altersbeschränkung: Number,
-      viedopfad: String,
-      genre: String,
+      videopfad: String,
+      genre: String
       // kanal: Schema.Types.Mixed
     },
     {collection: 'videos'});
 
 // automat. Validierung der Indexe beim 1. Zugriff
-videoSchema.set('autoIndex', autoIndex);
+videoSchema.set('autoIndex', AUTO_INDEX);
 
 // fuer ein Document (-Objekt) die Methode toJSON bereitstellen
 videoSchema.set('toJSON', {getters: true, virtuals: false});
@@ -69,11 +69,11 @@ export function validateVideo(video: any): any {
         err.titel = 'Ein Video muss einen Titel haben';
         invalid = true;
     }
-    if (isPresent(video.erscheinungsdatum)) {
+    if (!isPresent(video.erscheinungsdatum)) {
         err.erscheinungsdatum = 'Ein Video benötigt ein Erscheinungsdatum';
         invalid = true;
     }
-    if (isEmpty(video.altersbeschränkung)) {
+    if (!isPresent(video.altersbeschränkung)) {
         err.altersbeschränkung =
             'Ein Video muss einen Altersbeschränkung besitzen';
         invalid = true;

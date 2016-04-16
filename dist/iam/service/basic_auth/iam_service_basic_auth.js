@@ -24,7 +24,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-// basic-auth exportiert den Namespace auth und die gleichnamige Function
 const basicAuth = require('basic-auth');
 const abstract_iam_service_1 = require('../abstract_iam_service');
 const roles_service_1 = require('../roles_service');
@@ -44,7 +43,7 @@ class IamServiceBasicAuth extends abstract_iam_service_1.default {
         }
         const username = credentials.name;
         shared_1.logger.debug(`username = ${credentials.name}`);
-        const user = this._usersService.findByUserName(username);
+        const user = this._usersService.findByUsername(username);
         const password = credentials.pass;
         shared_1.logger.debug(`password = ${credentials.pass}`);
         if (!this.checkPassword(user, password)) {
@@ -60,7 +59,7 @@ class IamServiceBasicAuth extends abstract_iam_service_1.default {
         }
         const username = credentials.name;
         shared_1.logger.debug(`username = ${credentials.name}`);
-        const user = this._usersService.findByUserName(username);
+        const user = this._usersService.findByUsername(username);
         const password = credentials.pass;
         shared_1.logger.debug(`password = ${credentials.pass}`);
         return this.checkPassword(user, password);
@@ -73,7 +72,7 @@ class IamServiceBasicAuth extends abstract_iam_service_1.default {
         }
         const username = credentials.name;
         shared_1.logger.debug(`username = ${credentials.name}`);
-        const user = this._usersService.findByUserName(username);
+        const user = this._usersService.findByUsername(username);
         roles = this._rolesService.getNormalizedRoles(roles);
         return super.userHasAnyRole(user, roles);
     }

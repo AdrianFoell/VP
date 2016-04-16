@@ -1,434 +1,1204 @@
-2016-04-10T18:53:58.368Z - info: Logging durch Winston ist konfiguriert
-2016-04-10T18:54:01.519Z - debug: > Server.start()
-2016-04-10T18:54:01.534Z - debug: < Server.start(): result = void || undefined
-2016-04-10T18:54:01.547Z - info: Der Server ist gestartet: https://localhost:8443
-2016-04-10T18:54:01.708Z - info: Die Verbindung zu MongoDB ist hergestellt
-2016-04-10T18:54:15.532Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T18:54:15.532Z - debug: Request: headers={
+2016-04-16T10:19:11.099Z - info: Logging durch Winston ist konfiguriert
+2016-04-16T10:19:11.210Z - debug: > Server.start()
+2016-04-16T10:19:11.222Z - debug: < Server.start(): result = void || undefined
+2016-04-16T10:19:11.231Z - info: Der Server ist gestartet: https://localhost:8443
+2016-04-16T10:19:11.338Z - info: Die Verbindung zu MongoDB ist hergestellt
+2016-04-16T10:19:28.625Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:19:28.625Z - debug: Request: headers={
   "host": "localhost:8443",
   "connection": "keep-alive",
-  "authorization": "Basic Og==",
-  "cache-control": "no-cache",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "postman-token": "f3593140-c3c3-0237-63be-5f54b6024361",
-  "accept": "*/*",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
-}
-2016-04-10T18:54:15.533Z - debug: Request: protocol="https"
-2016-04-10T18:54:15.533Z - debug: Request: hostname="localhost"
-2016-04-10T18:54:15.539Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
-2016-04-10T18:54:15.539Z - debug: queryParams = {}
-2016-04-10T18:54:15.540Z - debug: > VideosService.find(): args = [{}]
-2016-04-10T18:54:15.542Z - debug: < VideosService.find(): result = <Promise>
-2016-04-10T18:54:15.542Z - debug: < VideosRouter.getByQuery(): result = void || undefined
-2016-04-10T18:54:15.542Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T18:54:15.566Z - debug: getByQuery(): buecher = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","kanal":[],"genere":[]},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos","kanal":[],"genere":[]},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","kanal":[],"genere":[]},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos","kanal":[],"genere":[]},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos","kanal":[],"genere":[]},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","kanal":[],"genere":[]}]
-2016-04-10T19:05:08.455Z - info: Logging durch Winston ist konfiguriert
-2016-04-10T19:05:08.585Z - debug: > Server.start()
-2016-04-10T19:05:08.597Z - debug: < Server.start(): result = void || undefined
-2016-04-10T19:05:08.608Z - info: Der Server ist gestartet: https://localhost:8443
-2016-04-10T19:05:08.710Z - info: Die Verbindung zu MongoDB ist hergestellt
-2016-04-10T19:05:15.000Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:05:15.000Z - debug: Request: headers={
-  "host": "localhost:8443",
-  "connection": "keep-alive",
-  "authorization": "Basic Og==",
-  "cache-control": "no-cache",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "postman-token": "453e057e-64fa-b5de-c26e-57416516e5d7",
-  "accept": "*/*",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
-}
-2016-04-10T19:05:15.000Z - debug: Request: protocol="https"
-2016-04-10T19:05:15.001Z - debug: Request: hostname="localhost"
-2016-04-10T19:05:15.007Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
-2016-04-10T19:05:15.007Z - debug: queryParams = {}
-2016-04-10T19:05:15.007Z - debug: > VideosService.find(): args = [{}]
-2016-04-10T19:05:15.009Z - debug: < VideosService.find(): result = <Promise>
-2016-04-10T19:05:15.010Z - debug: < VideosRouter.getByQuery(): result = void || undefined
-2016-04-10T19:05:15.010Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T19:05:15.018Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos"},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos"},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"}]
-2016-04-10T19:05:52.824Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:05:52.825Z - debug: Request: headers={
-  "host": "localhost:8443",
-  "connection": "keep-alive",
-  "authorization": "Basic Og==",
-  "cache-control": "no-cache",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "postman-token": "764b0142-dce4-0cc0-9dd6-197589fb8684",
-  "accept": "*/*",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
-}
-2016-04-10T19:05:52.825Z - debug: Request: protocol="https"
-2016-04-10T19:05:52.825Z - debug: Request: hostname="localhost"
-2016-04-10T19:05:52.827Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
-2016-04-10T19:05:52.827Z - debug: queryParams = {"altersbeschränkung":"11"}
-2016-04-10T19:05:52.828Z - debug: > VideosService.find(): args = [{"altersbeschränkung":"11"}]
-2016-04-10T19:05:52.829Z - debug: < VideosService.find(): result = <Promise>
-2016-04-10T19:05:52.829Z - debug: < VideosRouter.getByQuery(): result = void || undefined
-2016-04-10T19:05:52.829Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T19:05:52.832Z - debug: getByQuery(): videos = []
-2016-04-10T19:05:52.832Z - debug: status = 404
-2016-04-10T19:06:01.351Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:06:01.351Z - debug: Request: headers={
-  "host": "localhost:8443",
-  "connection": "keep-alive",
-  "authorization": "Basic Og==",
-  "cache-control": "no-cache",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "postman-token": "348d41ee-36d4-bb78-c23e-93eaf5947e03",
-  "accept": "*/*",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
-}
-2016-04-10T19:06:01.351Z - debug: Request: protocol="https"
-2016-04-10T19:06:01.351Z - debug: Request: hostname="localhost"
-2016-04-10T19:06:01.352Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
-2016-04-10T19:06:01.352Z - debug: queryParams = {"titel":"Z"}
-2016-04-10T19:06:01.352Z - debug: > VideosService.find(): args = [{"titel":"Z"}]
-2016-04-10T19:06:01.352Z - debug: < VideosService.find(): result = <Promise>
-2016-04-10T19:06:01.352Z - debug: < VideosRouter.getByQuery(): result = void || undefined
-2016-04-10T19:06:01.352Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T19:06:01.354Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos"},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos"},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"}]
-2016-04-10T19:06:05.564Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:06:05.565Z - debug: Request: headers={
-  "host": "localhost:8443",
-  "connection": "keep-alive",
-  "authorization": "Basic Og==",
-  "cache-control": "no-cache",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "postman-token": "8183cbc0-4493-ff1f-4a10-7ff4d792b87f",
-  "accept": "*/*",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
-}
-2016-04-10T19:06:05.565Z - debug: Request: protocol="https"
-2016-04-10T19:06:05.565Z - debug: Request: hostname="localhost"
-2016-04-10T19:06:05.567Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
-2016-04-10T19:06:05.568Z - debug: queryParams = {"titel":"K"}
-2016-04-10T19:06:05.568Z - debug: > VideosService.find(): args = [{"titel":"K"}]
-2016-04-10T19:06:05.568Z - debug: < VideosService.find(): result = <Promise>
-2016-04-10T19:06:05.568Z - debug: < VideosRouter.getByQuery(): result = void || undefined
-2016-04-10T19:06:05.568Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T19:06:05.571Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos"},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos"},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"}]
-2016-04-10T19:06:13.779Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:06:13.779Z - debug: Request: headers={
-  "host": "localhost:8443",
-  "connection": "keep-alive",
-  "authorization": "Basic Og==",
-  "cache-control": "no-cache",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "postman-token": "bbceeb7d-1e77-8581-3c11-a267e82130eb",
-  "accept": "*/*",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
-}
-2016-04-10T19:06:13.779Z - debug: Request: protocol="https"
-2016-04-10T19:06:13.779Z - debug: Request: hostname="localhost"
-2016-04-10T19:06:13.783Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
-2016-04-10T19:06:13.783Z - debug: queryParams = {"titel":"Gamma"}
-2016-04-10T19:06:13.783Z - debug: > VideosService.find(): args = [{"titel":"Gamma"}]
-2016-04-10T19:06:13.783Z - debug: < VideosService.find(): result = <Promise>
-2016-04-10T19:06:13.783Z - debug: < VideosRouter.getByQuery(): result = void || undefined
-2016-04-10T19:06:13.783Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T19:06:13.786Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos"},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos"},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"}]
-2016-04-10T19:06:57.858Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:06:57.858Z - debug: Request: headers={
-  "host": "localhost:8443",
-  "connection": "keep-alive",
-  "authorization": "Basic Og==",
-  "cache-control": "no-cache",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "postman-token": "600e9ce7-24d9-74d7-07de-fd7235a924c5",
-  "accept": "*/*",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
-}
-2016-04-10T19:06:57.858Z - debug: Request: protocol="https"
-2016-04-10T19:06:57.859Z - debug: Request: hostname="localhost"
-2016-04-10T19:06:57.861Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
-2016-04-10T19:06:57.861Z - debug: queryParams = {"erscheinungsdatum":"2015-02-01"}
-2016-04-10T19:06:57.861Z - debug: > VideosService.find(): args = [{"erscheinungsdatum":"2015-02-01"}]
-2016-04-10T19:06:57.863Z - debug: < VideosService.find(): result = <Promise>
-2016-04-10T19:06:57.863Z - debug: < VideosRouter.getByQuery(): result = void || undefined
-2016-04-10T19:06:57.863Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T19:06:57.866Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos"},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos"},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"}]
-2016-04-10T19:07:24.331Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:07:24.331Z - debug: Request: headers={
-  "host": "localhost:8443",
-  "connection": "keep-alive",
-  "authorization": "Basic Og==",
-  "cache-control": "no-cache",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "postman-token": "c6c357ee-13fb-763b-7d90-db35533d94fc",
-  "accept": "*/*",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
-}
-2016-04-10T19:07:24.331Z - debug: Request: protocol="https"
-2016-04-10T19:07:24.331Z - debug: Request: hostname="localhost"
-2016-04-10T19:07:24.333Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
-2016-04-10T19:07:24.333Z - debug: queryParams = {"erscheinungsdatum":"2015-02-00"}
-2016-04-10T19:07:24.333Z - debug: > VideosService.find(): args = [{"erscheinungsdatum":"2015-02-00"}]
-2016-04-10T19:07:24.333Z - debug: < VideosService.find(): result = <Promise>
-2016-04-10T19:07:24.334Z - debug: < VideosRouter.getByQuery(): result = void || undefined
-2016-04-10T19:07:24.334Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T19:11:16.598Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:11:16.598Z - debug: Request: headers={
-  "host": "localhost:8443",
-  "connection": "keep-alive",
-  "authorization": "Basic Og==",
-  "cache-control": "no-cache",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "postman-token": "5fa13564-8abe-3d54-1d34-621abb0189b3",
-  "accept": "*/*",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
-}
-2016-04-10T19:11:16.598Z - debug: Request: protocol="https"
-2016-04-10T19:11:16.598Z - debug: Request: hostname="localhost"
-2016-04-10T19:11:16.600Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
-2016-04-10T19:11:16.600Z - debug: queryParams = {"erscheinungsdatum":"2015-02-01"}
-2016-04-10T19:11:16.600Z - debug: > VideosService.find(): args = [{"erscheinungsdatum":"2015-02-01"}]
-2016-04-10T19:11:16.600Z - debug: < VideosService.find(): result = <Promise>
-2016-04-10T19:11:16.600Z - debug: < VideosRouter.getByQuery(): result = void || undefined
-2016-04-10T19:11:16.600Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T19:11:16.603Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos"},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos"},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"}]
-2016-04-10T19:11:37.381Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:11:37.381Z - debug: Request: headers={
-  "host": "localhost:8443",
-  "connection": "keep-alive",
-  "authorization": "Basic Og==",
-  "cache-control": "no-cache",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "postman-token": "d2da9f41-eb42-13f7-c31b-eb75756f3b9e",
-  "accept": "*/*",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
-}
-2016-04-10T19:11:37.381Z - debug: Request: protocol="https"
-2016-04-10T19:11:37.381Z - debug: Request: hostname="localhost"
-2016-04-10T19:11:37.383Z - debug: > SharedRequestHandler.validateMongoId(): args = <RequestResponse>
-2016-04-10T19:11:37.383Z - debug: id = 000000000000000000000001
-2016-04-10T19:11:37.383Z - debug: > VideosRouter.getById(): args = <RequestResponse>
-2016-04-10T19:11:37.384Z - debug: id = 000000000000000000000001
-2016-04-10T19:11:37.384Z - debug: > VideosService.findById(): args = ["000000000000000000000001"]
-2016-04-10T19:11:37.385Z - debug: < VideosService.findById(): result = <Promise>
-2016-04-10T19:11:37.386Z - debug: < VideosRouter.getById(): result = void || undefined
-2016-04-10T19:11:37.386Z - debug: < SharedRequestHandler.validateMongoId(): result = void || undefined
-2016-04-10T19:11:37.386Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T19:11:37.553Z - debug: getById(): video = {"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"}
-2016-04-10T19:11:49.731Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:11:49.731Z - debug: Request: headers={
-  "host": "localhost:8443",
-  "connection": "keep-alive",
-  "authorization": "Basic Og==",
-  "cache-control": "no-cache",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "postman-token": "04adcaf2-851d-34e2-cf3b-f7993a022ad2",
-  "accept": "*/*",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
-}
-2016-04-10T19:11:49.731Z - debug: Request: protocol="https"
-2016-04-10T19:11:49.731Z - debug: Request: hostname="localhost"
-2016-04-10T19:11:49.733Z - debug: > SharedRequestHandler.validateMongoId(): args = <RequestResponse>
-2016-04-10T19:11:49.733Z - debug: id = 000000000000000000000009
-2016-04-10T19:11:49.733Z - debug: > VideosRouter.getById(): args = <RequestResponse>
-2016-04-10T19:11:49.733Z - debug: id = 000000000000000000000009
-2016-04-10T19:11:49.733Z - debug: > VideosService.findById(): args = ["000000000000000000000009"]
-2016-04-10T19:11:49.734Z - debug: < VideosService.findById(): result = <Promise>
-2016-04-10T19:11:49.734Z - debug: < VideosRouter.getById(): result = void || undefined
-2016-04-10T19:11:49.734Z - debug: < SharedRequestHandler.validateMongoId(): result = void || undefined
-2016-04-10T19:11:49.734Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T19:11:49.735Z - debug: status = 404
-2016-04-10T19:23:45.426Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:23:45.427Z - debug: Request: headers={
-  "host": "localhost:8443",
-  "connection": "keep-alive",
-  "authorization": "Basic Og==",
-  "cache-control": "no-cache",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "postman-token": "3c9c31bb-21ea-6671-15e9-b65d0ce72b30",
-  "accept": "*/*",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
-}
-2016-04-10T19:23:45.427Z - debug: Request: protocol="https"
-2016-04-10T19:23:45.427Z - debug: Request: hostname="localhost"
-2016-04-10T19:23:45.428Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
-2016-04-10T19:23:45.428Z - debug: queryParams = {"erscheinungsdatum":"2015-02-00"}
-2016-04-10T19:23:45.428Z - debug: > VideosService.find(): args = [{"erscheinungsdatum":"2015-02-00"}]
-2016-04-10T19:23:45.428Z - debug: < VideosService.find(): result = <Promise>
-2016-04-10T19:23:45.429Z - debug: < VideosRouter.getByQuery(): result = void || undefined
-2016-04-10T19:23:45.429Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T19:24:15.290Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:24:15.290Z - debug: Request: headers={
-  "host": "localhost:8443",
-  "connection": "keep-alive",
-  "authorization": "Basic Og==",
-  "cache-control": "no-cache",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "postman-token": "74677d59-c6b6-9e4b-c7ed-d55ca448d8ba",
-  "accept": "*/*",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
-}
-2016-04-10T19:24:15.290Z - debug: Request: protocol="https"
-2016-04-10T19:24:15.290Z - debug: Request: hostname="localhost"
-2016-04-10T19:24:15.292Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
-2016-04-10T19:24:15.293Z - debug: queryParams = {"altersbeschränkung":"18"}
-2016-04-10T19:24:15.293Z - debug: > VideosService.find(): args = [{"altersbeschränkung":"18"}]
-2016-04-10T19:24:15.294Z - debug: < VideosService.find(): result = <Promise>
-2016-04-10T19:24:15.294Z - debug: < VideosRouter.getByQuery(): result = void || undefined
-2016-04-10T19:24:15.294Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T19:24:15.296Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos"}]
-2016-04-10T19:24:48.403Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:24:48.403Z - debug: Request: headers={
-  "host": "localhost:8443",
-  "connection": "keep-alive",
-  "authorization": "Basic Og==",
-  "cache-control": "no-cache",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "postman-token": "661557ea-94d5-9f76-b8d8-b85fa6e826d8",
-  "accept": "*/*",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
-}
-2016-04-10T19:24:48.403Z - debug: Request: protocol="https"
-2016-04-10T19:24:48.403Z - debug: Request: hostname="localhost"
-2016-04-10T19:24:48.404Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
-2016-04-10T19:24:48.404Z - debug: queryParams = {"altersbeschränkung":"11"}
-2016-04-10T19:24:48.404Z - debug: > VideosService.find(): args = [{"altersbeschränkung":"11"}]
-2016-04-10T19:24:48.404Z - debug: < VideosService.find(): result = <Promise>
-2016-04-10T19:24:48.404Z - debug: < VideosRouter.getByQuery(): result = void || undefined
-2016-04-10T19:24:48.404Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T19:24:48.405Z - debug: getByQuery(): videos = []
-2016-04-10T19:24:48.405Z - debug: status = 404
-2016-04-10T19:25:47.255Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:25:47.255Z - debug: Request: headers={
-  "host": "localhost:8443",
-  "connection": "keep-alive",
-  "authorization": "Basic Og==",
-  "cache-control": "no-cache",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "postman-token": "b4b35b69-7adf-42f3-a708-e61936984610",
-  "accept": "*/*",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
-}
-2016-04-10T19:25:47.255Z - debug: Request: protocol="https"
-2016-04-10T19:25:47.255Z - debug: Request: hostname="localhost"
-2016-04-10T19:25:47.256Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
-2016-04-10T19:25:47.256Z - debug: queryParams = {}
-2016-04-10T19:25:47.256Z - debug: > VideosService.find(): args = [{}]
-2016-04-10T19:25:47.256Z - debug: < VideosService.find(): result = <Promise>
-2016-04-10T19:25:47.256Z - debug: < VideosRouter.getByQuery(): result = void || undefined
-2016-04-10T19:25:47.256Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T19:25:47.263Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos"},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos"},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"}]
-2016-04-10T19:26:43.312Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:26:43.312Z - debug: Request: headers={
-  "host": "localhost:8443",
-  "connection": "keep-alive",
-  "content-length": "0",
-  "authorization": "Basic Og==",
-  "postman-token": "8e033b8b-3737-2b47-fbbe-6708e04dd4e9",
+  "content-length": "208",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
   "cache-control": "no-cache",
   "origin": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "content-type": "application/x-www-form-urlencoded",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA3OTk0MjgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiM2M0Y2Q2MmYtMjM0MC00N2ZlLThmZTAtZGIwOTk0ZGYzMzU1IiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODg1ODI4fQ.Lfx3D3xZacLrWBiOmDmrpuzytgo4oHQ9OKFC4F0QfMoQfFVFhtlKpmJxFpBt5k_L3cYQp1LWjOjz7r8UI24uln2KWljSBWhYuSwAEDhpXEs-jQnJb4FzrE9-HdwRhgrdvR5zXoslxBENja_i_MzeSILmC99P1UHeIUfhH4fO5RIwIqPf8ai6__bsYFDeQlNaW2XwDBitBPI1eWXqReAYswRZP2KrDtKbvFuLHdZq6T0R27UX9ue3JxegbRBrqgcV-fhaQiL5tgbOtt8HlEpabaJjtQ8TG7OBQldWBnqe9YNcxO0jzzslcbwPYoKfkB2P2R-QGl8XyrMx9ccaQXDLNw",
+  "postman-token": "e9f676ca-1806-6c99-fdd3-c8b6c1b88f10",
   "accept": "*/*",
   "accept-encoding": "gzip, deflate",
   "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
 }
-2016-04-10T19:26:43.312Z - debug: Request: protocol="https"
-2016-04-10T19:26:43.312Z - debug: Request: hostname="localhost"
-2016-04-10T19:26:43.318Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T19:27:04.225Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:27:04.226Z - debug: Request: headers={
+2016-04-16T10:19:28.625Z - debug: Request: protocol="https"
+2016-04-16T10:19:28.626Z - debug: Request: hostname="localhost"
+2016-04-16T10:19:28.632Z - debug: > IamRequestHandler.validateJwt(): args = <RequestResponse>
+2016-04-16T10:19:28.632Z - debug: > IamService.validateJwt(): args = <RequestResponse>
+2016-04-16T10:19:28.632Z - debug: > IamServiceJwt.validateJwt(): args = <RequestResponse>
+2016-04-16T10:19:28.633Z - debug: Authorization = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA3OTk0MjgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiM2M0Y2Q2MmYtMjM0MC00N2ZlLThmZTAtZGIwOTk0ZGYzMzU1IiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODg1ODI4fQ.Lfx3D3xZacLrWBiOmDmrpuzytgo4oHQ9OKFC4F0QfMoQfFVFhtlKpmJxFpBt5k_L3cYQp1LWjOjz7r8UI24uln2KWljSBWhYuSwAEDhpXEs-jQnJb4FzrE9-HdwRhgrdvR5zXoslxBENja_i_MzeSILmC99P1UHeIUfhH4fO5RIwIqPf8ai6__bsYFDeQlNaW2XwDBitBPI1eWXqReAYswRZP2KrDtKbvFuLHdZq6T0R27UX9ue3JxegbRBrqgcV-fhaQiL5tgbOtt8HlEpabaJjtQ8TG7OBQldWBnqe9YNcxO0jzzslcbwPYoKfkB2P2R-QGl8XyrMx9ccaQXDLNw
+2016-04-16T10:19:28.634Z - debug: email: admin@hska.de
+2016-04-16T10:19:28.634Z - debug: < IamServiceJwt.validateJwt(): result = 0
+2016-04-16T10:19:28.634Z - debug: < IamService.validateJwt(): result = 0
+2016-04-16T10:19:28.634Z - debug: > IamRequestHandler.isAdminMitarbeiter(): args = <RequestResponse>
+2016-04-16T10:19:28.634Z - debug: > IamRequestHandler._hasRolle(): args = <RequestResponse>
+2016-04-16T10:19:28.635Z - debug: Rollen = ["admin","mitarbeiter"]
+2016-04-16T10:19:28.635Z - debug: > IamService.isLoggedIn(): args = <RequestResponse>
+2016-04-16T10:19:28.635Z - debug: > AbstractIamService.isLoggedIn(): args = <RequestResponse>
+2016-04-16T10:19:28.635Z - debug: < AbstractIamService.isLoggedIn(): result = true
+2016-04-16T10:19:28.635Z - debug: < IamService.isLoggedIn(): result = true
+2016-04-16T10:19:28.635Z - debug: > IamService.hasAnyRole(): args = <RequestResponse>
+2016-04-16T10:19:28.635Z - debug: > IamServiceJwt.hasAnyRole(): args = <RequestResponse>
+2016-04-16T10:19:28.635Z - debug: > UsersService.findByEmail(): args = ["admin@hska.de"]
+2016-04-16T10:19:28.635Z - debug: > UsersServiceFile.findByEmail(): args = ["admin@hska.de"]
+2016-04-16T10:19:28.635Z - debug: < UsersServiceFile.findByEmail(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T10:19:28.635Z - debug: < UsersService.findByEmail(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T10:19:28.635Z - debug: > AbstractRolesService.getNormalizedRoles(): args = [["admin","mitarbeiter"]]
+2016-04-16T10:19:28.635Z - debug: > AbstractRolesService._getNormalizedRole(): args = ["admin"]
+2016-04-16T10:19:28.636Z - debug: > RolesService.findAllRoles()
+2016-04-16T10:19:28.636Z - debug: > RolesServiceFile.findAllRoles()
+2016-04-16T10:19:28.636Z - debug: < RolesServiceFile.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:19:28.636Z - debug: < RolesService.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:19:28.636Z - debug: < AbstractRolesService._getNormalizedRole(): result = "admin"
+2016-04-16T10:19:28.636Z - debug: > AbstractRolesService._getNormalizedRole(): args = ["mitarbeiter"]
+2016-04-16T10:19:28.636Z - debug: > RolesService.findAllRoles()
+2016-04-16T10:19:28.636Z - debug: > RolesServiceFile.findAllRoles()
+2016-04-16T10:19:28.636Z - debug: < RolesServiceFile.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:19:28.636Z - debug: < RolesService.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:19:28.636Z - debug: < AbstractRolesService._getNormalizedRole(): result = "mitarbeiter"
+2016-04-16T10:19:28.636Z - debug: < AbstractRolesService.getNormalizedRoles(): result = ["admin","mitarbeiter"]
+2016-04-16T10:19:28.636Z - debug: > AbstractIamService.userHasAnyRole(): args = [{"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]},["admin","mitarbeiter"]]
+2016-04-16T10:19:28.636Z - debug: Vorhandene Rolle: admin
+2016-04-16T10:19:28.636Z - debug: Vorhandene Rolle: mitarbeiter
+2016-04-16T10:19:28.636Z - debug: < AbstractIamService.userHasAnyRole(): result = true
+2016-04-16T10:19:28.636Z - debug: < IamServiceJwt.hasAnyRole(): result = true
+2016-04-16T10:19:28.636Z - debug: < IamService.hasAnyRole(): result = true
+2016-04-16T10:19:28.636Z - debug: < IamRequestHandler._hasRolle(): result = true
+2016-04-16T10:19:28.649Z - debug: < IamRequestHandler.isAdminMitarbeiter(): result = void || undefined
+2016-04-16T10:19:28.649Z - debug: < IamRequestHandler.validateJwt(): result = void || undefined
+2016-04-16T10:19:28.649Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:19:28.650Z - debug: > VideosRouter.post(): args = <RequestResponse>
+2016-04-16T10:19:28.656Z - debug: Body: {"titel":"Alpha9","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"genre":"Tierfilm","_id":"571211b06052ccd4187ace50"}
+2016-04-16T10:19:28.656Z - debug: status = 400
+2016-04-16T10:19:28.658Z - debug: Response time: 33.423179999999995 ms
+2016-04-16T10:19:28.660Z - debug: < VideosRouter.post(): result = void || undefined
+2016-04-16T10:24:43.198Z - info: Logging durch Winston ist konfiguriert
+2016-04-16T10:24:43.311Z - debug: > Server.start()
+2016-04-16T10:24:43.323Z - debug: < Server.start(): result = void || undefined
+2016-04-16T10:24:43.341Z - info: Der Server ist gestartet: https://localhost:8443
+2016-04-16T10:24:43.438Z - info: Die Verbindung zu MongoDB ist hergestellt
+2016-04-16T10:24:49.975Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:24:49.975Z - debug: Request: headers={
   "host": "localhost:8443",
   "connection": "keep-alive",
-  "authorization": "Basic YWRtaW46cA==",
-  "cache-control": "no-cache",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "postman-token": "b95a321b-e223-44ac-6091-2dc72db8f237",
-  "accept": "*/*",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
-}
-2016-04-10T19:27:04.226Z - debug: Request: protocol="https"
-2016-04-10T19:27:04.226Z - debug: Request: hostname="localhost"
-2016-04-10T19:27:04.227Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
-2016-04-10T19:27:04.228Z - debug: queryParams = {}
-2016-04-10T19:27:04.228Z - debug: > VideosService.find(): args = [{}]
-2016-04-10T19:27:04.228Z - debug: < VideosService.find(): result = <Promise>
-2016-04-10T19:27:04.228Z - debug: < VideosRouter.getByQuery(): result = void || undefined
-2016-04-10T19:27:04.228Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T19:27:04.232Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos"},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos"},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"}]
-2016-04-10T19:27:47.948Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:27:47.949Z - debug: Request: headers={
-  "host": "localhost:8443",
-  "connection": "keep-alive",
-  "content-length": "0",
-  "authorization": "Basic YWRtaW46cA==",
-  "postman-token": "a4f54f20-1f92-e9ae-19af-8a0307f6b404",
-  "cache-control": "no-cache",
-  "origin": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "content-type": "application/x-www-form-urlencoded",
-  "accept": "*/*",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
-}
-2016-04-10T19:27:47.950Z - debug: Request: protocol="https"
-2016-04-10T19:27:47.950Z - debug: Request: hostname="localhost"
-2016-04-10T19:27:47.951Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T19:28:37.277Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:28:37.277Z - debug: Request: headers={
-  "host": "localhost:8443",
-  "connection": "keep-alive",
-  "authorization": "Basic YWRtaW46cA==",
-  "cache-control": "no-cache",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "postman-token": "afb8911e-3e9d-f621-325f-4fcd1b68fad5",
-  "accept": "*/*",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
-}
-2016-04-10T19:28:37.277Z - debug: Request: protocol="https"
-2016-04-10T19:28:37.277Z - debug: Request: hostname="localhost"
-2016-04-10T19:28:37.279Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
-2016-04-10T19:28:37.279Z - debug: queryParams = {}
-2016-04-10T19:28:37.279Z - debug: > VideosService.find(): args = [{}]
-2016-04-10T19:28:37.279Z - debug: < VideosService.find(): result = <Promise>
-2016-04-10T19:28:37.279Z - debug: < VideosRouter.getByQuery(): result = void || undefined
-2016-04-10T19:28:37.279Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-10T19:28:37.282Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos"},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos"},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos"}]
-2016-04-10T19:29:20.334Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
-2016-04-10T19:29:20.334Z - debug: Request: headers={
-  "host": "localhost:8443",
-  "connection": "keep-alive",
-  "authorization": "Basic YWRtaW46cA==",
-  "postman-token": "7432fd44-1ed9-ae92-1418-df3318db900a",
+  "content-length": "208",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
   "cache-control": "no-cache",
   "origin": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36",
-  "content-type": "application/x-www-form-urlencoded",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA3OTk0MjgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiM2M0Y2Q2MmYtMjM0MC00N2ZlLThmZTAtZGIwOTk0ZGYzMzU1IiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODg1ODI4fQ.Lfx3D3xZacLrWBiOmDmrpuzytgo4oHQ9OKFC4F0QfMoQfFVFhtlKpmJxFpBt5k_L3cYQp1LWjOjz7r8UI24uln2KWljSBWhYuSwAEDhpXEs-jQnJb4FzrE9-HdwRhgrdvR5zXoslxBENja_i_MzeSILmC99P1UHeIUfhH4fO5RIwIqPf8ai6__bsYFDeQlNaW2XwDBitBPI1eWXqReAYswRZP2KrDtKbvFuLHdZq6T0R27UX9ue3JxegbRBrqgcV-fhaQiL5tgbOtt8HlEpabaJjtQ8TG7OBQldWBnqe9YNcxO0jzzslcbwPYoKfkB2P2R-QGl8XyrMx9ccaQXDLNw",
+  "postman-token": "70157890-1208-1949-97b5-f32fc11b26c7",
   "accept": "*/*",
   "accept-encoding": "gzip, deflate",
   "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
 }
-2016-04-10T19:29:20.334Z - debug: Request: protocol="https"
-2016-04-10T19:29:20.334Z - debug: Request: hostname="localhost"
-2016-04-10T19:29:20.336Z - debug: > SharedRequestHandler.validateMongoId(): args = <RequestResponse>
-2016-04-10T19:29:20.336Z - debug: id = 000000000000000000000006
-2016-04-10T19:29:20.336Z - debug: < SharedRequestHandler.validateMongoId(): result = void || undefined
-2016-04-10T19:29:20.337Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
-2016-04-11T08:44:19.231Z - info: Logging durch Winston ist konfiguriert
-2016-04-11T08:44:19.360Z - debug: > Server.start()
-2016-04-11T08:44:19.373Z - debug: < Server.start(): result = void || undefined
-2016-04-11T08:44:19.384Z - info: Der Server ist gestartet: https://localhost:8443
-2016-04-11T08:44:19.485Z - info: Die Verbindung zu MongoDB ist hergestellt
+2016-04-16T10:24:49.976Z - debug: Request: protocol="https"
+2016-04-16T10:24:49.976Z - debug: Request: hostname="localhost"
+2016-04-16T10:24:49.982Z - debug: > IamRequestHandler.validateJwt(): args = <RequestResponse>
+2016-04-16T10:24:49.983Z - debug: > IamService.validateJwt(): args = <RequestResponse>
+2016-04-16T10:24:49.983Z - debug: > IamServiceJwt.validateJwt(): args = <RequestResponse>
+2016-04-16T10:24:49.983Z - debug: Authorization = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA3OTk0MjgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiM2M0Y2Q2MmYtMjM0MC00N2ZlLThmZTAtZGIwOTk0ZGYzMzU1IiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODg1ODI4fQ.Lfx3D3xZacLrWBiOmDmrpuzytgo4oHQ9OKFC4F0QfMoQfFVFhtlKpmJxFpBt5k_L3cYQp1LWjOjz7r8UI24uln2KWljSBWhYuSwAEDhpXEs-jQnJb4FzrE9-HdwRhgrdvR5zXoslxBENja_i_MzeSILmC99P1UHeIUfhH4fO5RIwIqPf8ai6__bsYFDeQlNaW2XwDBitBPI1eWXqReAYswRZP2KrDtKbvFuLHdZq6T0R27UX9ue3JxegbRBrqgcV-fhaQiL5tgbOtt8HlEpabaJjtQ8TG7OBQldWBnqe9YNcxO0jzzslcbwPYoKfkB2P2R-QGl8XyrMx9ccaQXDLNw
+2016-04-16T10:24:49.984Z - debug: email: admin@hska.de
+2016-04-16T10:24:49.984Z - debug: < IamServiceJwt.validateJwt(): result = 0
+2016-04-16T10:24:49.984Z - debug: < IamService.validateJwt(): result = 0
+2016-04-16T10:24:49.984Z - debug: > IamRequestHandler.isAdminMitarbeiter(): args = <RequestResponse>
+2016-04-16T10:24:49.985Z - debug: > IamRequestHandler._hasRolle(): args = <RequestResponse>
+2016-04-16T10:24:49.985Z - debug: Rollen = ["admin","mitarbeiter"]
+2016-04-16T10:24:49.985Z - debug: > IamService.isLoggedIn(): args = <RequestResponse>
+2016-04-16T10:24:49.985Z - debug: > AbstractIamService.isLoggedIn(): args = <RequestResponse>
+2016-04-16T10:24:49.985Z - debug: < AbstractIamService.isLoggedIn(): result = true
+2016-04-16T10:24:49.985Z - debug: < IamService.isLoggedIn(): result = true
+2016-04-16T10:24:49.985Z - debug: > IamService.hasAnyRole(): args = <RequestResponse>
+2016-04-16T10:24:49.985Z - debug: > IamServiceJwt.hasAnyRole(): args = <RequestResponse>
+2016-04-16T10:24:49.985Z - debug: > UsersService.findByEmail(): args = ["admin@hska.de"]
+2016-04-16T10:24:49.985Z - debug: > UsersServiceFile.findByEmail(): args = ["admin@hska.de"]
+2016-04-16T10:24:49.985Z - debug: < UsersServiceFile.findByEmail(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T10:24:49.985Z - debug: < UsersService.findByEmail(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T10:24:49.985Z - debug: > AbstractRolesService.getNormalizedRoles(): args = [["admin","mitarbeiter"]]
+2016-04-16T10:24:49.985Z - debug: > AbstractRolesService._getNormalizedRole(): args = ["admin"]
+2016-04-16T10:24:49.986Z - debug: > RolesService.findAllRoles()
+2016-04-16T10:24:49.986Z - debug: > RolesServiceFile.findAllRoles()
+2016-04-16T10:24:49.986Z - debug: < RolesServiceFile.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:24:49.986Z - debug: < RolesService.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:24:49.986Z - debug: < AbstractRolesService._getNormalizedRole(): result = "admin"
+2016-04-16T10:24:49.986Z - debug: > AbstractRolesService._getNormalizedRole(): args = ["mitarbeiter"]
+2016-04-16T10:24:49.986Z - debug: > RolesService.findAllRoles()
+2016-04-16T10:24:49.986Z - debug: > RolesServiceFile.findAllRoles()
+2016-04-16T10:24:49.986Z - debug: < RolesServiceFile.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:24:49.986Z - debug: < RolesService.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:24:49.986Z - debug: < AbstractRolesService._getNormalizedRole(): result = "mitarbeiter"
+2016-04-16T10:24:49.986Z - debug: < AbstractRolesService.getNormalizedRoles(): result = ["admin","mitarbeiter"]
+2016-04-16T10:24:49.986Z - debug: > AbstractIamService.userHasAnyRole(): args = [{"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]},["admin","mitarbeiter"]]
+2016-04-16T10:24:49.986Z - debug: Vorhandene Rolle: admin
+2016-04-16T10:24:49.986Z - debug: Vorhandene Rolle: mitarbeiter
+2016-04-16T10:24:49.986Z - debug: < AbstractIamService.userHasAnyRole(): result = true
+2016-04-16T10:24:49.986Z - debug: < IamServiceJwt.hasAnyRole(): result = true
+2016-04-16T10:24:49.986Z - debug: < IamService.hasAnyRole(): result = true
+2016-04-16T10:24:49.986Z - debug: < IamRequestHandler._hasRolle(): result = true
+2016-04-16T10:24:49.998Z - debug: < IamRequestHandler.isAdminMitarbeiter(): result = void || undefined
+2016-04-16T10:24:49.999Z - debug: < IamRequestHandler.validateJwt(): result = void || undefined
+2016-04-16T10:24:49.999Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:24:50.000Z - debug: > VideosRouter.post(): args = <RequestResponse>
+2016-04-16T10:24:50.006Z - debug: Body: {"titel":"Alpha9","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm","_id":"571212f2953782802d0b2525"}
+2016-04-16T10:24:50.006Z - debug: > VideosService.save(): args = [{"titel":"Alpha9","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm","_id":"571212f2953782802d0b2525"}]
+2016-04-16T10:24:50.007Z - debug: < VideosService.save(): result = {"emitter":{"domain":null,"_events":{},"_eventsCount":0},"emitted":{},"ended":false}
+2016-04-16T10:24:50.007Z - debug: < VideosRouter.post(): result = void || undefined
+2016-04-16T10:24:50.014Z - debug: post(): id = 571212f2953782802d0b2525
+2016-04-16T10:24:50.014Z - debug: post(): location = https://localhost:8443/videos/571212f2953782802d0b2525
+2016-04-16T10:24:50.016Z - debug: Response time: 41.590675999999995 ms
+2016-04-16T10:24:56.326Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:24:56.326Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA3OTk0MjgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiM2M0Y2Q2MmYtMjM0MC00N2ZlLThmZTAtZGIwOTk0ZGYzMzU1IiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODg1ODI4fQ.Lfx3D3xZacLrWBiOmDmrpuzytgo4oHQ9OKFC4F0QfMoQfFVFhtlKpmJxFpBt5k_L3cYQp1LWjOjz7r8UI24uln2KWljSBWhYuSwAEDhpXEs-jQnJb4FzrE9-HdwRhgrdvR5zXoslxBENja_i_MzeSILmC99P1UHeIUfhH4fO5RIwIqPf8ai6__bsYFDeQlNaW2XwDBitBPI1eWXqReAYswRZP2KrDtKbvFuLHdZq6T0R27UX9ue3JxegbRBrqgcV-fhaQiL5tgbOtt8HlEpabaJjtQ8TG7OBQldWBnqe9YNcxO0jzzslcbwPYoKfkB2P2R-QGl8XyrMx9ccaQXDLNw",
+  "postman-token": "0fdf5047-1821-3fb5-df93-f8a161570802",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:24:56.327Z - debug: Request: protocol="https"
+2016-04-16T10:24:56.327Z - debug: Request: hostname="localhost"
+2016-04-16T10:24:56.330Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-16T10:24:56.331Z - debug: queryParams = {}
+2016-04-16T10:24:56.331Z - debug: > VideosService.find(): args = [{}]
+2016-04-16T10:24:56.333Z - debug: < VideosService.find(): result = <Promise>
+2016-04-16T10:24:56.334Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-16T10:24:56.334Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:24:56.342Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"},{"_id":"571212f2953782802d0b2525","titel":"Alpha9","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm","__v":0},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos","genre":"Action"},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","genre":"Horror"},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Sport"},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Mode"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"}]
+2016-04-16T10:24:56.347Z - debug: Response time: 20.63862 ms
+2016-04-16T10:27:38.047Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:27:38.047Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "content-length": "208",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "origin": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA3OTk0MjgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiM2M0Y2Q2MmYtMjM0MC00N2ZlLThmZTAtZGIwOTk0ZGYzMzU1IiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODg1ODI4fQ.Lfx3D3xZacLrWBiOmDmrpuzytgo4oHQ9OKFC4F0QfMoQfFVFhtlKpmJxFpBt5k_L3cYQp1LWjOjz7r8UI24uln2KWljSBWhYuSwAEDhpXEs-jQnJb4FzrE9-HdwRhgrdvR5zXoslxBENja_i_MzeSILmC99P1UHeIUfhH4fO5RIwIqPf8ai6__bsYFDeQlNaW2XwDBitBPI1eWXqReAYswRZP2KrDtKbvFuLHdZq6T0R27UX9ue3JxegbRBrqgcV-fhaQiL5tgbOtt8HlEpabaJjtQ8TG7OBQldWBnqe9YNcxO0jzzslcbwPYoKfkB2P2R-QGl8XyrMx9ccaQXDLNw",
+  "postman-token": "8790a9fb-9430-4135-4374-76af54d0de6c",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:27:38.047Z - debug: Request: protocol="https"
+2016-04-16T10:27:38.047Z - debug: Request: hostname="localhost"
+2016-04-16T10:27:38.049Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:27:38.049Z - debug: Response time: 2.406431 ms
+2016-04-16T10:27:52.612Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:27:52.612Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA3OTk0MjgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiM2M0Y2Q2MmYtMjM0MC00N2ZlLThmZTAtZGIwOTk0ZGYzMzU1IiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODg1ODI4fQ.Lfx3D3xZacLrWBiOmDmrpuzytgo4oHQ9OKFC4F0QfMoQfFVFhtlKpmJxFpBt5k_L3cYQp1LWjOjz7r8UI24uln2KWljSBWhYuSwAEDhpXEs-jQnJb4FzrE9-HdwRhgrdvR5zXoslxBENja_i_MzeSILmC99P1UHeIUfhH4fO5RIwIqPf8ai6__bsYFDeQlNaW2XwDBitBPI1eWXqReAYswRZP2KrDtKbvFuLHdZq6T0R27UX9ue3JxegbRBrqgcV-fhaQiL5tgbOtt8HlEpabaJjtQ8TG7OBQldWBnqe9YNcxO0jzzslcbwPYoKfkB2P2R-QGl8XyrMx9ccaQXDLNw",
+  "postman-token": "180e32d5-27b4-b699-007f-3ba980296df6",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:27:52.613Z - debug: Request: protocol="https"
+2016-04-16T10:27:52.613Z - debug: Request: hostname="localhost"
+2016-04-16T10:27:52.617Z - debug: > SharedRequestHandler.validateMongoId(): args = <RequestResponse>
+2016-04-16T10:27:52.617Z - debug: id = 571212f2953782802d0b2525
+2016-04-16T10:27:52.617Z - debug: > VideosRouter.getById(): args = <RequestResponse>
+2016-04-16T10:27:52.617Z - debug: id = 571212f2953782802d0b2525
+2016-04-16T10:27:52.617Z - debug: > VideosService.findById(): args = ["571212f2953782802d0b2525"]
+2016-04-16T10:27:52.618Z - debug: < VideosService.findById(): result = <Promise>
+2016-04-16T10:27:52.618Z - debug: < VideosRouter.getById(): result = void || undefined
+2016-04-16T10:27:52.618Z - debug: < SharedRequestHandler.validateMongoId(): result = void || undefined
+2016-04-16T10:27:52.618Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:27:52.621Z - debug: getById(): video = {"_id":"571212f2953782802d0b2525","titel":"Alpha9","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm","__v":0}
+2016-04-16T10:27:52.621Z - debug: Response time: 8.992536 ms
+2016-04-16T10:28:17.196Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:28:17.196Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "content-length": "247",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "origin": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA3OTk0MjgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiM2M0Y2Q2MmYtMjM0MC00N2ZlLThmZTAtZGIwOTk0ZGYzMzU1IiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODg1ODI4fQ.Lfx3D3xZacLrWBiOmDmrpuzytgo4oHQ9OKFC4F0QfMoQfFVFhtlKpmJxFpBt5k_L3cYQp1LWjOjz7r8UI24uln2KWljSBWhYuSwAEDhpXEs-jQnJb4FzrE9-HdwRhgrdvR5zXoslxBENja_i_MzeSILmC99P1UHeIUfhH4fO5RIwIqPf8ai6__bsYFDeQlNaW2XwDBitBPI1eWXqReAYswRZP2KrDtKbvFuLHdZq6T0R27UX9ue3JxegbRBrqgcV-fhaQiL5tgbOtt8HlEpabaJjtQ8TG7OBQldWBnqe9YNcxO0jzzslcbwPYoKfkB2P2R-QGl8XyrMx9ccaQXDLNw",
+  "postman-token": "6bbf90ab-60be-2187-de53-fb79310d7424",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:28:17.196Z - debug: Request: protocol="https"
+2016-04-16T10:28:17.196Z - debug: Request: hostname="localhost"
+2016-04-16T10:28:17.201Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:28:17.201Z - debug: Response time: 5.706589 ms
+2016-04-16T10:29:06.338Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:29:06.338Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "content-length": "247",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "origin": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA3OTk0MjgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiM2M0Y2Q2MmYtMjM0MC00N2ZlLThmZTAtZGIwOTk0ZGYzMzU1IiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODg1ODI4fQ.Lfx3D3xZacLrWBiOmDmrpuzytgo4oHQ9OKFC4F0QfMoQfFVFhtlKpmJxFpBt5k_L3cYQp1LWjOjz7r8UI24uln2KWljSBWhYuSwAEDhpXEs-jQnJb4FzrE9-HdwRhgrdvR5zXoslxBENja_i_MzeSILmC99P1UHeIUfhH4fO5RIwIqPf8ai6__bsYFDeQlNaW2XwDBitBPI1eWXqReAYswRZP2KrDtKbvFuLHdZq6T0R27UX9ue3JxegbRBrqgcV-fhaQiL5tgbOtt8HlEpabaJjtQ8TG7OBQldWBnqe9YNcxO0jzzslcbwPYoKfkB2P2R-QGl8XyrMx9ccaQXDLNw",
+  "postman-token": "630fd327-96b4-a1e1-1a23-880d0af796dd",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:29:06.338Z - debug: Request: protocol="https"
+2016-04-16T10:29:06.338Z - debug: Request: hostname="localhost"
+2016-04-16T10:29:06.341Z - debug: > IamRequestHandler.validateJwt(): args = <RequestResponse>
+2016-04-16T10:29:06.341Z - debug: > IamService.validateJwt(): args = <RequestResponse>
+2016-04-16T10:29:06.341Z - debug: > IamServiceJwt.validateJwt(): args = <RequestResponse>
+2016-04-16T10:29:06.342Z - debug: Authorization = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA3OTk0MjgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiM2M0Y2Q2MmYtMjM0MC00N2ZlLThmZTAtZGIwOTk0ZGYzMzU1IiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODg1ODI4fQ.Lfx3D3xZacLrWBiOmDmrpuzytgo4oHQ9OKFC4F0QfMoQfFVFhtlKpmJxFpBt5k_L3cYQp1LWjOjz7r8UI24uln2KWljSBWhYuSwAEDhpXEs-jQnJb4FzrE9-HdwRhgrdvR5zXoslxBENja_i_MzeSILmC99P1UHeIUfhH4fO5RIwIqPf8ai6__bsYFDeQlNaW2XwDBitBPI1eWXqReAYswRZP2KrDtKbvFuLHdZq6T0R27UX9ue3JxegbRBrqgcV-fhaQiL5tgbOtt8HlEpabaJjtQ8TG7OBQldWBnqe9YNcxO0jzzslcbwPYoKfkB2P2R-QGl8XyrMx9ccaQXDLNw
+2016-04-16T10:29:06.343Z - debug: email: admin@hska.de
+2016-04-16T10:29:06.343Z - debug: < IamServiceJwt.validateJwt(): result = 0
+2016-04-16T10:29:06.343Z - debug: < IamService.validateJwt(): result = 0
+2016-04-16T10:29:06.343Z - debug: > IamRequestHandler.isAdminMitarbeiter(): args = <RequestResponse>
+2016-04-16T10:29:06.343Z - debug: > IamRequestHandler._hasRolle(): args = <RequestResponse>
+2016-04-16T10:29:06.343Z - debug: Rollen = ["admin","mitarbeiter"]
+2016-04-16T10:29:06.343Z - debug: > IamService.isLoggedIn(): args = <RequestResponse>
+2016-04-16T10:29:06.343Z - debug: > AbstractIamService.isLoggedIn(): args = <RequestResponse>
+2016-04-16T10:29:06.343Z - debug: < AbstractIamService.isLoggedIn(): result = true
+2016-04-16T10:29:06.343Z - debug: < IamService.isLoggedIn(): result = true
+2016-04-16T10:29:06.343Z - debug: > IamService.hasAnyRole(): args = <RequestResponse>
+2016-04-16T10:29:06.343Z - debug: > IamServiceJwt.hasAnyRole(): args = <RequestResponse>
+2016-04-16T10:29:06.343Z - debug: > UsersService.findByEmail(): args = ["admin@hska.de"]
+2016-04-16T10:29:06.343Z - debug: > UsersServiceFile.findByEmail(): args = ["admin@hska.de"]
+2016-04-16T10:29:06.343Z - debug: < UsersServiceFile.findByEmail(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T10:29:06.344Z - debug: < UsersService.findByEmail(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T10:29:06.344Z - debug: > AbstractRolesService.getNormalizedRoles(): args = [["admin","mitarbeiter"]]
+2016-04-16T10:29:06.344Z - debug: > AbstractRolesService._getNormalizedRole(): args = ["admin"]
+2016-04-16T10:29:06.344Z - debug: > RolesService.findAllRoles()
+2016-04-16T10:29:06.344Z - debug: > RolesServiceFile.findAllRoles()
+2016-04-16T10:29:06.344Z - debug: < RolesServiceFile.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:29:06.344Z - debug: < RolesService.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:29:06.344Z - debug: < AbstractRolesService._getNormalizedRole(): result = "admin"
+2016-04-16T10:29:06.345Z - debug: > AbstractRolesService._getNormalizedRole(): args = ["mitarbeiter"]
+2016-04-16T10:29:06.345Z - debug: > RolesService.findAllRoles()
+2016-04-16T10:29:06.345Z - debug: > RolesServiceFile.findAllRoles()
+2016-04-16T10:29:06.345Z - debug: < RolesServiceFile.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:29:06.345Z - debug: < RolesService.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:29:06.345Z - debug: < AbstractRolesService._getNormalizedRole(): result = "mitarbeiter"
+2016-04-16T10:29:06.345Z - debug: < AbstractRolesService.getNormalizedRoles(): result = ["admin","mitarbeiter"]
+2016-04-16T10:29:06.345Z - debug: > AbstractIamService.userHasAnyRole(): args = [{"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]},["admin","mitarbeiter"]]
+2016-04-16T10:29:06.346Z - debug: Vorhandene Rolle: admin
+2016-04-16T10:29:06.346Z - debug: Vorhandene Rolle: mitarbeiter
+2016-04-16T10:29:06.346Z - debug: < AbstractIamService.userHasAnyRole(): result = true
+2016-04-16T10:29:06.346Z - debug: < IamServiceJwt.hasAnyRole(): result = true
+2016-04-16T10:29:06.346Z - debug: < IamService.hasAnyRole(): result = true
+2016-04-16T10:29:06.346Z - debug: < IamRequestHandler._hasRolle(): result = true
+2016-04-16T10:29:06.346Z - debug: < IamRequestHandler.isAdminMitarbeiter(): result = void || undefined
+2016-04-16T10:29:06.346Z - debug: < IamRequestHandler.validateJwt(): result = void || undefined
+2016-04-16T10:29:06.346Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:29:06.346Z - debug: > VideosRouter.put(): args = <RequestResponse>
+2016-04-16T10:29:06.347Z - debug: Body: {"_id":"571212f2953782802d0b2525","titel":"Alpha8","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"}
+2016-04-16T10:29:06.347Z - debug: > VideosService.update(): args = [{"_id":"571212f2953782802d0b2525","titel":"Alpha8","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"}]
+2016-04-16T10:29:06.348Z - debug: < VideosService.update(): result = <Promise>
+2016-04-16T10:29:06.349Z - debug: < VideosRouter.put(): result = void || undefined
+2016-04-16T10:29:06.354Z - debug: Response time: 15.606273999999999 ms
+2016-04-16T10:29:12.755Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:29:12.755Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA3OTk0MjgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiM2M0Y2Q2MmYtMjM0MC00N2ZlLThmZTAtZGIwOTk0ZGYzMzU1IiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODg1ODI4fQ.Lfx3D3xZacLrWBiOmDmrpuzytgo4oHQ9OKFC4F0QfMoQfFVFhtlKpmJxFpBt5k_L3cYQp1LWjOjz7r8UI24uln2KWljSBWhYuSwAEDhpXEs-jQnJb4FzrE9-HdwRhgrdvR5zXoslxBENja_i_MzeSILmC99P1UHeIUfhH4fO5RIwIqPf8ai6__bsYFDeQlNaW2XwDBitBPI1eWXqReAYswRZP2KrDtKbvFuLHdZq6T0R27UX9ue3JxegbRBrqgcV-fhaQiL5tgbOtt8HlEpabaJjtQ8TG7OBQldWBnqe9YNcxO0jzzslcbwPYoKfkB2P2R-QGl8XyrMx9ccaQXDLNw",
+  "postman-token": "758872ed-bb8e-84af-f9ca-1096e72735b4",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:29:12.755Z - debug: Request: protocol="https"
+2016-04-16T10:29:12.755Z - debug: Request: hostname="localhost"
+2016-04-16T10:29:12.756Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-16T10:29:12.756Z - debug: queryParams = {}
+2016-04-16T10:29:12.756Z - debug: > VideosService.find(): args = [{}]
+2016-04-16T10:29:12.757Z - debug: < VideosService.find(): result = <Promise>
+2016-04-16T10:29:12.758Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-16T10:29:12.758Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:29:12.761Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"},{"_id":"571212f2953782802d0b2525","titel":"Alpha8","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm","__v":0},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos","genre":"Action"},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","genre":"Horror"},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Sport"},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Mode"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"}]
+2016-04-16T10:29:12.763Z - debug: Response time: 7.6799729999999995 ms
+2016-04-16T10:31:14.746Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:31:14.746Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "content-length": "247",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "origin": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA3OTk0MjgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiM2M0Y2Q2MmYtMjM0MC00N2ZlLThmZTAtZGIwOTk0ZGYzMzU1IiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODg1ODI4fQ.Lfx3D3xZacLrWBiOmDmrpuzytgo4oHQ9OKFC4F0QfMoQfFVFhtlKpmJxFpBt5k_L3cYQp1LWjOjz7r8UI24uln2KWljSBWhYuSwAEDhpXEs-jQnJb4FzrE9-HdwRhgrdvR5zXoslxBENja_i_MzeSILmC99P1UHeIUfhH4fO5RIwIqPf8ai6__bsYFDeQlNaW2XwDBitBPI1eWXqReAYswRZP2KrDtKbvFuLHdZq6T0R27UX9ue3JxegbRBrqgcV-fhaQiL5tgbOtt8HlEpabaJjtQ8TG7OBQldWBnqe9YNcxO0jzzslcbwPYoKfkB2P2R-QGl8XyrMx9ccaQXDLNw",
+  "postman-token": "cd7c45be-4dd2-dbca-ea60-1b50ebec90b0",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:31:14.746Z - debug: Request: protocol="https"
+2016-04-16T10:31:14.746Z - debug: Request: hostname="localhost"
+2016-04-16T10:31:14.749Z - debug: > IamRequestHandler.validateJwt(): args = <RequestResponse>
+2016-04-16T10:31:14.749Z - debug: > IamService.validateJwt(): args = <RequestResponse>
+2016-04-16T10:31:14.749Z - debug: > IamServiceJwt.validateJwt(): args = <RequestResponse>
+2016-04-16T10:31:14.749Z - debug: Authorization = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA3OTk0MjgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiM2M0Y2Q2MmYtMjM0MC00N2ZlLThmZTAtZGIwOTk0ZGYzMzU1IiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODg1ODI4fQ.Lfx3D3xZacLrWBiOmDmrpuzytgo4oHQ9OKFC4F0QfMoQfFVFhtlKpmJxFpBt5k_L3cYQp1LWjOjz7r8UI24uln2KWljSBWhYuSwAEDhpXEs-jQnJb4FzrE9-HdwRhgrdvR5zXoslxBENja_i_MzeSILmC99P1UHeIUfhH4fO5RIwIqPf8ai6__bsYFDeQlNaW2XwDBitBPI1eWXqReAYswRZP2KrDtKbvFuLHdZq6T0R27UX9ue3JxegbRBrqgcV-fhaQiL5tgbOtt8HlEpabaJjtQ8TG7OBQldWBnqe9YNcxO0jzzslcbwPYoKfkB2P2R-QGl8XyrMx9ccaQXDLNw
+2016-04-16T10:31:14.749Z - debug: email: admin@hska.de
+2016-04-16T10:31:14.749Z - debug: < IamServiceJwt.validateJwt(): result = 0
+2016-04-16T10:31:14.749Z - debug: < IamService.validateJwt(): result = 0
+2016-04-16T10:31:14.749Z - debug: > IamRequestHandler.isAdminMitarbeiter(): args = <RequestResponse>
+2016-04-16T10:31:14.749Z - debug: > IamRequestHandler._hasRolle(): args = <RequestResponse>
+2016-04-16T10:31:14.749Z - debug: Rollen = ["admin","mitarbeiter"]
+2016-04-16T10:31:14.749Z - debug: > IamService.isLoggedIn(): args = <RequestResponse>
+2016-04-16T10:31:14.749Z - debug: > AbstractIamService.isLoggedIn(): args = <RequestResponse>
+2016-04-16T10:31:14.749Z - debug: < AbstractIamService.isLoggedIn(): result = true
+2016-04-16T10:31:14.749Z - debug: < IamService.isLoggedIn(): result = true
+2016-04-16T10:31:14.750Z - debug: > IamService.hasAnyRole(): args = <RequestResponse>
+2016-04-16T10:31:14.750Z - debug: > IamServiceJwt.hasAnyRole(): args = <RequestResponse>
+2016-04-16T10:31:14.750Z - debug: > UsersService.findByEmail(): args = ["admin@hska.de"]
+2016-04-16T10:31:14.750Z - debug: > UsersServiceFile.findByEmail(): args = ["admin@hska.de"]
+2016-04-16T10:31:14.750Z - debug: < UsersServiceFile.findByEmail(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T10:31:14.750Z - debug: < UsersService.findByEmail(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T10:31:14.750Z - debug: > AbstractRolesService.getNormalizedRoles(): args = [["admin","mitarbeiter"]]
+2016-04-16T10:31:14.750Z - debug: > AbstractRolesService._getNormalizedRole(): args = ["admin"]
+2016-04-16T10:31:14.750Z - debug: > RolesService.findAllRoles()
+2016-04-16T10:31:14.750Z - debug: > RolesServiceFile.findAllRoles()
+2016-04-16T10:31:14.750Z - debug: < RolesServiceFile.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:31:14.750Z - debug: < RolesService.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:31:14.750Z - debug: < AbstractRolesService._getNormalizedRole(): result = "admin"
+2016-04-16T10:31:14.750Z - debug: > AbstractRolesService._getNormalizedRole(): args = ["mitarbeiter"]
+2016-04-16T10:31:14.750Z - debug: > RolesService.findAllRoles()
+2016-04-16T10:31:14.750Z - debug: > RolesServiceFile.findAllRoles()
+2016-04-16T10:31:14.750Z - debug: < RolesServiceFile.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:31:14.750Z - debug: < RolesService.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:31:14.750Z - debug: < AbstractRolesService._getNormalizedRole(): result = "mitarbeiter"
+2016-04-16T10:31:14.750Z - debug: < AbstractRolesService.getNormalizedRoles(): result = ["admin","mitarbeiter"]
+2016-04-16T10:31:14.750Z - debug: > AbstractIamService.userHasAnyRole(): args = [{"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]},["admin","mitarbeiter"]]
+2016-04-16T10:31:14.750Z - debug: Vorhandene Rolle: admin
+2016-04-16T10:31:14.750Z - debug: Vorhandene Rolle: mitarbeiter
+2016-04-16T10:31:14.751Z - debug: < AbstractIamService.userHasAnyRole(): result = true
+2016-04-16T10:31:14.751Z - debug: < IamServiceJwt.hasAnyRole(): result = true
+2016-04-16T10:31:14.751Z - debug: < IamService.hasAnyRole(): result = true
+2016-04-16T10:31:14.751Z - debug: < IamRequestHandler._hasRolle(): result = true
+2016-04-16T10:31:14.751Z - debug: < IamRequestHandler.isAdminMitarbeiter(): result = void || undefined
+2016-04-16T10:31:14.751Z - debug: < IamRequestHandler.validateJwt(): result = void || undefined
+2016-04-16T10:31:14.751Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:31:14.751Z - debug: > VideosRouter.post(): args = <RequestResponse>
+2016-04-16T10:31:14.751Z - debug: Body: {"_id":"571212f2953782802d0b2525","titel":"Alpha8","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"}
+2016-04-16T10:31:14.752Z - debug: > VideosService.save(): args = [{"_id":"571212f2953782802d0b2525","titel":"Alpha8","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"}]
+2016-04-16T10:31:14.752Z - debug: < VideosService.save(): result = {"emitter":{"domain":null,"_events":{},"_eventsCount":0},"emitted":{},"ended":false}
+2016-04-16T10:31:14.752Z - debug: < VideosRouter.post(): result = void || undefined
+2016-04-16T10:31:14.754Z - debug: Response time: 7.9795929999999995 ms
+2016-04-16T10:31:22.192Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:31:22.193Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA3OTk0MjgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiM2M0Y2Q2MmYtMjM0MC00N2ZlLThmZTAtZGIwOTk0ZGYzMzU1IiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODg1ODI4fQ.Lfx3D3xZacLrWBiOmDmrpuzytgo4oHQ9OKFC4F0QfMoQfFVFhtlKpmJxFpBt5k_L3cYQp1LWjOjz7r8UI24uln2KWljSBWhYuSwAEDhpXEs-jQnJb4FzrE9-HdwRhgrdvR5zXoslxBENja_i_MzeSILmC99P1UHeIUfhH4fO5RIwIqPf8ai6__bsYFDeQlNaW2XwDBitBPI1eWXqReAYswRZP2KrDtKbvFuLHdZq6T0R27UX9ue3JxegbRBrqgcV-fhaQiL5tgbOtt8HlEpabaJjtQ8TG7OBQldWBnqe9YNcxO0jzzslcbwPYoKfkB2P2R-QGl8XyrMx9ccaQXDLNw",
+  "postman-token": "4cdda6ac-35f5-b954-27fc-f79808f7bfd2",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:31:22.193Z - debug: Request: protocol="https"
+2016-04-16T10:31:22.193Z - debug: Request: hostname="localhost"
+2016-04-16T10:31:22.196Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-16T10:31:22.196Z - debug: queryParams = {}
+2016-04-16T10:31:22.196Z - debug: > VideosService.find(): args = [{}]
+2016-04-16T10:31:22.196Z - debug: < VideosService.find(): result = <Promise>
+2016-04-16T10:31:22.196Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-16T10:31:22.196Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:31:22.199Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"},{"_id":"571212f2953782802d0b2525","titel":"Alpha8","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm","__v":0},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos","genre":"Action"},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","genre":"Horror"},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Sport"},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Mode"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"}]
+2016-04-16T10:31:22.200Z - debug: Response time: 7.561152 ms
+2016-04-16T10:31:55.934Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:31:55.934Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "content-length": "247",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "origin": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA3OTk0MjgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiM2M0Y2Q2MmYtMjM0MC00N2ZlLThmZTAtZGIwOTk0ZGYzMzU1IiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODg1ODI4fQ.Lfx3D3xZacLrWBiOmDmrpuzytgo4oHQ9OKFC4F0QfMoQfFVFhtlKpmJxFpBt5k_L3cYQp1LWjOjz7r8UI24uln2KWljSBWhYuSwAEDhpXEs-jQnJb4FzrE9-HdwRhgrdvR5zXoslxBENja_i_MzeSILmC99P1UHeIUfhH4fO5RIwIqPf8ai6__bsYFDeQlNaW2XwDBitBPI1eWXqReAYswRZP2KrDtKbvFuLHdZq6T0R27UX9ue3JxegbRBrqgcV-fhaQiL5tgbOtt8HlEpabaJjtQ8TG7OBQldWBnqe9YNcxO0jzzslcbwPYoKfkB2P2R-QGl8XyrMx9ccaQXDLNw",
+  "postman-token": "6de6f5a2-2550-9735-509e-539648bbc297",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:31:55.934Z - debug: Request: protocol="https"
+2016-04-16T10:31:55.934Z - debug: Request: hostname="localhost"
+2016-04-16T10:31:55.935Z - debug: > IamRequestHandler.validateJwt(): args = <RequestResponse>
+2016-04-16T10:31:55.935Z - debug: > IamService.validateJwt(): args = <RequestResponse>
+2016-04-16T10:31:55.935Z - debug: > IamServiceJwt.validateJwt(): args = <RequestResponse>
+2016-04-16T10:31:55.935Z - debug: Authorization = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA3OTk0MjgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiM2M0Y2Q2MmYtMjM0MC00N2ZlLThmZTAtZGIwOTk0ZGYzMzU1IiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODg1ODI4fQ.Lfx3D3xZacLrWBiOmDmrpuzytgo4oHQ9OKFC4F0QfMoQfFVFhtlKpmJxFpBt5k_L3cYQp1LWjOjz7r8UI24uln2KWljSBWhYuSwAEDhpXEs-jQnJb4FzrE9-HdwRhgrdvR5zXoslxBENja_i_MzeSILmC99P1UHeIUfhH4fO5RIwIqPf8ai6__bsYFDeQlNaW2XwDBitBPI1eWXqReAYswRZP2KrDtKbvFuLHdZq6T0R27UX9ue3JxegbRBrqgcV-fhaQiL5tgbOtt8HlEpabaJjtQ8TG7OBQldWBnqe9YNcxO0jzzslcbwPYoKfkB2P2R-QGl8XyrMx9ccaQXDLNw
+2016-04-16T10:31:55.935Z - debug: email: admin@hska.de
+2016-04-16T10:31:55.935Z - debug: < IamServiceJwt.validateJwt(): result = 0
+2016-04-16T10:31:55.935Z - debug: < IamService.validateJwt(): result = 0
+2016-04-16T10:31:55.935Z - debug: > IamRequestHandler.isAdminMitarbeiter(): args = <RequestResponse>
+2016-04-16T10:31:55.935Z - debug: > IamRequestHandler._hasRolle(): args = <RequestResponse>
+2016-04-16T10:31:55.935Z - debug: Rollen = ["admin","mitarbeiter"]
+2016-04-16T10:31:55.935Z - debug: > IamService.isLoggedIn(): args = <RequestResponse>
+2016-04-16T10:31:55.935Z - debug: > AbstractIamService.isLoggedIn(): args = <RequestResponse>
+2016-04-16T10:31:55.935Z - debug: < AbstractIamService.isLoggedIn(): result = true
+2016-04-16T10:31:55.935Z - debug: < IamService.isLoggedIn(): result = true
+2016-04-16T10:31:55.935Z - debug: > IamService.hasAnyRole(): args = <RequestResponse>
+2016-04-16T10:31:55.935Z - debug: > IamServiceJwt.hasAnyRole(): args = <RequestResponse>
+2016-04-16T10:31:55.936Z - debug: > UsersService.findByEmail(): args = ["admin@hska.de"]
+2016-04-16T10:31:55.936Z - debug: > UsersServiceFile.findByEmail(): args = ["admin@hska.de"]
+2016-04-16T10:31:55.936Z - debug: < UsersServiceFile.findByEmail(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T10:31:55.936Z - debug: < UsersService.findByEmail(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T10:31:55.936Z - debug: > AbstractRolesService.getNormalizedRoles(): args = [["admin","mitarbeiter"]]
+2016-04-16T10:31:55.936Z - debug: > AbstractRolesService._getNormalizedRole(): args = ["admin"]
+2016-04-16T10:31:55.936Z - debug: > RolesService.findAllRoles()
+2016-04-16T10:31:55.936Z - debug: > RolesServiceFile.findAllRoles()
+2016-04-16T10:31:55.936Z - debug: < RolesServiceFile.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:31:55.936Z - debug: < RolesService.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:31:55.936Z - debug: < AbstractRolesService._getNormalizedRole(): result = "admin"
+2016-04-16T10:31:55.936Z - debug: > AbstractRolesService._getNormalizedRole(): args = ["mitarbeiter"]
+2016-04-16T10:31:55.936Z - debug: > RolesService.findAllRoles()
+2016-04-16T10:31:55.936Z - debug: > RolesServiceFile.findAllRoles()
+2016-04-16T10:31:55.936Z - debug: < RolesServiceFile.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:31:55.936Z - debug: < RolesService.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:31:55.936Z - debug: < AbstractRolesService._getNormalizedRole(): result = "mitarbeiter"
+2016-04-16T10:31:55.936Z - debug: < AbstractRolesService.getNormalizedRoles(): result = ["admin","mitarbeiter"]
+2016-04-16T10:31:55.936Z - debug: > AbstractIamService.userHasAnyRole(): args = [{"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]},["admin","mitarbeiter"]]
+2016-04-16T10:31:55.936Z - debug: Vorhandene Rolle: admin
+2016-04-16T10:31:55.936Z - debug: Vorhandene Rolle: mitarbeiter
+2016-04-16T10:31:55.936Z - debug: < AbstractIamService.userHasAnyRole(): result = true
+2016-04-16T10:31:55.936Z - debug: < IamServiceJwt.hasAnyRole(): result = true
+2016-04-16T10:31:55.936Z - debug: < IamService.hasAnyRole(): result = true
+2016-04-16T10:31:55.936Z - debug: < IamRequestHandler._hasRolle(): result = true
+2016-04-16T10:31:55.936Z - debug: < IamRequestHandler.isAdminMitarbeiter(): result = void || undefined
+2016-04-16T10:31:55.936Z - debug: < IamRequestHandler.validateJwt(): result = void || undefined
+2016-04-16T10:31:55.936Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:31:55.937Z - debug: > VideosRouter.put(): args = <RequestResponse>
+2016-04-16T10:31:55.937Z - debug: Body: {"_id":"571212f2953782802d0b2525","titel":"Alpha7","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"}
+2016-04-16T10:31:55.938Z - debug: > VideosService.update(): args = [{"_id":"571212f2953782802d0b2525","titel":"Alpha7","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"}]
+2016-04-16T10:31:55.938Z - debug: < VideosService.update(): result = <Promise>
+2016-04-16T10:31:55.938Z - debug: < VideosRouter.put(): result = void || undefined
+2016-04-16T10:31:55.941Z - debug: Response time: 7.379563999999999 ms
+2016-04-16T10:37:16.450Z - info: Logging durch Winston ist konfiguriert
+2016-04-16T10:37:16.565Z - debug: > Server.start()
+2016-04-16T10:37:16.577Z - debug: < Server.start(): result = void || undefined
+2016-04-16T10:37:16.586Z - info: Der Server ist gestartet: https://localhost:8443
+2016-04-16T10:37:16.691Z - info: Die Verbindung zu MongoDB ist hergestellt
+2016-04-16T10:47:40.409Z - info: Logging durch Winston ist konfiguriert
+2016-04-16T10:47:40.528Z - debug: > Server.start()
+2016-04-16T10:47:40.540Z - debug: < Server.start(): result = void || undefined
+2016-04-16T10:47:40.558Z - info: Der Server ist gestartet: https://localhost:8443
+2016-04-16T10:47:40.650Z - info: Die Verbindung zu MongoDB ist hergestellt
+2016-04-16T10:47:51.330Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:47:51.330Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "content-type": "application/json",
+  "authorization": "Basic YWRtaW46cA==",
+  "postman-token": "ac808ec9-a771-605a-3a80-4b50a86d50c4",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:47:51.331Z - debug: Request: protocol="https"
+2016-04-16T10:47:51.331Z - debug: Request: hostname="localhost"
+2016-04-16T10:47:51.337Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-16T10:47:51.337Z - debug: queryParams = {"genre":"Tierfilm"}
+2016-04-16T10:47:51.338Z - debug: > VideosService.find(): args = [{"genre":"Tierfilm"}]
+2016-04-16T10:47:51.339Z - debug: < VideosService.find(): result = <Promise>
+2016-04-16T10:47:51.340Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-16T10:47:51.340Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:47:51.349Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"},{"_id":"571212f2953782802d0b2525","titel":"Alpha7","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm","__v":0}]
+2016-04-16T10:47:51.352Z - debug: Response time: 22.204615999999998 ms
+2016-04-16T10:48:10.402Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:48:10.402Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "authorization": "Basic YWRtaW46cA==",
+  "cache-control": "no-cache",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "postman-token": "0427f1f7-da87-5872-59fd-1fd96517bc9c",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:48:10.402Z - debug: Request: protocol="https"
+2016-04-16T10:48:10.402Z - debug: Request: hostname="localhost"
+2016-04-16T10:48:10.404Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-16T10:48:10.404Z - debug: queryParams = {"titel":"Gamma"}
+2016-04-16T10:48:10.404Z - debug: > VideosService.find(): args = [{"titel":"Gamma"}]
+2016-04-16T10:48:10.404Z - debug: < VideosService.find(): result = <Promise>
+2016-04-16T10:48:10.405Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-16T10:48:10.405Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:48:10.409Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","genre":"Horror"}]
+2016-04-16T10:48:10.410Z - debug: Response time: 8.174997 ms
+2016-04-16T10:48:17.271Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:48:17.271Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "authorization": "Basic YWRtaW46cA==",
+  "cache-control": "no-cache",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "postman-token": "39e5a1dd-f475-1da1-68ea-ca47d1a614fe",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:48:17.271Z - debug: Request: protocol="https"
+2016-04-16T10:48:17.271Z - debug: Request: hostname="localhost"
+2016-04-16T10:48:17.274Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-16T10:48:17.274Z - debug: queryParams = {"titel":"Gamm"}
+2016-04-16T10:48:17.274Z - debug: > VideosService.find(): args = [{"titel":"Gamm"}]
+2016-04-16T10:48:17.275Z - debug: < VideosService.find(): result = <Promise>
+2016-04-16T10:48:17.275Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-16T10:48:17.275Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:48:17.277Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","genre":"Horror"}]
+2016-04-16T10:48:17.277Z - debug: Response time: 6.908225 ms
+2016-04-16T10:48:41.240Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:48:41.240Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "authorization": "Basic YWRtaW46cA==",
+  "cache-control": "no-cache",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "postman-token": "e3aea31b-a6da-ee81-2284-0b209b856e23",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:48:41.240Z - debug: Request: protocol="https"
+2016-04-16T10:48:41.240Z - debug: Request: hostname="localhost"
+2016-04-16T10:48:41.242Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-16T10:48:41.242Z - debug: queryParams = {"titel":"Gamma?genre=Horror"}
+2016-04-16T10:48:41.242Z - debug: > VideosService.find(): args = [{"titel":"Gamma?genre=Horror"}]
+2016-04-16T10:48:41.242Z - debug: < VideosService.find(): result = <Promise>
+2016-04-16T10:48:41.243Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-16T10:48:41.243Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:48:41.244Z - debug: getByQuery(): videos = []
+2016-04-16T10:48:41.244Z - debug: status = 404
+2016-04-16T10:48:41.245Z - debug: Response time: 5.236435 ms
+2016-04-16T10:49:41.064Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:49:41.064Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "authorization": "Basic YWRtaW46cA==",
+  "cache-control": "no-cache",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "postman-token": "f00a8d73-823a-d938-3e40-dd8a6aeb2a4c",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:49:41.064Z - debug: Request: protocol="https"
+2016-04-16T10:49:41.064Z - debug: Request: hostname="localhost"
+2016-04-16T10:49:41.067Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-16T10:49:41.067Z - debug: queryParams = {"titel":"Gamma","genre":"Horror"}
+2016-04-16T10:49:41.067Z - debug: > VideosService.find(): args = [{"titel":"Gamma","genre":"Horror"}]
+2016-04-16T10:49:41.067Z - debug: < VideosService.find(): result = <Promise>
+2016-04-16T10:49:41.067Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-16T10:49:41.067Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:49:41.069Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","genre":"Horror"}]
+2016-04-16T10:49:41.070Z - debug: Response time: 5.904756 ms
+2016-04-16T10:52:02.542Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:52:02.543Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "authorization": "Basic YWRtaW46cA==",
+  "cache-control": "no-cache",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "postman-token": "396ae8a3-20d3-67a2-8bfc-aeb2a49916ac",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:52:02.543Z - debug: Request: protocol="https"
+2016-04-16T10:52:02.543Z - debug: Request: hostname="localhost"
+2016-04-16T10:52:02.545Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-16T10:52:02.545Z - debug: queryParams = {}
+2016-04-16T10:52:02.545Z - debug: > VideosService.find(): args = [{}]
+2016-04-16T10:52:02.546Z - debug: < VideosService.find(): result = <Promise>
+2016-04-16T10:52:02.546Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-16T10:52:02.546Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:52:02.549Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"},{"_id":"571212f2953782802d0b2525","titel":"Alpha7","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm","__v":0},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos","genre":"Action"},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","genre":"Horror"},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Sport"},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Mode"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"}]
+2016-04-16T10:52:02.553Z - debug: Response time: 10.166934 ms
+2016-04-16T10:52:18.712Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:52:18.712Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "content-length": "210",
+  "authorization": "Basic YWRtaW46cA==",
+  "postman-token": "640779c5-cb90-987a-5866-c0afe4c530aa",
+  "cache-control": "no-cache",
+  "origin": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "content-type": "text/plain;charset=UTF-8",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:52:18.712Z - debug: Request: protocol="https"
+2016-04-16T10:52:18.715Z - debug: Request: hostname="localhost"
+2016-04-16T10:52:18.717Z - debug: > IamRequestHandler.validateJwt(): args = <RequestResponse>
+2016-04-16T10:52:18.717Z - debug: > IamService.validateJwt(): args = <RequestResponse>
+2016-04-16T10:52:18.717Z - debug: > IamServiceJwt.validateJwt(): args = <RequestResponse>
+2016-04-16T10:52:18.718Z - debug: Authorization = Basic YWRtaW46cA==
+2016-04-16T10:52:18.718Z - error: Das Schema beim Header-Field Authorization muss Bearer sein
+2016-04-16T10:52:18.718Z - debug: < IamServiceJwt.validateJwt(): result = 1
+2016-04-16T10:52:18.718Z - debug: < IamService.validateJwt(): result = 1
+2016-04-16T10:52:18.718Z - debug: 401
+2016-04-16T10:52:18.718Z - debug: Response time: 6.644133999999999 ms
+2016-04-16T10:52:18.719Z - debug: < IamRequestHandler.validateJwt(): result = void || undefined
+2016-04-16T10:52:18.719Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:52:37.275Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:52:37.275Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "content-length": "210",
+  "authorization": "Basic YWRtaW46cA==",
+  "postman-token": "ac57351a-ee02-9f5c-75d1-b03dbec27c27",
+  "cache-control": "no-cache",
+  "origin": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "content-type": "text/plain;charset=UTF-8",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:52:37.275Z - debug: Request: protocol="https"
+2016-04-16T10:52:37.275Z - debug: Request: hostname="localhost"
+2016-04-16T10:52:37.282Z - debug: > IamRequestHandler.login(): args = <RequestResponse>
+2016-04-16T10:52:37.282Z - debug: > IamService.login(): args = <RequestResponse>
+2016-04-16T10:52:37.282Z - debug: > IamServiceJwt.login(): args = <RequestResponse>
+2016-04-16T10:52:37.282Z - debug: username: undefined
+2016-04-16T10:52:37.282Z - debug: password: undefined
+2016-04-16T10:52:37.282Z - debug: > UsersService.findByUsername(): args = [null]
+2016-04-16T10:52:37.282Z - debug: > UsersServiceFile.findByUsername(): args = [null]
+2016-04-16T10:52:37.283Z - debug: < UsersServiceFile.findByUsername(): result = null
+2016-04-16T10:52:37.283Z - debug: < UsersService.findByUsername(): result = null
+2016-04-16T10:52:37.283Z - debug: user = undefined
+2016-04-16T10:52:37.283Z - debug: > AbstractIamService.checkPassword(): args = [null,null]
+2016-04-16T10:52:37.283Z - debug: Falscher Username
+2016-04-16T10:52:37.283Z - debug: < AbstractIamService.checkPassword(): result = false
+2016-04-16T10:52:37.283Z - debug: < IamServiceJwt.login(): result = null
+2016-04-16T10:52:37.283Z - debug: < IamService.login(): result = null
+2016-04-16T10:52:37.283Z - debug: 401
+2016-04-16T10:52:37.283Z - debug: Response time: 8.014331 ms
+2016-04-16T10:52:37.283Z - debug: < IamRequestHandler.login(): result = void || undefined
+2016-04-16T10:52:37.283Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:53:08.119Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:53:08.119Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "content-length": "25",
+  "cache-control": "no-cache",
+  "origin": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+  "content-type": "application/x-www-form-urlencoded",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "postman-token": "923069a2-a1be-f09f-170b-5e72a552ee63",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:53:08.119Z - debug: Request: protocol="https"
+2016-04-16T10:53:08.119Z - debug: Request: hostname="localhost"
+2016-04-16T10:53:08.137Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:53:08.138Z - debug: > IamRequestHandler.login(): args = <RequestResponse>
+2016-04-16T10:53:08.138Z - debug: > IamService.login(): args = <RequestResponse>
+2016-04-16T10:53:08.138Z - debug: > IamServiceJwt.login(): args = <RequestResponse>
+2016-04-16T10:53:08.138Z - debug: username: admin
+2016-04-16T10:53:08.138Z - debug: password: p
+2016-04-16T10:53:08.138Z - debug: > UsersService.findByUsername(): args = ["admin"]
+2016-04-16T10:53:08.139Z - debug: > UsersServiceFile.findByUsername(): args = ["admin"]
+2016-04-16T10:53:08.139Z - debug: < UsersServiceFile.findByUsername(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T10:53:08.139Z - debug: < UsersService.findByUsername(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T10:53:08.139Z - debug: user = "admin"
+2016-04-16T10:53:08.139Z - debug: > AbstractIamService.checkPassword(): args = [{"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]},"p"]
+2016-04-16T10:53:08.143Z - debug: < AbstractIamService.checkPassword(): result = true
+2016-04-16T10:53:08.146Z - debug: < IamServiceJwt.login(): result = {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ","token_type":"Bearer","expires_in":86400,"roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T10:53:08.146Z - debug: < IamService.login(): result = {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ","token_type":"Bearer","expires_in":86400,"roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T10:53:08.146Z - debug: Response time: 26.949185999999997 ms
+2016-04-16T10:53:08.146Z - debug: < IamRequestHandler.login(): result = void || undefined
+2016-04-16T10:53:57.922Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:53:57.922Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ",
+  "cache-control": "no-cache",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "postman-token": "2d05f0ad-76d6-0f9d-f871-cafefeee0469",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:53:57.922Z - debug: Request: protocol="https"
+2016-04-16T10:53:57.923Z - debug: Request: hostname="localhost"
+2016-04-16T10:53:57.926Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:53:57.928Z - debug: Response time: 5.3698619999999995 ms
+2016-04-16T10:54:07.819Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:54:07.819Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ",
+  "cache-control": "no-cache",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "postman-token": "58229976-476e-5209-3f1c-b267c96a6a1a",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:54:07.819Z - debug: Request: protocol="https"
+2016-04-16T10:54:07.819Z - debug: Request: hostname="localhost"
+2016-04-16T10:54:07.822Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-16T10:54:07.823Z - debug: queryParams = {}
+2016-04-16T10:54:07.823Z - debug: > VideosService.find(): args = [{}]
+2016-04-16T10:54:07.823Z - debug: < VideosService.find(): result = <Promise>
+2016-04-16T10:54:07.823Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-16T10:54:07.823Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:54:07.827Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"},{"_id":"571212f2953782802d0b2525","titel":"Alpha7","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm","__v":0},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos","genre":"Action"},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","genre":"Horror"},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Sport"},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Mode"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"}]
+2016-04-16T10:54:07.828Z - debug: Response time: 9.755994 ms
+2016-04-16T10:54:58.026Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T10:54:58.027Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "content-length": "210",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "origin": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ",
+  "postman-token": "be9bb2a3-1577-0633-e5a5-b7ce24c6b422",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T10:54:58.027Z - debug: Request: protocol="https"
+2016-04-16T10:54:58.027Z - debug: Request: hostname="localhost"
+2016-04-16T10:54:58.029Z - debug: > IamRequestHandler.validateJwt(): args = <RequestResponse>
+2016-04-16T10:54:58.030Z - debug: > IamService.validateJwt(): args = <RequestResponse>
+2016-04-16T10:54:58.030Z - debug: > IamServiceJwt.validateJwt(): args = <RequestResponse>
+2016-04-16T10:54:58.030Z - debug: Authorization = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ
+2016-04-16T10:54:58.031Z - debug: email: admin@hska.de
+2016-04-16T10:54:58.031Z - debug: < IamServiceJwt.validateJwt(): result = 0
+2016-04-16T10:54:58.031Z - debug: < IamService.validateJwt(): result = 0
+2016-04-16T10:54:58.031Z - debug: > IamRequestHandler.isAdminMitarbeiter(): args = <RequestResponse>
+2016-04-16T10:54:58.031Z - debug: > IamRequestHandler._hasRolle(): args = <RequestResponse>
+2016-04-16T10:54:58.032Z - debug: Rollen = ["admin","mitarbeiter"]
+2016-04-16T10:54:58.032Z - debug: > IamService.isLoggedIn(): args = <RequestResponse>
+2016-04-16T10:54:58.032Z - debug: > AbstractIamService.isLoggedIn(): args = <RequestResponse>
+2016-04-16T10:54:58.032Z - debug: < AbstractIamService.isLoggedIn(): result = true
+2016-04-16T10:54:58.032Z - debug: < IamService.isLoggedIn(): result = true
+2016-04-16T10:54:58.032Z - debug: > IamService.hasAnyRole(): args = <RequestResponse>
+2016-04-16T10:54:58.032Z - debug: > IamServiceJwt.hasAnyRole(): args = <RequestResponse>
+2016-04-16T10:54:58.032Z - debug: > UsersService.findByEmail(): args = ["admin@hska.de"]
+2016-04-16T10:54:58.032Z - debug: > UsersServiceFile.findByEmail(): args = ["admin@hska.de"]
+2016-04-16T10:54:58.032Z - debug: < UsersServiceFile.findByEmail(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T10:54:58.032Z - debug: < UsersService.findByEmail(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T10:54:58.032Z - debug: > AbstractRolesService.getNormalizedRoles(): args = [["admin","mitarbeiter"]]
+2016-04-16T10:54:58.033Z - debug: > AbstractRolesService._getNormalizedRole(): args = ["admin"]
+2016-04-16T10:54:58.033Z - debug: > RolesService.findAllRoles()
+2016-04-16T10:54:58.033Z - debug: > RolesServiceFile.findAllRoles()
+2016-04-16T10:54:58.033Z - debug: < RolesServiceFile.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:54:58.033Z - debug: < RolesService.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:54:58.033Z - debug: < AbstractRolesService._getNormalizedRole(): result = "admin"
+2016-04-16T10:54:58.033Z - debug: > AbstractRolesService._getNormalizedRole(): args = ["mitarbeiter"]
+2016-04-16T10:54:58.033Z - debug: > RolesService.findAllRoles()
+2016-04-16T10:54:58.033Z - debug: > RolesServiceFile.findAllRoles()
+2016-04-16T10:54:58.033Z - debug: < RolesServiceFile.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:54:58.033Z - debug: < RolesService.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T10:54:58.033Z - debug: < AbstractRolesService._getNormalizedRole(): result = "mitarbeiter"
+2016-04-16T10:54:58.033Z - debug: < AbstractRolesService.getNormalizedRoles(): result = ["admin","mitarbeiter"]
+2016-04-16T10:54:58.033Z - debug: > AbstractIamService.userHasAnyRole(): args = [{"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]},["admin","mitarbeiter"]]
+2016-04-16T10:54:58.033Z - debug: Vorhandene Rolle: admin
+2016-04-16T10:54:58.034Z - debug: Vorhandene Rolle: mitarbeiter
+2016-04-16T10:54:58.034Z - debug: < AbstractIamService.userHasAnyRole(): result = true
+2016-04-16T10:54:58.034Z - debug: < IamServiceJwt.hasAnyRole(): result = true
+2016-04-16T10:54:58.034Z - debug: < IamService.hasAnyRole(): result = true
+2016-04-16T10:54:58.034Z - debug: < IamRequestHandler._hasRolle(): result = true
+2016-04-16T10:54:58.035Z - debug: < IamRequestHandler.isAdminMitarbeiter(): result = void || undefined
+2016-04-16T10:54:58.035Z - debug: < IamRequestHandler.validateJwt(): result = void || undefined
+2016-04-16T10:54:58.035Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T10:54:58.036Z - debug: > VideosRouter.put(): args = <RequestResponse>
+2016-04-16T10:54:58.039Z - debug: Body: {"titel":"Alpha9","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm","_id":"57121a02eeba012820b20528"}
+2016-04-16T10:54:58.039Z - debug: > VideosService.update(): args = [{"titel":"Alpha9","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm","_id":"57121a02eeba012820b20528"}]
+2016-04-16T10:54:58.040Z - debug: < VideosService.update(): result = <Promise>
+2016-04-16T10:54:58.040Z - debug: < VideosRouter.put(): result = void || undefined
+2016-04-16T10:54:58.046Z - debug: Response time: 19.696733 ms
+2016-04-16T11:03:59.182Z - info: Logging durch Winston ist konfiguriert
+2016-04-16T11:03:59.565Z - debug: > Server.start()
+2016-04-16T11:03:59.577Z - debug: < Server.start(): result = void || undefined
+2016-04-16T11:03:59.595Z - info: Der Server ist gestartet: https://localhost:8443
+2016-04-16T11:03:59.684Z - info: Die Verbindung zu MongoDB ist hergestellt
+2016-04-16T11:04:09.106Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T11:04:09.106Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ",
+  "postman-token": "8b6b82be-c301-9092-48b6-71ed751bd7a6",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T11:04:09.107Z - debug: Request: protocol="https"
+2016-04-16T11:04:09.107Z - debug: Request: hostname="localhost"
+2016-04-16T11:04:09.113Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-16T11:04:09.113Z - debug: queryParams = {}
+2016-04-16T11:04:09.113Z - debug: > VideosService.find(): args = [{}]
+2016-04-16T11:04:09.115Z - debug: < VideosService.find(): result = <Promise>
+2016-04-16T11:04:09.116Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-16T11:04:09.116Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T11:04:09.127Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"},{"_id":"571212f2953782802d0b2525","titel":"Alpha7","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm","__v":0},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos","genre":"Action"},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","genre":"Horror"},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Sport"},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Mode"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"}]
+2016-04-16T11:04:09.146Z - debug: Response time: 41.292636 ms
+2016-04-16T11:04:16.914Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T11:04:16.914Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ",
+  "postman-token": "c98e2957-62c8-e51b-3525-93f91ebbed83",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T11:04:16.914Z - debug: Request: protocol="https"
+2016-04-16T11:04:16.914Z - debug: Request: hostname="localhost"
+2016-04-16T11:04:16.917Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-16T11:04:16.917Z - debug: queryParams = {"genre":"Tierfilm"}
+2016-04-16T11:04:16.917Z - debug: > VideosService.find(): args = [{"genre":"Tierfilm"}]
+2016-04-16T11:04:16.918Z - debug: < VideosService.find(): result = <Promise>
+2016-04-16T11:04:16.918Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-16T11:04:16.918Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T11:04:16.921Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"},{"_id":"571212f2953782802d0b2525","titel":"Alpha7","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm","__v":0}]
+2016-04-16T11:04:16.926Z - debug: Response time: 11.661874 ms
+2016-04-16T11:04:38.640Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T11:04:38.640Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ",
+  "postman-token": "2cac7834-3e8f-58a7-60d9-fcdebf0eab73",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T11:04:38.640Z - debug: Request: protocol="https"
+2016-04-16T11:04:38.641Z - debug: Request: hostname="localhost"
+2016-04-16T11:04:38.643Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-16T11:04:38.643Z - debug: queryParams = {"genre":"Tierfilm","titel":"Alpha"}
+2016-04-16T11:04:38.643Z - debug: > VideosService.find(): args = [{"genre":"Tierfilm","titel":"Alpha"}]
+2016-04-16T11:04:38.643Z - debug: < VideosService.find(): result = <Promise>
+2016-04-16T11:04:38.643Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-16T11:04:38.643Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T11:04:38.645Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"},{"_id":"571212f2953782802d0b2525","titel":"Alpha7","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm","__v":0}]
+2016-04-16T11:04:38.646Z - debug: Response time: 5.608689 ms
+2016-04-16T11:05:45.797Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T11:05:45.798Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "content-length": "25",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "origin": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+  "content-type": "application/x-www-form-urlencoded",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ",
+  "postman-token": "7b357f24-5b1b-7054-e657-dae57fd480ff",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T11:05:45.798Z - debug: Request: protocol="https"
+2016-04-16T11:05:45.798Z - debug: Request: hostname="localhost"
+2016-04-16T11:05:46.026Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T11:05:46.028Z - debug: > IamRequestHandler.login(): args = <RequestResponse>
+2016-04-16T11:05:46.029Z - debug: > IamService.login(): args = <RequestResponse>
+2016-04-16T11:05:46.029Z - debug: > IamServiceJwt.login(): args = <RequestResponse>
+2016-04-16T11:05:46.029Z - debug: username: admin
+2016-04-16T11:05:46.029Z - debug: password: p
+2016-04-16T11:05:46.029Z - debug: > UsersService.findByUsername(): args = ["admin"]
+2016-04-16T11:05:46.029Z - debug: > UsersServiceFile.findByUsername(): args = ["admin"]
+2016-04-16T11:05:46.029Z - debug: < UsersServiceFile.findByUsername(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T11:05:46.029Z - debug: < UsersService.findByUsername(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T11:05:46.029Z - debug: user = "admin"
+2016-04-16T11:05:46.029Z - debug: > AbstractIamService.checkPassword(): args = [{"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]},"p"]
+2016-04-16T11:05:46.031Z - debug: < AbstractIamService.checkPassword(): result = true
+2016-04-16T11:05:46.034Z - debug: < IamServiceJwt.login(): result = {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDQ3NDYsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiNjFlYzllNGMtN2Q0YS00Y2Q1LTgzYjEtN2RiNTQxNWM5NzMwIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkxMTQ2fQ.LhPlpNkz7vsAl4SnQTIlebGh7EdvQir80ueN55YNwHYge_e4k3J3-mrmVC7Ro-iC8N2MwZ62wcLqAVD62eMyc6rbTpIoQSeZDG4jlRq5bAfUzJp6rAfxSnT2KVB9YZ4UunElWDNr4aPNxXMrPBdZCT_ONDzAGUewQ70JTRF3Wbhpu4p6DfYNLpjZRD9hwwNY0kRBjwkyAPB4pPkpg8JgCbFMISFvn8bBHxNc9bTqnrYZjyi1ieSzMG8OI68kVIsDqfYYtKBMM3sIrZn9jRh3Wf0tHn5sriywsJZs0l_4OBUC6SJ_G4hS0vs_uwQHIVTJT7_u-ffRI0UeY6S9s46YcQ","token_type":"Bearer","expires_in":86400,"roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T11:05:46.034Z - debug: < IamService.login(): result = {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDQ3NDYsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiNjFlYzllNGMtN2Q0YS00Y2Q1LTgzYjEtN2RiNTQxNWM5NzMwIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkxMTQ2fQ.LhPlpNkz7vsAl4SnQTIlebGh7EdvQir80ueN55YNwHYge_e4k3J3-mrmVC7Ro-iC8N2MwZ62wcLqAVD62eMyc6rbTpIoQSeZDG4jlRq5bAfUzJp6rAfxSnT2KVB9YZ4UunElWDNr4aPNxXMrPBdZCT_ONDzAGUewQ70JTRF3Wbhpu4p6DfYNLpjZRD9hwwNY0kRBjwkyAPB4pPkpg8JgCbFMISFvn8bBHxNc9bTqnrYZjyi1ieSzMG8OI68kVIsDqfYYtKBMM3sIrZn9jRh3Wf0tHn5sriywsJZs0l_4OBUC6SJ_G4hS0vs_uwQHIVTJT7_u-ffRI0UeY6S9s46YcQ","token_type":"Bearer","expires_in":86400,"roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T11:05:46.035Z - debug: Response time: 237.269521 ms
+2016-04-16T11:05:46.035Z - debug: < IamRequestHandler.login(): result = void || undefined
+2016-04-16T11:07:01.949Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T11:07:01.949Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "content-length": "208",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "origin": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ",
+  "postman-token": "e4e7b535-924b-e197-cba4-105f9d18bf6e",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T11:07:01.949Z - debug: Request: protocol="https"
+2016-04-16T11:07:01.949Z - debug: Request: hostname="localhost"
+2016-04-16T11:07:01.951Z - debug: > IamRequestHandler.validateJwt(): args = <RequestResponse>
+2016-04-16T11:07:01.952Z - debug: > IamService.validateJwt(): args = <RequestResponse>
+2016-04-16T11:07:01.952Z - debug: > IamServiceJwt.validateJwt(): args = <RequestResponse>
+2016-04-16T11:07:01.953Z - debug: Authorization = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ
+2016-04-16T11:07:01.955Z - debug: email: admin@hska.de
+2016-04-16T11:07:01.955Z - debug: < IamServiceJwt.validateJwt(): result = 0
+2016-04-16T11:07:01.955Z - debug: < IamService.validateJwt(): result = 0
+2016-04-16T11:07:01.955Z - debug: > IamRequestHandler.isAdminMitarbeiter(): args = <RequestResponse>
+2016-04-16T11:07:01.955Z - debug: > IamRequestHandler._hasRolle(): args = <RequestResponse>
+2016-04-16T11:07:01.955Z - debug: Rollen = ["admin","mitarbeiter"]
+2016-04-16T11:07:01.955Z - debug: > IamService.isLoggedIn(): args = <RequestResponse>
+2016-04-16T11:07:01.956Z - debug: > AbstractIamService.isLoggedIn(): args = <RequestResponse>
+2016-04-16T11:07:01.956Z - debug: < AbstractIamService.isLoggedIn(): result = true
+2016-04-16T11:07:01.956Z - debug: < IamService.isLoggedIn(): result = true
+2016-04-16T11:07:01.956Z - debug: > IamService.hasAnyRole(): args = <RequestResponse>
+2016-04-16T11:07:01.956Z - debug: > IamServiceJwt.hasAnyRole(): args = <RequestResponse>
+2016-04-16T11:07:01.956Z - debug: > UsersService.findByEmail(): args = ["admin@hska.de"]
+2016-04-16T11:07:01.956Z - debug: > UsersServiceFile.findByEmail(): args = ["admin@hska.de"]
+2016-04-16T11:07:01.956Z - debug: < UsersServiceFile.findByEmail(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T11:07:01.956Z - debug: < UsersService.findByEmail(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T11:07:01.957Z - debug: > AbstractRolesService.getNormalizedRoles(): args = [["admin","mitarbeiter"]]
+2016-04-16T11:07:01.957Z - debug: > AbstractRolesService._getNormalizedRole(): args = ["admin"]
+2016-04-16T11:07:01.957Z - debug: > RolesService.findAllRoles()
+2016-04-16T11:07:01.957Z - debug: > RolesServiceFile.findAllRoles()
+2016-04-16T11:07:01.957Z - debug: < RolesServiceFile.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T11:07:01.957Z - debug: < RolesService.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T11:07:01.958Z - debug: < AbstractRolesService._getNormalizedRole(): result = "admin"
+2016-04-16T11:07:01.959Z - debug: > AbstractRolesService._getNormalizedRole(): args = ["mitarbeiter"]
+2016-04-16T11:07:01.959Z - debug: > RolesService.findAllRoles()
+2016-04-16T11:07:01.959Z - debug: > RolesServiceFile.findAllRoles()
+2016-04-16T11:07:01.959Z - debug: < RolesServiceFile.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T11:07:01.959Z - debug: < RolesService.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T11:07:01.959Z - debug: < AbstractRolesService._getNormalizedRole(): result = "mitarbeiter"
+2016-04-16T11:07:01.959Z - debug: < AbstractRolesService.getNormalizedRoles(): result = ["admin","mitarbeiter"]
+2016-04-16T11:07:01.959Z - debug: > AbstractIamService.userHasAnyRole(): args = [{"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]},["admin","mitarbeiter"]]
+2016-04-16T11:07:01.960Z - debug: Vorhandene Rolle: admin
+2016-04-16T11:07:01.960Z - debug: Vorhandene Rolle: mitarbeiter
+2016-04-16T11:07:01.960Z - debug: < AbstractIamService.userHasAnyRole(): result = true
+2016-04-16T11:07:01.960Z - debug: < IamServiceJwt.hasAnyRole(): result = true
+2016-04-16T11:07:01.960Z - debug: < IamService.hasAnyRole(): result = true
+2016-04-16T11:07:01.960Z - debug: < IamRequestHandler._hasRolle(): result = true
+2016-04-16T11:07:01.961Z - debug: < IamRequestHandler.isAdminMitarbeiter(): result = void || undefined
+2016-04-16T11:07:01.961Z - debug: < IamRequestHandler.validateJwt(): result = void || undefined
+2016-04-16T11:07:01.961Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T11:07:01.962Z - debug: > VideosRouter.post(): args = <RequestResponse>
+2016-04-16T11:07:01.964Z - debug: Body: {"titel":"Beta5","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","genre":"Horror","_id":"57121cd52ab384103b1b515c"}
+2016-04-16T11:07:01.965Z - debug: > VideosService.save(): args = [{"titel":"Beta5","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","genre":"Horror","_id":"57121cd52ab384103b1b515c"}]
+2016-04-16T11:07:01.966Z - debug: < VideosService.save(): result = {"emitter":{"domain":null,"_events":{},"_eventsCount":0},"emitted":{},"ended":false}
+2016-04-16T11:07:01.967Z - debug: < VideosRouter.post(): result = void || undefined
+2016-04-16T11:07:01.975Z - debug: post(): id = 57121cd52ab384103b1b515c
+2016-04-16T11:07:01.975Z - debug: post(): location = https://localhost:8443/videos/57121cd52ab384103b1b515c
+2016-04-16T11:07:01.976Z - debug: Response time: 26.99024 ms
+2016-04-16T11:07:10.254Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T11:07:10.254Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ",
+  "postman-token": "e0cdce6c-c51c-3a77-f4e9-c38da98bb17e",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T11:07:10.255Z - debug: Request: protocol="https"
+2016-04-16T11:07:10.255Z - debug: Request: hostname="localhost"
+2016-04-16T11:07:10.258Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-16T11:07:10.258Z - debug: queryParams = {}
+2016-04-16T11:07:10.258Z - debug: > VideosService.find(): args = [{}]
+2016-04-16T11:07:10.259Z - debug: < VideosService.find(): result = <Promise>
+2016-04-16T11:07:10.259Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-16T11:07:10.259Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T11:07:10.265Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"},{"_id":"571212f2953782802d0b2525","titel":"Alpha7","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm","__v":0},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos","genre":"Action"},{"_id":"57121cd52ab384103b1b515c","titel":"Beta5","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","genre":"Horror","__v":0},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","genre":"Horror"},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Sport"},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Mode"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"}]
+2016-04-16T11:07:10.266Z - debug: Response time: 11.730561999999999 ms
+2016-04-16T11:07:40.439Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T11:07:40.440Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "content-length": "248",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "origin": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ",
+  "postman-token": "125ec9db-ca52-485c-7fb2-0ed330906bdd",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T11:07:40.440Z - debug: Request: protocol="https"
+2016-04-16T11:07:40.441Z - debug: Request: hostname="localhost"
+2016-04-16T11:07:40.443Z - debug: > IamRequestHandler.validateJwt(): args = <RequestResponse>
+2016-04-16T11:07:40.443Z - debug: > IamService.validateJwt(): args = <RequestResponse>
+2016-04-16T11:07:40.443Z - debug: > IamServiceJwt.validateJwt(): args = <RequestResponse>
+2016-04-16T11:07:40.443Z - debug: Authorization = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ
+2016-04-16T11:07:40.443Z - debug: email: admin@hska.de
+2016-04-16T11:07:40.443Z - debug: < IamServiceJwt.validateJwt(): result = 0
+2016-04-16T11:07:40.443Z - debug: < IamService.validateJwt(): result = 0
+2016-04-16T11:07:40.443Z - debug: > IamRequestHandler.isAdminMitarbeiter(): args = <RequestResponse>
+2016-04-16T11:07:40.443Z - debug: > IamRequestHandler._hasRolle(): args = <RequestResponse>
+2016-04-16T11:07:40.443Z - debug: Rollen = ["admin","mitarbeiter"]
+2016-04-16T11:07:40.444Z - debug: > IamService.isLoggedIn(): args = <RequestResponse>
+2016-04-16T11:07:40.444Z - debug: > AbstractIamService.isLoggedIn(): args = <RequestResponse>
+2016-04-16T11:07:40.444Z - debug: < AbstractIamService.isLoggedIn(): result = true
+2016-04-16T11:07:40.444Z - debug: < IamService.isLoggedIn(): result = true
+2016-04-16T11:07:40.444Z - debug: > IamService.hasAnyRole(): args = <RequestResponse>
+2016-04-16T11:07:40.444Z - debug: > IamServiceJwt.hasAnyRole(): args = <RequestResponse>
+2016-04-16T11:07:40.444Z - debug: > UsersService.findByEmail(): args = ["admin@hska.de"]
+2016-04-16T11:07:40.444Z - debug: > UsersServiceFile.findByEmail(): args = ["admin@hska.de"]
+2016-04-16T11:07:40.444Z - debug: < UsersServiceFile.findByEmail(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T11:07:40.444Z - debug: < UsersService.findByEmail(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T11:07:40.444Z - debug: > AbstractRolesService.getNormalizedRoles(): args = [["admin","mitarbeiter"]]
+2016-04-16T11:07:40.444Z - debug: > AbstractRolesService._getNormalizedRole(): args = ["admin"]
+2016-04-16T11:07:40.444Z - debug: > RolesService.findAllRoles()
+2016-04-16T11:07:40.444Z - debug: > RolesServiceFile.findAllRoles()
+2016-04-16T11:07:40.444Z - debug: < RolesServiceFile.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T11:07:40.444Z - debug: < RolesService.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T11:07:40.444Z - debug: < AbstractRolesService._getNormalizedRole(): result = "admin"
+2016-04-16T11:07:40.444Z - debug: > AbstractRolesService._getNormalizedRole(): args = ["mitarbeiter"]
+2016-04-16T11:07:40.444Z - debug: > RolesService.findAllRoles()
+2016-04-16T11:07:40.444Z - debug: > RolesServiceFile.findAllRoles()
+2016-04-16T11:07:40.444Z - debug: < RolesServiceFile.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T11:07:40.444Z - debug: < RolesService.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T11:07:40.444Z - debug: < AbstractRolesService._getNormalizedRole(): result = "mitarbeiter"
+2016-04-16T11:07:40.444Z - debug: < AbstractRolesService.getNormalizedRoles(): result = ["admin","mitarbeiter"]
+2016-04-16T11:07:40.444Z - debug: > AbstractIamService.userHasAnyRole(): args = [{"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]},["admin","mitarbeiter"]]
+2016-04-16T11:07:40.444Z - debug: Vorhandene Rolle: admin
+2016-04-16T11:07:40.444Z - debug: Vorhandene Rolle: mitarbeiter
+2016-04-16T11:07:40.444Z - debug: < AbstractIamService.userHasAnyRole(): result = true
+2016-04-16T11:07:40.444Z - debug: < IamServiceJwt.hasAnyRole(): result = true
+2016-04-16T11:07:40.444Z - debug: < IamService.hasAnyRole(): result = true
+2016-04-16T11:07:40.444Z - debug: < IamRequestHandler._hasRolle(): result = true
+2016-04-16T11:07:40.445Z - debug: < IamRequestHandler.isAdminMitarbeiter(): result = void || undefined
+2016-04-16T11:07:40.445Z - debug: < IamRequestHandler.validateJwt(): result = void || undefined
+2016-04-16T11:07:40.445Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T11:07:40.445Z - debug: > VideosRouter.put(): args = <RequestResponse>
+2016-04-16T11:07:40.446Z - debug: Body: {"_id":"57121cd52ab384103b1b515c","titel":"Beta3","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","genre":"Horror"}
+2016-04-16T11:07:40.446Z - debug: > VideosService.update(): args = [{"_id":"57121cd52ab384103b1b515c","titel":"Beta3","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","genre":"Horror"}]
+2016-04-16T11:07:40.447Z - debug: < VideosService.update(): result = <Promise>
+2016-04-16T11:07:40.447Z - debug: < VideosRouter.put(): result = void || undefined
+2016-04-16T11:07:40.452Z - debug: Response time: 13.326559 ms
+2016-04-16T11:07:47.743Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T11:07:47.744Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ",
+  "postman-token": "01a9e13f-3d60-b73d-ed9e-1f850595ec07",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T11:07:47.744Z - debug: Request: protocol="https"
+2016-04-16T11:07:47.744Z - debug: Request: hostname="localhost"
+2016-04-16T11:07:47.747Z - debug: > VideosRouter.getByQuery(): args = <RequestResponse>
+2016-04-16T11:07:47.748Z - debug: queryParams = {}
+2016-04-16T11:07:47.748Z - debug: > VideosService.find(): args = [{}]
+2016-04-16T11:07:47.748Z - debug: < VideosService.find(): result = <Promise>
+2016-04-16T11:07:47.748Z - debug: < VideosRouter.getByQuery(): result = void || undefined
+2016-04-16T11:07:47.748Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T11:07:47.756Z - debug: getByQuery(): videos = [{"_id":"000000000000000000000001","titel":"Alpha","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"},{"_id":"571212f2953782802d0b2525","titel":"Alpha7","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm","__v":0},{"_id":"000000000000000000000002","titel":"Beta","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Actionvideo","altersbeschränkung":12,"videopfad":"C:/Videos","genre":"Action"},{"_id":"57121cd52ab384103b1b515c","titel":"Beta3","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","genre":"Horror","__v":0},{"_id":"000000000000000000000003","titel":"Gamma","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Horrorvideo","altersbeschränkung":18,"videopfad":"C:/Videos","genre":"Horror"},{"_id":"000000000000000000000004","titel":"Hugo","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Sportvideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Sport"},{"_id":"000000000000000000000005","titel":"Karl","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Modevideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Mode"},{"_id":"000000000000000000000006","titel":"Otto","erscheinungsdatum":"2015-02-01T00:00:00.000Z","beschreibung":"Das ist ein Tiervideo","altersbeschränkung":0,"videopfad":"C:/Videos","genre":"Tierfilm"}]
+2016-04-16T11:07:47.757Z - debug: Response time: 14.080542999999999 ms
+2016-04-16T11:08:17.571Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T11:08:17.571Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "content-length": "248",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "origin": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ",
+  "postman-token": "e145f873-7bfd-958e-54db-16f425fddd2a",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T11:08:17.571Z - debug: Request: protocol="https"
+2016-04-16T11:08:17.571Z - debug: Request: hostname="localhost"
+2016-04-16T11:08:17.573Z - debug: > SharedRequestHandler.validateMongoId(): args = <RequestResponse>
+2016-04-16T11:08:17.573Z - debug: id = 57121cd52ab384103b1b515c
+2016-04-16T11:08:17.573Z - debug: > IamRequestHandler.validateJwt(): args = <RequestResponse>
+2016-04-16T11:08:17.573Z - debug: > IamService.validateJwt(): args = <RequestResponse>
+2016-04-16T11:08:17.573Z - debug: > IamServiceJwt.validateJwt(): args = <RequestResponse>
+2016-04-16T11:08:17.573Z - debug: Authorization = Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ
+2016-04-16T11:08:17.574Z - debug: email: admin@hska.de
+2016-04-16T11:08:17.574Z - debug: < IamServiceJwt.validateJwt(): result = 0
+2016-04-16T11:08:17.574Z - debug: < IamService.validateJwt(): result = 0
+2016-04-16T11:08:17.574Z - debug: > IamRequestHandler.isAdmin(): args = <RequestResponse>
+2016-04-16T11:08:17.574Z - debug: > IamRequestHandler._hasRolle(): args = <RequestResponse>
+2016-04-16T11:08:17.574Z - debug: Rollen = ["admin"]
+2016-04-16T11:08:17.574Z - debug: > IamService.isLoggedIn(): args = <RequestResponse>
+2016-04-16T11:08:17.575Z - debug: > AbstractIamService.isLoggedIn(): args = <RequestResponse>
+2016-04-16T11:08:17.575Z - debug: < AbstractIamService.isLoggedIn(): result = true
+2016-04-16T11:08:17.575Z - debug: < IamService.isLoggedIn(): result = true
+2016-04-16T11:08:17.575Z - debug: > IamService.hasAnyRole(): args = <RequestResponse>
+2016-04-16T11:08:17.575Z - debug: > IamServiceJwt.hasAnyRole(): args = <RequestResponse>
+2016-04-16T11:08:17.575Z - debug: > UsersService.findByEmail(): args = ["admin@hska.de"]
+2016-04-16T11:08:17.575Z - debug: > UsersServiceFile.findByEmail(): args = ["admin@hska.de"]
+2016-04-16T11:08:17.575Z - debug: < UsersServiceFile.findByEmail(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T11:08:17.575Z - debug: < UsersService.findByEmail(): result = {"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]}
+2016-04-16T11:08:17.575Z - debug: > AbstractRolesService.getNormalizedRoles(): args = [["admin"]]
+2016-04-16T11:08:17.575Z - debug: > AbstractRolesService._getNormalizedRole(): args = ["admin"]
+2016-04-16T11:08:17.575Z - debug: > RolesService.findAllRoles()
+2016-04-16T11:08:17.575Z - debug: > RolesServiceFile.findAllRoles()
+2016-04-16T11:08:17.575Z - debug: < RolesServiceFile.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T11:08:17.575Z - debug: < RolesService.findAllRoles(): result = ["admin","mitarbeiter","abteilungsleiter","kunde"]
+2016-04-16T11:08:17.575Z - debug: < AbstractRolesService._getNormalizedRole(): result = "admin"
+2016-04-16T11:08:17.575Z - debug: < AbstractRolesService.getNormalizedRoles(): result = ["admin"]
+2016-04-16T11:08:17.575Z - debug: > AbstractIamService.userHasAnyRole(): args = [{"username":"admin","password":"peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==","email":"admin@hska.de","roles":["admin","mitarbeiter","abteilungsleiter","kunde"]},["admin"]]
+2016-04-16T11:08:17.575Z - debug: Vorhandene Rolle: admin
+2016-04-16T11:08:17.575Z - debug: < AbstractIamService.userHasAnyRole(): result = true
+2016-04-16T11:08:17.576Z - debug: < IamServiceJwt.hasAnyRole(): result = true
+2016-04-16T11:08:17.576Z - debug: < IamService.hasAnyRole(): result = true
+2016-04-16T11:08:17.576Z - debug: < IamRequestHandler._hasRolle(): result = true
+2016-04-16T11:08:17.576Z - debug: > VideosRouter.deleteMeth(): args = <RequestResponse>
+2016-04-16T11:08:17.576Z - debug: id = 57121cd52ab384103b1b515c
+2016-04-16T11:08:17.577Z - debug: > VideosService.remove(): args = ["57121cd52ab384103b1b515c"]
+2016-04-16T11:08:17.578Z - debug: < VideosService.remove(): result = <Promise>
+2016-04-16T11:08:17.578Z - debug: < VideosRouter.deleteMeth(): result = void || undefined
+2016-04-16T11:08:17.578Z - debug: < IamRequestHandler.isAdmin(): result = void || undefined
+2016-04-16T11:08:17.578Z - debug: < IamRequestHandler.validateJwt(): result = void || undefined
+2016-04-16T11:08:17.578Z - debug: < SharedRequestHandler.validateMongoId(): result = void || undefined
+2016-04-16T11:08:17.578Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T11:08:17.581Z - debug: Response time: 10.206014999999999 ms
+2016-04-16T11:08:23.759Z - debug: > SharedRequestHandler.logRequestHeader(): args = <RequestResponse>
+2016-04-16T11:08:23.759Z - debug: Request: headers={
+  "host": "localhost:8443",
+  "connection": "keep-alive",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36",
+  "cache-control": "no-cache",
+  "content-type": "application/json",
+  "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE0NjA4MDM5ODgsImlzcyI6InVybjpKdWVyZ2VuLlppbW1lcm1hbm4iLCJzdWIiOiJhZG1pbkBoc2thLmRlIiwianRpIjoiMWNiZDBlZDYtZjdjYy00MjgxLWJkYTUtZTRhY2EzMDIzNjVhIiwiYXVkIjoiaHR0cDovL2hza2EuZGUvand0L3YxL3Rva2VuIiwiZXhwIjoxNDYwODkwMzg4fQ.RIkHY--wtTrQAatzXptk1xQPw6sjRcPTc6Hh8GAQlNd4gucnf7M8xS1MQT9lwyf3BGRlyLIhpbDMT6iBVVVBQqv901doo-yrtnssoTLjcW-6OI6YZCeATi4xRT5pcJHlpfai9Zc_-YIMtvim5yE3YsWLvD-qqqtn9yny0IUBgyXkjkY8Q4VHHb0_AzXJGKlLKDe8xltuQUrM3z-PtROinDtMtcRWJhA2gihGk0QNqsqwfvAMDfM5sE_W-qP6NsgwkE8ZjXPWL_9WsLXPIAO1XyCDbjs088Pit6FgjmSbd0kaQFyq2hWTXx6o3R8-8T4aCFSY0jAaeu-GCddmfCzNfQ",
+  "postman-token": "0d3e909f-768c-16e5-c8cf-972351904bc6",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4"
+}
+2016-04-16T11:08:23.759Z - debug: Request: protocol="https"
+2016-04-16T11:08:23.759Z - debug: Request: hostname="localhost"
+2016-04-16T11:08:23.760Z - debug: > SharedRequestHandler.validateMongoId(): args = <RequestResponse>
+2016-04-16T11:08:23.760Z - debug: id = 57121cd52ab384103b1b515c
+2016-04-16T11:08:23.761Z - debug: > VideosRouter.getById(): args = <RequestResponse>
+2016-04-16T11:08:23.761Z - debug: id = 57121cd52ab384103b1b515c
+2016-04-16T11:08:23.761Z - debug: > VideosService.findById(): args = ["57121cd52ab384103b1b515c"]
+2016-04-16T11:08:23.761Z - debug: < VideosService.findById(): result = <Promise>
+2016-04-16T11:08:23.761Z - debug: < VideosRouter.getById(): result = void || undefined
+2016-04-16T11:08:23.762Z - debug: < SharedRequestHandler.validateMongoId(): result = void || undefined
+2016-04-16T11:08:23.762Z - debug: < SharedRequestHandler.logRequestHeader(): result = void || undefined
+2016-04-16T11:08:23.766Z - debug: status = 404
+2016-04-16T11:08:23.767Z - debug: Response time: 8.184866 ms

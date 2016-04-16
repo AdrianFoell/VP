@@ -88,8 +88,8 @@ class VideosRequestHandler {
             .catch((err) => { res.sendStatus(500); });
     }
     post(req, res) {
-        if (req.header(shared_1.contentType) === undefined
-            || req.header(shared_1.contentType).toLowerCase() !== shared_1.applicationJson) {
+        if (req.header(shared_1.CONTENT_TYPE) === undefined
+            || req.header(shared_1.CONTENT_TYPE).toLowerCase() !== shared_1.APPLICATION_JSON) {
             shared_1.logger.debug('status = 406');
             res.sendStatus(406);
             return;
@@ -115,8 +115,8 @@ class VideosRequestHandler {
             .catch((err) => { res.sendStatus(500); });
     }
     put(req, res) {
-        if (req.header(shared_1.contentType) === undefined
-            || req.header(shared_1.contentType).toLowerCase() !== shared_1.applicationJson) {
+        if (req.header(shared_1.CONTENT_TYPE) === undefined
+            || req.header(shared_1.CONTENT_TYPE).toLowerCase() !== shared_1.APPLICATION_JSON) {
             res.status(406);
             return;
         }

@@ -59,34 +59,35 @@ class VideosService {
             delete query.titel;
             titelQuery = { titel: new RegExp(titel, 'i') };
         }
-        /*let erscheinungsdatumQuery: any = null;
-        const erscheinungsdatum: Date = query.erscheinungsdatum;
-        if (!isPresent(erscheinungsdatum)) {
+        let genreQuery = null;
+        const genre = query.genre;
+        if (!shared_1.isEmpty(genre)) {
             // Titel in der Query: Teilstring des Titels,
             // d.h. "LIKE" als regulaerer Ausdruck
             // 'i': keine Unterscheidung zw. Gross- u. Kleinschreibung
-            delete query.erscheinungsdatum;
-            erscheinungsdatumQuery = {erscheinungsdatum: new
-        RegExp(erscheinungsdatum, 'i')};
+            delete query.genre;
+            genreQuery = { genre: new RegExp(genre, 'i') };
         }
-        let altersbeschränkungQuery: any = null;
-        const altersbeschränkung: Number = query.altersbeschränkung;
-        if (!isPresent(altersbeschränkung)) {
-            // Titel in der Query: Teilstring des Titels,
-            // d.h. "LIKE" als regulaerer Ausdruck
-            // 'i': keine Unterscheidung zw. Gross- u. Kleinschreibung
-            delete query.altersbeschränkung;
-            altersbeschränkungQuery = {altersbeschränkung: new
-        RegExp(altersbeschränkung, 'i')};
-        }*/
-        let videopfadQuery = null;
-        const videopfad = query.videopfad;
-        if (!shared_1.isEmpty(videopfad)) {
+        /*let videopfadQuery: any = null;
+        const videopfad: string = query.videopfad;
+        if (!isEmpty(videopfad)) {
             // Titel in der Query: Teilstring des Titels,
             // d.h. "LIKE" als regulaerer Ausdruck
             // 'i': keine Unterscheidung zw. Gross- u. Kleinschreibung
             delete query.videopfad;
-            videopfadQuery = { videopfad: new RegExp(videopfad, 'i') };
+            videopfadQuery = {videopfad: new RegExp(videopfad, 'i')};
+        }*/
+        if (titelQuery !== null && genreQuery !== null) {
+            const tmpQuery = video_1.Video.find();
+            return tmpQuery.and([query, titelQuery, genreQuery]);
+        }
+        if (titelQuery !== null) {
+            const tmpQuery = video_1.Video.find();
+            return tmpQuery.and([query, titelQuery]);
+        }
+        if (genreQuery !== null) {
+            const tmpQuery = video_1.Video.find();
+            return (tmpQuery.and([query, genreQuery]));
         }
         return (video_1.Video.find(query));
         // Buch.findOne(query), falls das Suchkriterium eindeutig ist

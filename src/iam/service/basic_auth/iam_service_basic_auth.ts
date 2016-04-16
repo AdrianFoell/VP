@@ -15,15 +15,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {Request} from 'express';
-
 // Alternativen zu Basic Authentication
-// JWS: JSON Web Signature
-//      urspruengl. JWT = JSON Web Token
+// JWT (= JSON Web Token)
 // OAuth2
-// Cookies
+// Cookies: Sicherheitsprobleme mit CSRF und CORS
+
+import {Request} from 'express';
 import {BasicAuthResult} from 'basic-auth';
-// basic-auth exportiert den Namespace auth und die gleichnamige Function
 import * as basicAuth from 'basic-auth';
 
 import AbstractIamService from '../abstract_iam_service';
@@ -45,7 +43,7 @@ export default class IamServiceBasicAuth extends AbstractIamService {
 
         const username: string = credentials.name;
         logger.debug(`username = ${credentials.name}`);
-        const user: any = this._usersService.findByUserName(username);
+        const user: any = this._usersService.findByUsername(username);
 
         const password: string = credentials.pass;
         logger.debug(`password = ${credentials.pass}`);
@@ -66,7 +64,7 @@ export default class IamServiceBasicAuth extends AbstractIamService {
 
         const username: string = credentials.name;
         logger.debug(`username = ${credentials.name}`);
-        const user: any = this._usersService.findByUserName(username);
+        const user: any = this._usersService.findByUsername(username);
 
         const password: string = credentials.pass;
         logger.debug(`password = ${credentials.pass}`);
@@ -83,7 +81,7 @@ export default class IamServiceBasicAuth extends AbstractIamService {
         }
         const username: string = credentials.name;
         logger.debug(`username = ${credentials.name}`);
-        const user: any = this._usersService.findByUserName(username);
+        const user: any = this._usersService.findByUsername(username);
 
         roles = this._rolesService.getNormalizedRoles(roles);
         return super.userHasAnyRole(user, roles);

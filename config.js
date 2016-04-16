@@ -19,12 +19,12 @@ if (process.env.VCAP_SERVICES) {
 } else {
   mongo = {
 //    db:       'db',
-    db:       'videodb',
+    db:       'mydb',
     host:     'localhost',
     password: 'p',
     port:     27017,
     ssl:      false,
-    url:      'mongodb://localhost:27017/videodb',
+    url:      'mongodb://localhost:27017/mydb',
     username: 'admin',
   };
 }

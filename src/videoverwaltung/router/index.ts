@@ -29,15 +29,15 @@ import {validateMongoId} from '../../shared/shared';
 
 // http://expressjs.com/en/api.html
 // Ein Router ist eine "Mini-Anwendung" mit Express
-const videosRouter: Router = Router();
-videosRouter.route('/')
+const buecherRouter: Router = Router();
+buecherRouter.route('/')
     .get(getByQuery)
     .post(validateJwt, isAdminMitarbeiter, json(), post)
     .put(validateJwt, isAdminMitarbeiter, json(), put);
 
 const idParam: string = 'id';
-videosRouter.param(idParam, validateMongoId)
+buecherRouter.param(idParam, validateMongoId)
     .get(`/:${idParam}`, getById)
     .delete(`/:${idParam}`, validateJwt, isAdmin, deleteFn);
 
-export default videosRouter;
+export default buecherRouter;

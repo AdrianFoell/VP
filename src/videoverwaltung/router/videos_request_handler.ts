@@ -20,7 +20,7 @@ import {Document as MDocument} from 'mongoose';
 
 import VideosService from '../service/videos_service';
 import {Video, validateVideo} from '../model/video';
-import {getBaseUri, contentType, applicationJson, isBlank, log, logger} from '../../shared/shared';
+import {getBaseUri, CONTENT_TYPE, APPLICATION_JSON, isBlank, log, logger} from '../../shared/shared';
 
 class VideosRequestHandler {
     private _videosService: VideosService = new VideosService();
@@ -101,8 +101,8 @@ class VideosRequestHandler {
 
     @log
     post(req: Request, res: Response): void {
-        if (req.header(contentType) === undefined
-            || req.header(contentType).toLowerCase() !== applicationJson) {
+        if (req.header(CONTENT_TYPE) === undefined
+            || req.header(CONTENT_TYPE).toLowerCase() !== APPLICATION_JSON) {
             logger.debug('status = 406');
             res.sendStatus(406);
             return;
@@ -135,8 +135,8 @@ class VideosRequestHandler {
 
     @log
     put(req: Request, res: Response): void {
-        if (req.header(contentType) === undefined
-            || req.header(contentType).toLowerCase() !== applicationJson) {
+        if (req.header(CONTENT_TYPE) === undefined
+            || req.header(CONTENT_TYPE).toLowerCase() !== APPLICATION_JSON) {
             res.status(406);
             return;
         }

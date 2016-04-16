@@ -16,7 +16,11 @@
  */
 
 interface IUsersService {
-    findByUserName(username: string): any;
+    // fuer Login bei JWT und fuer Basic Authentifizierung
+    findByUsername(username: string): any;
+
+    // fuer Validierung bei JWT
+    findByEmail(email: string): any;
 }
 
 export default IUsersService;

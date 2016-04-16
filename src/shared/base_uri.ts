@@ -16,9 +16,9 @@
  */
 
 import {Request} from 'express';
-import {port} from './constants';
+import {PORT} from './constants';
 
 export function getBaseUri(req: Request): string {
     'use strict';
-    return `${req.protocol}://${req.hostname}:${port}${req.originalUrl}`;
+    return `${req.protocol}://${req.hostname}:${PORT}${req.originalUrl}`;
 }

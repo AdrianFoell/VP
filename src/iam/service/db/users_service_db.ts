@@ -20,9 +20,12 @@ import {log} from '../../../shared/shared';
 
 export default class UsersServiceDb implements IUsersService {
     @log
-    findByUserName(username: string): any {
+    findByUsername(username: string): any {
         throw new Error('Not yet implemented');
     }
+
+    @log
+    findByEmail(email: string): any { throw new Error('Not yet implemented'); }
 
     toString(): string { return 'UsersServiceDb'; }
 }

@@ -18,14 +18,14 @@
 import AbstractRolesService from './abstract_roles_service';
 import RolesServiceDb from './db/roles_service_db';
 import RolesServiceFile from './file/roles_service_file';
-import {rolesUsers, log} from '../../shared/shared';
+import {ROLES_USERS, log} from '../../shared/shared';
 
 export default class RolesService extends AbstractRolesService {
     private _impl: AbstractRolesService;
 
     constructor() {
         super();
-        switch (rolesUsers) {
+        switch (ROLES_USERS) {
             case 'db':
                 this._impl = new RolesServiceDb();
                 break;

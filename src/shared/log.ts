@@ -38,6 +38,7 @@ export function log(
     const originalMethod: any = descriptor.value;
 
     // keine Arrow Function wg. this im Funktionsrumpf
+    // Spread-Parameter ab ES 2015
     descriptor.value = function(...args: any[]): any {
         const klasseAsString: string = target.toString();
         // indexOf: Zaehlung ab 0. -1 bedeutet nicht enthalten
@@ -105,5 +106,6 @@ function isResponse(arg: any): boolean {
 
 function isPromise(result: any): boolean {
     'use strict';
-    return result.model !== undefined && result.schema !== undefined;
+    return isPresent(result) && result.model !== undefined
+        && result.schema !== undefined;
 }

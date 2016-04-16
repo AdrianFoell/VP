@@ -26,14 +26,14 @@ const shared_1 = require('../../shared/shared');
 /* tslint:enable:max-line-length */
 // http://expressjs.com/en/api.html
 // Ein Router ist eine "Mini-Anwendung" mit Express
-const videosRouter = express_1.Router();
-videosRouter.route('/')
+const buecherRouter = express_1.Router();
+buecherRouter.route('/')
     .get(videos_request_handler_1.getByQuery)
     .post(iam_request_handler_1.validateJwt, iam_request_handler_1.isAdminMitarbeiter, body_parser_1.json(), videos_request_handler_1.post)
     .put(iam_request_handler_1.validateJwt, iam_request_handler_1.isAdminMitarbeiter, body_parser_1.json(), videos_request_handler_1.put);
 const idParam = 'id';
-videosRouter.param(idParam, shared_1.validateMongoId)
+buecherRouter.param(idParam, shared_1.validateMongoId)
     .get(`/:${idParam}`, videos_request_handler_1.getById)
     .delete(`/:${idParam}`, iam_request_handler_1.validateJwt, iam_request_handler_1.isAdmin, videos_request_handler_1.deleteFn);
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = videosRouter;
+exports.default = buecherRouter;

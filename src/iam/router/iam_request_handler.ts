@@ -15,10 +15,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+/* tslint:disable:max-line-length */
 import {Request, Response, NextFunction} from 'express';
 
 import IamService from '../service/iam_service';
-import {log, logger, isBlank} from '../../shared/shared';
+import {log, logger, TOKEN_INVALID, TOKEN_EXPIRED, isBlank} from '../../shared/shared';
+/* tslint:enable:max-line-length */
 
 class IamRequestHandler {
     private _iamService: IamService = new IamService();
@@ -37,11 +39,27 @@ class IamRequestHandler {
 
     @log
     validateJwt(req: Request, res: Response, next: NextFunction): void {
-        if (!this._iamService.validateJwt(req)) {
-            logger.debug('401');
-            res.sendStatus(401);
-            return;
+        const tokenStatus: number = this._iamService.validateJwt(req);
+        switch (tokenStatus) {
+            case TOKEN_INVALID:
+                logger.debug('401');
+                res.sendStatus(401);
+                return;
+
+            case TOKEN_EXPIRED:
+                logger.debug('401');
+                res.header(
+                    'WWW-Authenticate',
+                    /* tslint:disable:max-line-length */
+                    'Bearer realm="hska.de", error="invalid_token", error_description="The access token expired"');
+                /* tslint:enable:max-line-length */
+                res.status(401).send('The access token expired');
+                return;
+
+            default:
+                break;
         }
+
         next();
     }
 
@@ -79,6 +97,7 @@ class IamRequestHandler {
 
     toString(): string { return 'IamRequestHandler'; }
 
+    // Spread-Parameter ab ES 2015
     @log
     private _hasRolle(req: Request, res: Response, ...roles: Array<string>):
         boolean {

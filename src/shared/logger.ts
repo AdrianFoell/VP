@@ -16,7 +16,7 @@
  */
 
 import {LoggerInstance, Logger, transports} from 'winston';
-import {logOptions, mongoMock, dbConn} from './constants';
+import {LOG_OPTIONS, MONGO_MOCK, dbConn} from './constants';
 
 function loggerConfig(): LoggerInstance {
     'use strict';
@@ -25,8 +25,8 @@ function loggerConfig(): LoggerInstance {
     // https://github.com/winstonjs/winston/blob/master/docs/transports.md
     const logger: LoggerInstance = new (Logger)({
         transports: [
-            new (transports.Console)(logOptions.console),
-            new (transports.File)(logOptions.file)
+            new (transports.Console)(LOG_OPTIONS.console),
+            new (transports.File)(LOG_OPTIONS.file)
         ]
     });
 
@@ -36,7 +36,7 @@ function loggerConfig(): LoggerInstance {
 
 export const logger: LoggerInstance = loggerConfig();
 
-if (!mongoMock) {
+if (!MONGO_MOCK) {
     dbConn.once('open', () => {
         logger.info('Die Verbindung zu MongoDB ist hergestellt');
     });

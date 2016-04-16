@@ -4,7 +4,8 @@
     "erscheinungsdatum": ISODate("2015-02-01T00:00:00.000Z"),
     "beschreibung": "Das ist ein Tiervideo",
     "altersbeschränkung": 0,
-    "videopfad": "C:/Videos"
+    "videopfad": "C:/Videos",
+    "genre": "Tierfilm"
 }
 {
       "_id": ObjectId("000000000000000000000002"),
@@ -12,7 +13,8 @@
       "erscheinungsdatum": ISODate("2015-02-01T00:00:00.000Z"),
       "beschreibung": "Das ist ein Actionvideo",
       "altersbeschränkung": 12,
-      "videopfad": "C:/Videos"
+      "videopfad": "C:/Videos",
+      "genre": "Action"
 }
 {
       "_id": ObjectId("000000000000000000000003"),
@@ -20,7 +22,8 @@
       "erscheinungsdatum": ISODate("2015-02-01T00:00:00.000Z"),
       "beschreibung": "Das ist ein Horrorvideo",
       "altersbeschränkung": 18,
-      "videopfad": "C:/Videos"
+      "videopfad": "C:/Videos",
+      "genre": "Horror"
 }
 {
       "_id": ObjectId("000000000000000000000004"),
@@ -28,7 +31,8 @@
       "erscheinungsdatum": ISODate("2015-02-01T00:00:00.000Z"),
       "beschreibung": "Das ist ein Sportvideo",
       "altersbeschränkung": 0,
-      "videopfad": "C:/Videos"
+      "videopfad": "C:/Videos",
+      "genre": "Sport"
 }
 {
       "_id": ObjectId("000000000000000000000005"),
@@ -36,7 +40,8 @@
       "erscheinungsdatum": ISODate("2015-02-01T00:00:00.000Z"),
       "beschreibung": "Das ist ein Modevideo",
       "altersbeschränkung": 0,
-      "videopfad": "C:/Videos" 
+      "videopfad": "C:/Videos",
+      "genre": "Mode"
 }
 {
       "_id": ObjectId("000000000000000000000006"),
@@ -44,5 +49,6 @@
       "erscheinungsdatum": ISODate("2015-02-01T00:00:00.000Z"),
       "beschreibung": "Das ist ein Tiervideo",
       "altersbeschränkung": 0,
-      "videopfad": "C:/Videos"
+      "videopfad": "C:/Videos",
+      "genre": "Tierfilm"
 }

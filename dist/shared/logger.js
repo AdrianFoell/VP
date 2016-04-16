@@ -23,15 +23,15 @@ function loggerConfig() {
     // https://github.com/winstonjs/winston/blob/master/docs/transports.md
     const logger = new (winston_1.Logger)({
         transports: [
-            new (winston_1.transports.Console)(constants_1.logOptions.console),
-            new (winston_1.transports.File)(constants_1.logOptions.file)
+            new (winston_1.transports.Console)(constants_1.LOG_OPTIONS.console),
+            new (winston_1.transports.File)(constants_1.LOG_OPTIONS.file)
         ]
     });
     logger.info('Logging durch Winston ist konfiguriert');
     return logger;
 }
 exports.logger = loggerConfig();
-if (!constants_1.mongoMock) {
+if (!constants_1.MONGO_MOCK) {
     constants_1.dbConn.once('open', () => {
         exports.logger.info('Die Verbindung zu MongoDB ist hergestellt');
     });

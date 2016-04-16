@@ -25,11 +25,8 @@ export const videoMock: IVideo = {
     beschreibung: 'Das ist ein Tiervideo',
     altersbeschränkung: 0,
     videopfad: 'C:/Videos',
-    /*genre: {
-        _id: new ObjectID('300000000000000000000001'),
-        name: 'Tierfilm'
-    },
-    kanal: {
+    genre: 'Tierfilm'
+    /*kanal: {
         _id: new ObjectID('400000000000000000000001'),
         name: 'BananaCup',
         beschreibung: 'Das ist ein Kanal für Tierfilme'
@@ -44,15 +41,12 @@ export const videosMock: Array<IVideo> = [
       beschreibung: 'Das ist ein Actionvideo',
       altersbeschränkung: 12,
       videopfad: 'C:/Videos',
-      /*genre: {
-        _id: new ObjectID('300000000000000000000002'),
-        name: 'Actionfilm'
-    },
-    kanal: {
+      genre: 'Action'
+      /*kanal: {
         _id: new ObjectID('400000000000000000000002'),
         name: 'AppleTree',
         beschreibung: 'Das ist ein Kanal für Actionfilme'
-    }*/
+      }*/
     },
     {
       _id: new ObjectID('000000000000000000000003'),
@@ -61,15 +55,12 @@ export const videosMock: Array<IVideo> = [
       beschreibung: 'Das ist ein Horrorvideo',
       altersbeschränkung: 18,
       videopfad: 'C:/Videos',
-      /*genre: {
-        _id: new ObjectID('300000000000000000000003'),
-        name: 'Horrorfilm'
-    },
-    kanal: {
+      genre: 'Horror'
+      /*kanal: {
         _id: new ObjectID('400000000000000000000003'),
         name: 'GammaTV',
         beschreibung: 'Das ist ein Kanal für Horrorfilme'
-    }*/
+      }*/
     },
     {
       _id: new ObjectID('000000000000000000000004'),
@@ -78,15 +69,12 @@ export const videosMock: Array<IVideo> = [
       beschreibung: 'Das ist ein Sportvideo',
       altersbeschränkung: 0,
       videopfad: 'C:/Videos',
-      /*genre: {
-        _id: new ObjectID('300000000000000000000004'),
-        name: 'Sport'
-    },
-    kanal: {
+      genre: 'Sport'
+      /*kanal: {
         _id: new ObjectID('400000000000000000000004'),
         name: 'HugoSport',
         beschreibung: 'Das ist ein Kanal für Sportvideos'
-    }*/
+      }*/
     },
     {
       _id: new ObjectID('000000000000000000000005'),
@@ -95,15 +83,12 @@ export const videosMock: Array<IVideo> = [
       beschreibung: 'Das ist ein Modevideo',
       altersbeschränkung: 0,
       videopfad: 'C:/Videos',
-      /*genre: {
-        _id: new ObjectID('300000000000000000000005'),
-        name: 'Mode'
-    },
-    kanal: {
+      genre: 'Mode'
+      /* kanal: {
         _id: new ObjectID('400000000000000000000005'),
         name: 'BananaCup',
         beschreibung: 'Das ist ein Kanal für Mode'
-    }*/
+      }*/
     },
     {
       _id: new ObjectID('000000000000000000000006'),
@@ -112,14 +97,11 @@ export const videosMock: Array<IVideo> = [
       beschreibung: 'Das ist ein Tiervideo',
       altersbeschränkung: 0,
       videopfad: 'C:/Videos',
-      /*genre: {
-        _id: new ObjectID('300000000000000000000006'),
-        name: 'Tierfilm'
-    },
-    kanal: {
+      genre: 'Tierfilm'
+      /*kanal: {
         _id: new ObjectID('400000000000000000000006'),
         name: 'BananaCup',
         beschreibung: 'Das ist ein Kanal für Tierfilme'
-    }*/
+      }*/
     }
 ];

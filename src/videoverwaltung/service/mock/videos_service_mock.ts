@@ -37,7 +37,7 @@ export interface IVideo {
     beschreibung: string;
     altersbeschränkung: number;
     videopfad: string;
-    // genre?: IGenre;
+    genre: string;
     // kanal?: IKanal;
 }
 
@@ -53,19 +53,22 @@ export class VideoMock implements MDocument, IVideo {
     constructor(
         public _id: string, public titel: string,
         public erscheinungsdatum: string, public beschreibung: string,
-        public altersbeschränkung: number, public videopfad: string) {
+        public altersbeschränkung: number, public videopfad: string,
+        public genre: string) {
         this._id = _id || null;
         this.titel = titel || null;
         this.erscheinungsdatum = erscheinungsdatum || null;
         this.beschreibung = beschreibung || null;
         this.videopfad = videopfad || null;
+        this.genre = genre || null;
     }
 
     // JSON-Daten von einem REST-Client bei einem POST-oder PUT-Request
     static fromJson(video: IVideo): VideoMock {
         return new VideoMock(
             <string>video._id, video.titel, video.erscheinungsdatum,
-            video.beschreibung, video.altersbeschränkung, video.videopfad);
+            video.beschreibung, video.altersbeschränkung, video.videopfad,
+            video.genre);
     }
 
     // Dummy-Methoden fuer das Interface Document von mongoose
@@ -130,8 +133,9 @@ export default class MockVideosService implements IVideosService {
             return Promise.resolve(videos);
         }
 
-        const {titel, erscheinungsdatum, beschreibung, altersbeschränkung,
-               videopfad}: any = query;
+        const {titel,        erscheinungsdatum,
+               beschreibung, altersbeschränkung,
+               videopfad,    genre}: any = query;
 
         let videosJson: Array<IVideo> = videosMock;
         if (!isEmpty(titel)) {
@@ -139,7 +143,7 @@ export default class MockVideosService implements IVideosService {
                 (video: VideoMock) =>
                     video.titel.toLowerCase().includes(titel.toLowerCase()));
         }
-        if (!isEmpty(erscheinungsdatum) && isPresent(videosJson)) {
+        if (isPresent(erscheinungsdatum) && isPresent(videosJson)) {
             videosJson = videosJson.filter(
                 (video: VideoMock) =>
                     video.erscheinungsdatum === erscheinungsdatum);
@@ -153,9 +157,13 @@ export default class MockVideosService implements IVideosService {
                 (video: VideoMock) =>
                     video.altersbeschränkung === altersbeschränkung);
         }
-        if (!isEmpty(videopfad) && isPresent(videosJson)) {
+        if (!isEmpty(genre) && isPresent(videosJson)) {
             videosJson = videosJson.filter(
                 (video: VideoMock) => video.videopfad === videopfad);
+        }
+        if (!isEmpty(genre) && isPresent(videosJson)) {
+            videosJson =
+                videosJson.filter((video: VideoMock) => video.genre === genre);
         }
 
         const videos: Array<VideoMock> = isPresent(videosJson) ?

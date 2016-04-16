@@ -15,6 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 "use strict";
+const logger_1 = require('./logger');
 /**
  * Abfrage, ob ein Objekt weder <code>null</code> noch <code>undefined</code>
  * ist.
@@ -49,6 +50,9 @@ function isString(obj) {
     return typeof obj === 'string';
 }
 exports.isString = isString;
+exports.responseTimeFn = (req, res, time) => {
+    logger_1.logger.debug(`Response time: ${time} ms`);
+};
 /**
  * Ein Benutzernamen und ein Passwort werden zu einem String zusammengefasst und
  * dabei durch einen Doppelpunkt (:) getrennt. Dieser String wird

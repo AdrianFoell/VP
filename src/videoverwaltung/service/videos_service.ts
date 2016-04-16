@@ -62,27 +62,16 @@ export default class VideosService implements IVideosService {
             delete query.titel;
             titelQuery = {titel: new RegExp(titel, 'i')};
         }
-        /*let erscheinungsdatumQuery: any = null;
-        const erscheinungsdatum: Date = query.erscheinungsdatum;
-        if (!isPresent(erscheinungsdatum)) {
+        let genreQuery: any = null;
+        const genre: string = query.genre;
+        if (!isEmpty(genre)) {
             // Titel in der Query: Teilstring des Titels,
             // d.h. "LIKE" als regulaerer Ausdruck
             // 'i': keine Unterscheidung zw. Gross- u. Kleinschreibung
-            delete query.erscheinungsdatum;
-            erscheinungsdatumQuery = {erscheinungsdatum: new
-        RegExp(erscheinungsdatum, 'i')};
+            delete query.genre;
+            genreQuery = {genre: new RegExp(genre, 'i')};
         }
-        let altersbeschränkungQuery: any = null;
-        const altersbeschränkung: Number = query.altersbeschränkung;
-        if (!isPresent(altersbeschränkung)) {
-            // Titel in der Query: Teilstring des Titels,
-            // d.h. "LIKE" als regulaerer Ausdruck
-            // 'i': keine Unterscheidung zw. Gross- u. Kleinschreibung
-            delete query.altersbeschränkung;
-            altersbeschränkungQuery = {altersbeschränkung: new
-        RegExp(altersbeschränkung, 'i')};
-        }*/
-        let videopfadQuery: any = null;
+        /*let videopfadQuery: any = null;
         const videopfad: string = query.videopfad;
         if (!isEmpty(videopfad)) {
             // Titel in der Query: Teilstring des Titels,
@@ -90,8 +79,21 @@ export default class VideosService implements IVideosService {
             // 'i': keine Unterscheidung zw. Gross- u. Kleinschreibung
             delete query.videopfad;
             videopfadQuery = {videopfad: new RegExp(videopfad, 'i')};
+        }*/
+        if (titelQuery !== null && genreQuery !== null) {
+            const tmpQuery: Query<MDocument> = <Query<MDocument>>Video.find();
+            return <Promise<Array<MDocument>>>tmpQuery.and(
+                [query, titelQuery, genreQuery]);
         }
-
+        if (titelQuery !== null) {
+            const tmpQuery: Query<MDocument> = <Query<MDocument>>Video.find();
+            return <Promise<Array<MDocument>>>tmpQuery.and([query, titelQuery]);
+        }
+        if (genreQuery !== null) {
+            const tmpQuery: Query<MDocument> = <Query<MDocument>>Video.find();
+            return <Promise<Array<MDocument>>>(
+                tmpQuery.and([query, genreQuery]));
+        }
         return <Promise<Array<MDocument>>>(Video.find(query));
         // Buch.findOne(query), falls das Suchkriterium eindeutig ist
     }

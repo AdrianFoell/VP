@@ -28,9 +28,16 @@ export default class UsersServiceFile implements IUsersService {
         JSON.parse(readFileSync('iam/service/file/users.json', 'utf-8'));
 
     @log
-    findByUserName(username: string): any {
+    findByUsername(username: string): any {
         const user: any =
             UsersServiceFile._USERS.find((u: any) => u.username === username);
+        return user === undefined ? null : user;
+    }
+
+    @log
+    findByEmail(email: string): any {
+        const user: any =
+            UsersServiceFile._USERS.find((u: any) => u.email === email);
         return user === undefined ? null : user;
     }
 

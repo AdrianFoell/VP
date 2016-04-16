@@ -23,6 +23,7 @@ exports.videoMock = {
     beschreibung: 'Das ist ein Tiervideo',
     altersbeschränkung: 0,
     videopfad: 'C:/Videos',
+    genre: 'Tierfilm'
 };
 exports.videosMock = [
     {
@@ -32,6 +33,7 @@ exports.videosMock = [
         beschreibung: 'Das ist ein Actionvideo',
         altersbeschränkung: 12,
         videopfad: 'C:/Videos',
+        genre: 'Action'
     },
     {
         _id: new mongodb_1.ObjectID('000000000000000000000003'),
@@ -40,6 +42,7 @@ exports.videosMock = [
         beschreibung: 'Das ist ein Horrorvideo',
         altersbeschränkung: 18,
         videopfad: 'C:/Videos',
+        genre: 'Horror'
     },
     {
         _id: new mongodb_1.ObjectID('000000000000000000000004'),
@@ -48,6 +51,7 @@ exports.videosMock = [
         beschreibung: 'Das ist ein Sportvideo',
         altersbeschränkung: 0,
         videopfad: 'C:/Videos',
+        genre: 'Sport'
     },
     {
         _id: new mongodb_1.ObjectID('000000000000000000000005'),
@@ -56,6 +60,7 @@ exports.videosMock = [
         beschreibung: 'Das ist ein Modevideo',
         altersbeschränkung: 0,
         videopfad: 'C:/Videos',
+        genre: 'Mode'
     },
     {
         _id: new mongodb_1.ObjectID('000000000000000000000006'),
@@ -64,5 +69,6 @@ exports.videosMock = [
         beschreibung: 'Das ist ein Tiervideo',
         altersbeschränkung: 0,
         videopfad: 'C:/Videos',
+        genre: 'Tierfilm'
     }
 ];

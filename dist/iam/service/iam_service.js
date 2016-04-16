@@ -31,7 +31,7 @@ const shared_1 = require('../../shared/shared');
 class IamService extends abstract_iam_service_1.default {
     constructor() {
         super();
-        switch (shared_1.iam) {
+        switch (shared_1.AUTH_METHOD) {
             case 'jwt':
                 this._impl = new iam_service_jwt_1.default();
                 break;
@@ -60,7 +60,7 @@ __decorate([
     shared_1.log, 
     __metadata('design:type', Function), 
     __metadata('design:paramtypes', [Object]), 
-    __metadata('design:returntype', Boolean)
+    __metadata('design:returntype', Number)
 ], IamService.prototype, "validateJwt", null);
 __decorate([
     shared_1.log, 

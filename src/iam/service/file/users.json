@@ -2,6 +2,7 @@
     {
         "username": "admin",
         "password": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==",
+        "email": "admin@hska.de",
         "roles": [
             "admin",
             "mitarbeiter",
@@ -12,6 +13,7 @@
     {
         "username": "adriana.alpha",
         "password": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==",
+        "email": "adriana.alpha@hska.de",
         "roles": [
             "admin",
             "mitarbeiter",
@@ -21,6 +23,7 @@
     {
         "username": "alfred.alpha",
         "password": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==",
+        "email": "alfred.alpha@hska.de",
         "roles": [
             "mitarbeiter",
             "kunde"
@@ -29,6 +32,7 @@
     {
         "username": "anton.alpha",
         "password": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==",
+        "email": "anton.alpha@hska.de",
         "roles": [
             "mitarbeiter",
             "kunde"
@@ -37,12 +41,14 @@
     {
         "username": "dirk.delta",
         "password": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==",
+        "email": "dirk.delta@hska.de",
         "roles": [
             "kunde"
         ]
     },
     {
         "username": "emil.epsilon",
-        "password": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ=="
+        "password": "peJ4wq1oFkNFifDKkMuWF5MdQPahMZPzGkiWs2xG7xbZPof8xA0Tf4D+GrnkkQXSs+iUBigQOJyawn5sLLIASQ==",
+        "email": "emil.epsilon@hska.de"
     }
 ]

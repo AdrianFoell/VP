@@ -29,7 +29,7 @@ const users_service_file_1 = require('./file/users_service_file');
 const shared_1 = require('../../shared/shared');
 class UsersService {
     constructor() {
-        switch (shared_1.rolesUsers) {
+        switch (shared_1.ROLES_USERS) {
             case 'db':
                 this._impl = new users_service_db_1.default();
                 break;
@@ -40,9 +40,10 @@ class UsersService {
                 throw new Error('Es ist nur "db" und "file" verfuegbar');
         }
     }
-    findByUserName(username) {
-        return this._impl.findByUserName(username);
+    findByUsername(username) {
+        return this._impl.findByUsername(username);
     }
+    findByEmail(email) { return this._impl.findByEmail(email); }
     toString() { return 'UsersService'; }
 }
 __decorate([
@@ -50,6 +51,12 @@ __decorate([
     __metadata('design:type', Function), 
     __metadata('design:paramtypes', [String]), 
     __metadata('design:returntype', Object)
-], UsersService.prototype, "findByUserName", null);
+], UsersService.prototype, "findByUsername", null);
+__decorate([
+    shared_1.log, 
+    __metadata('design:type', Function), 
+    __metadata('design:paramtypes', [String]), 
+    __metadata('design:returntype', Object)
+], UsersService.prototype, "findByEmail", null);
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = UsersService;

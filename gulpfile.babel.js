@@ -52,10 +52,12 @@ const configDir = 'config';
 const dateien = {
     ts: `${srcDir}/**/*.ts`,
     https: `${configDir}/https/*`,
-    iam: `${srcDir}/iam/service/file/*.json`,
+    iamJson: `${srcDir}/iam/service/file/*.json`,
+    jwtPem: `${srcDir}/iam/service/jwt/*.pem`,
     mongoExpress: `${configDir}/mongo-express/*`,
     nodemon: `${configDir}/nodemon/*`
 };
+const dbname = 'mydb';
 
 let username;
 let password;
@@ -125,12 +127,21 @@ gulp.task(httpsConfig);
 
 function iamJson(done) {
     'use strict';
-     gulp.src(dateien.iam)
+     gulp.src(dateien.iamJson)
         .pipe(gulpNewer(`${distDir}/iam/service/file`))
         .pipe(gulp.dest(`${distDir}/iam/service/file`));
      done();
 }
 gulp.task(iamJson);
+
+function jwtPem(done) {
+    'use strict';
+     gulp.src(dateien.iamJson)
+        .pipe(gulpNewer(`${distDir}/iam/service/jwt`))
+        .pipe(gulp.dest(`${distDir}/iam/service/jwt`));
+     done();
+}
+gulp.task(jwtPem);
 
 function nodemonConfig(done) {
     'use strict';
@@ -150,7 +161,7 @@ function mongoExpressConfig(done) {
 }
 gulp.task(mongoExpressConfig);
 
-gulp.task('default', gulp.parallel('ts', httpsConfig, iamJson, nodemonConfig, mongoExpressConfig));
+gulp.task('default', gulp.parallel('ts', httpsConfig, iamJson, jwtPem, nodemonConfig, mongoExpressConfig));
 
 // Empfehlung: Kein Auto-Save im Editor
 gulp.task('watch', gulp.series('default', () => {
@@ -192,24 +203,24 @@ gulp.task(mongostop);
 
 function mongoimport(done) {
     'use strict';
-    shelljs.exec('mongoimport -v -u zimmermann -p p -d videodb -c roles --drop --file mongoimport/roles.json');
-    shelljs.exec('mongoimport -v -u zimmermann -p p -d videodb -c users --drop --file mongoimport/users.json');
-    shelljs.exec('mongoimport -v -u zimmermann -p p -d videodb -c videos --drop --file mongoimport/videos.json');
+    shelljs.exec(`mongoimport -v -u zimmermann -p p -d ${dbname} -c roles --drop --file mongoimport/roles.json`);
+    shelljs.exec(`mongoimport -v -u zimmermann -p p -d ${dbname} -c users --drop --file mongoimport/users.json`);
+    shelljs.exec(`mongoimport -v -u zimmermann -p p -d ${dbname} -c videos --drop --file mongoimport/videos.json`);
     done();
 }
 gulp.task(mongoimport);
 
 function mongoexport(done) {
     'use strict';
-    shelljs.exec('mongoexport -v -u zimmermann -p p -d videodb -c videos -o EXPORT.videos.json --pretty');
-    gulplog.info(chalk.yellow.bgRed.bold(`Der Mongo-Export ist in der Datei EXPORT.videos.json`));
+    shelljs.exec(`mongoexport -v -u zimmermann -p p -d ${dbname} -c videos -o EXPORT.videos.json --pretty`);
+    gulplog.info(chalk.yellow.bgRed.bold('Der Mongo-Export ist in der Datei EXPORT.videos.json'));
     done();
 }
 gulp.task(mongoexport);
 
 function mongoexpress(done) {
     'use strict';
-    shelljs.exec('cd node_modules/mongo-express && node app.js -u zimmermann -p p -d videodb');
+    shelljs.exec(`cd node_modules/mongo-express && node app.js -u zimmermann -p p -d ${dbname}`);
     done();
 }
 gulp.task(mongoexpress);

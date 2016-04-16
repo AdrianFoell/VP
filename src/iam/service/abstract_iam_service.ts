@@ -20,7 +20,7 @@ import {Request} from 'express';
 // https://code.google.com/archive/p/crypto-js
 import {SHA3, enc} from 'crypto-js';
 
-import {log, isBlank, logger} from '../../shared/shared';
+import {log, TOKEN_OK, isBlank, logger} from '../../shared/shared';
 
 abstract class AbstractIamService {
     abstract login(req: Request): any;
@@ -29,7 +29,7 @@ abstract class AbstractIamService {
     // JWT: ueberladen bzw. neu implementieren
     // Basic Authentifiizierung: irrelevant, d.h. kein ueberladen
     @log
-    validateJwt(req: Request): boolean { return true; }
+    validateJwt(req: Request): number { return TOKEN_OK; }
 
     // JWT: bereits erledigt durch Validierung des Tokens
     // Basic Authentifiizierung: ueberladen bzw. neu implementieren

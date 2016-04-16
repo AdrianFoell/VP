@@ -33,12 +33,11 @@ const videoSchema = new mongoose_1.Schema({
     erscheinungsdatum: Date,
     beschreibung: String,
     altersbeschränkung: Number,
-    viedopfad: String,
-    genre: String,
-    kanal: mongoose_1.Schema.Types.Mixed
+    videopfad: String,
+    genre: String
 }, { collection: 'videos' });
 // automat. Validierung der Indexe beim 1. Zugriff
-videoSchema.set('autoIndex', shared_1.autoIndex);
+videoSchema.set('autoIndex', shared_1.AUTO_INDEX);
 // fuer ein Document (-Objekt) die Methode toJSON bereitstellen
 videoSchema.set('toJSON', { getters: true, virtuals: false });
 const MODEL_NAME = 'Video';
@@ -57,11 +56,11 @@ function validateVideo(video) {
         err.titel = 'Ein Video muss einen Titel haben';
         invalid = true;
     }
-    if (shared_1.isPresent(video.erscheinungsdatum)) {
+    if (!shared_1.isPresent(video.erscheinungsdatum)) {
         err.erscheinungsdatum = 'Ein Video benötigt ein Erscheinungsdatum';
         invalid = true;
     }
-    if (shared_1.isEmpty(video.altersbeschränkung)) {
+    if (!shared_1.isPresent(video.altersbeschränkung)) {
         err.altersbeschränkung =
             'Ein Video muss einen Altersbeschränkung besitzen';
         invalid = true;
@@ -74,10 +73,10 @@ function validateVideo(video) {
         err.genre = 'Ein Video muss einem Genre zugeordnet sein';
         invalid = true;
     }
-    if (shared_1.isPresent(video.kanal)) {
+    /*if (isPresent(video.kanal)) {
         err.kanal = 'Ein Video muss einem Kanal zugeordnet sein';
         invalid = true;
-    }
+    }*/
     return invalid ? err : null;
 }
 exports.validateVideo = validateVideo;

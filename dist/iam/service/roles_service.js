@@ -31,7 +31,7 @@ const shared_1 = require('../../shared/shared');
 class RolesService extends abstract_roles_service_1.default {
     constructor() {
         super();
-        switch (shared_1.rolesUsers) {
+        switch (shared_1.ROLES_USERS) {
             case 'db':
                 this._impl = new roles_service_db_1.default();
                 break;

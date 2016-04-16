@@ -17,133 +17,217 @@
 
 /* tslint:disable:max-line-length */
 import {Request} from 'express';
-import * as jwt from 'jsonwebtoken';
-import * as moment from 'moment';
+
+import {IHeader, IPayload, ISignOptions, IToken, sign, decode, verify} from 'jws';
+import {readFileSync} from 'fs';
 import * as uuid from 'node-uuid';
 
 import AbstractIamService from '../abstract_iam_service';
 import RolesService from '../roles_service';
 import UsersService from '../users_service';
-import {log, logger, issuerJwt, secretJwt, audienceJwt, expirationJwt, isEmpty} from '../../../shared/shared';
+import {log, logger, TYP_JWT, ALG_JWT, ISSUER_JWT, SECRET_JWT, AUDIENCE_JWT, EXPIRATION_JWT, ENCODING_JWT, BEARER_JWT, TOKEN_OK, TOKEN_INVALID, TOKEN_EXPIRED, isEmpty, isBlank} from '../../../shared/shared';
 /* tslint:enable:max-line-length */
 
 interface ILoginResultJwt {
     token: string;
+    token_type: 'Bearer';
+    expires_in: number;
     roles?: Array<string>;
 }
 
 export default class IamServiceJwt extends AbstractIamService {
+    private static RSA_PRIVATE_KEY: Buffer =
+        readFileSync('iam/service/jwt/rsa.pem');
+    private static RSA_PUBLIC_KEY: Buffer =
+        readFileSync('iam/service/jwt/rsa.public.pem');
+    private static ECDSA_PRIVATE_KEY: Buffer =
+        readFileSync('iam/service/jwt/ecdsa.pem');
+    private static ECDSA_PUBLIC_KEY: Buffer =
+        readFileSync('iam/service/jwt/ecdsa.public.pem');
+
     private _rolesService: RolesService = new RolesService();
     private _usersService: UsersService = new UsersService();
 
+    // in Anlehnung an die Function sign() im Package express-jwt
     @log
     login(req: Request): ILoginResultJwt {
         logger.debug(`username: ${req.body.username}`);
         logger.debug(`password: ${req.body.password}`);
         const username: string = req.body.username;
-        logger.debug(`username = ${username}`);
-        const user: any = this._usersService.findByUserName(username);
+        const user: any = this._usersService.findByUsername(username);
         logger.debug(`user = ${JSON.stringify(username)}`);
 
-        const password: string = req.body.password;
-        logger.debug(`password = ${password}`);
-
-        if (!this.checkPassword(user, password)) {
+        if (!this.checkPassword(user, req.body.password)) {
             return null;
         }
 
-        // Expiration time in Millisekunden
-        const expiration: number =
-            moment().add('days', expirationJwt).valueOf();
-        const payload: any = {
+        const header: IHeader = {typ: TYP_JWT, alg: ALG_JWT};
+        // akt. Datum in Sek. seit 1.1.1970
+        const current: number = Math.floor(Date.now() / 1000);
+        const payload: IPayload = {
+            iat: current,
+            // issuer
+            iss: ISSUER_JWT,
+            // subject
+            sub: user.email,
             // JWT ID (hier: als generierte UUID)
             jti: uuid.v4(),
-            // issuer
-            iss: issuerJwt,
-            // subject
-            sub: user.username,
             // audience
-            aud: audienceJwt,
-            // implizit: iat = issued at
+            aud: AUDIENCE_JWT,
             // expiration time
-            exp: expiration
+            exp: current + EXPIRATION_JWT
             // nbf = not before
         };
-        const token: string = jwt.sign(payload, secretJwt);
 
-        return {token: token, roles: user.roles};
+        let secretOrPrivateKey: string|Buffer;
+        if (this._isHMAC(ALG_JWT)) {
+            secretOrPrivateKey = SECRET_JWT;
+        } else if (this._isRSA(ALG_JWT)) {
+            secretOrPrivateKey = IamServiceJwt.RSA_PRIVATE_KEY;
+        } else if (this._isECDSA(ALG_JWT)) {
+            secretOrPrivateKey = IamServiceJwt.ECDSA_PRIVATE_KEY;
+        }
+        const signOptions: ISignOptions = {
+            header: header,
+            payload: payload,
+            secret: secretOrPrivateKey,
+            encoding: ENCODING_JWT
+        };
+        const token: string = sign(signOptions);
+
+        return {
+            token: token,
+            token_type: BEARER_JWT,
+            expires_in: EXPIRATION_JWT,
+            roles: user.roles
+        };
     }
 
+    // in Anlehnung an die Function verify() im Package express-jwt
+    // Status codes gemaess OAuth 2
+    //  https://tools.ietf.org/html/rfc6749#section-5.2
+    //  https://tools.ietf.org/html/rfc6750#section-3.1
     @log
-    validateJwt(req: Request): boolean {
+    validateJwt(req: Request): number {
         // Die "Field Names" beim Request Header unterscheiden nicht zwischen
         // Gross- und Kleinschreibung (case-insensitive)
         // https://tools.ietf.org/html/rfc7230
         // http://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html#sec4.2
-        const auth: string = req.header('authorization');
+        const auth: string = req.header('Authorization');
         if (isEmpty(auth)) {
             logger.error('Kein Header-Field Authorization');
-            return false;
+            return TOKEN_INVALID;
         }
         logger.debug(`Authorization = ${auth}`);
 
-        const authParts: Array<string> = auth.split(' ');
-        if (authParts.length !== 2) {
+        // Destructuring in ES 2015
+        const[scheme, tokenString]: Array<string> = auth.split(' ');
+        if (isEmpty(tokenString)) {
             logger.error(
-                `Fehler beim Header-Field Authorization: ${JSON.stringify(authParts)}`);
-            return false;
+                `Fehler beim Header-Field Authorization: ${JSON.stringify(auth)}`);
+            return TOKEN_INVALID;
         }
 
-        const scheme: string = authParts[0];
-        if (!/^Bearer$/i.test(scheme)) {
+        const bearerRegExp: RegExp = new RegExp(`^${BEARER_JWT}$`, 'i');
+        if (!scheme.match(bearerRegExp)) {
             logger.error(
-                'Das Schema beim Header-Field Authorization muss Bearer sein');
-            return false;
+                `Das Schema beim Header-Field Authorization muss ${BEARER_JWT} sein`);
+            return TOKEN_INVALID;
         }
 
-        const token: string = authParts[1];
+        /* tslint:disable:no-unused-variable */
+        const[headerBase64, payloadBase64, signatureBase64]: Array<string> =
+            tokenString.split('.');
+        /* tslint:enable:no-unused-variable */
+        if (isEmpty(signatureBase64)) {
+            logger.error('Der Token besteht nicht aus 3 Teilen.');
+            return TOKEN_INVALID;
+        }
+        if (payloadBase64.trim() === '') {
+            logger.error('Die Payload des Tokens ist leer.');
+            return TOKEN_INVALID;
+        }
 
-        // Verifikation des Tokens
+        let tokenDecoded: IToken;
         try {
-            jwt.verify(
-                token, secretJwt, {issuer: issuerJwt, audience: audienceJwt});
+            tokenDecoded = decode(tokenString);
         } catch (err) {
-            logger.error(`Fehler bei JWT.verify(): ${JSON.stringify(err)}`);
-            return false;
+            logger.error('Der JWT-Token kann nicht decodiert werden');
+            return TOKEN_INVALID;
+        }
+        if (isBlank(tokenDecoded)) {
+            logger.error(
+                'Decodieren des Token-Strings liefert kein Token-Objekt');
+            return TOKEN_INVALID;
         }
 
-        const decodedToken: any = jwt.decode(token, {complete: true});
-        logger.debug(`decoded token = ${JSON.stringify(decodedToken)}`);
-
-        // JWT abgelaufen, d.h. exp(iration) < aktuelles Datum?
-        const payload: any = decodedToken.payload;
-        const expiration: number = payload.exp;
-        logger.debug(`expiration = ${expiration}`);
-        const now: number = Date.now();
-        logger.debug(`now = ${now}`);
-        if (expiration < now) {
-            return false;
+        // Destructuring in ES 2015
+        const {header, payload}: any = tokenDecoded;
+        if (header.alg !== ALG_JWT) {
+            logger.error(`Falscher ALgorithmus im Header: ${header.alg}`);
+            return TOKEN_INVALID;
         }
 
-        return true;
+        let secretOrPublicKey: string|Buffer;
+        if (this._isHMAC(ALG_JWT)) {
+            secretOrPublicKey = SECRET_JWT;
+        } else if (this._isRSA(ALG_JWT)) {
+            secretOrPublicKey = IamServiceJwt.RSA_PUBLIC_KEY;
+        } else if (this._isECDSA(ALG_JWT)) {
+            secretOrPublicKey = IamServiceJwt.ECDSA_PUBLIC_KEY;
+        }
+
+        let valid: boolean = true;
+        try {
+            valid = verify(tokenString, header.alg, secretOrPublicKey);
+        } catch (e) {
+            logger.error(
+                `Der Token-String kann mit ${header.alg} nicht verifiziert werden`);
+            return TOKEN_INVALID;
+        }
+        if (!valid) {
+            return TOKEN_INVALID;
+        }
+
+        const {exp, iss, aud, sub}: any = payload;
+        if (isBlank(exp) || typeof exp !== 'number'
+            || Math.floor(Date.now() / 1000) >= payload.exp) {
+            logger.error('Der Token ist abgelaufen');
+            return TOKEN_EXPIRED;
+        }
+
+        if (iss !== ISSUER_JWT) {
+            logger.error(`Falscher issuer: ${iss}`);
+            return TOKEN_INVALID;
+        }
+        if (aud !== AUDIENCE_JWT) {
+            logger.error(`Falsche audience: ${aud}`);
+            return TOKEN_INVALID;
+        }
+
+        // Request-Objekt um email erweitern
+        logger.debug(`email: ${sub}`);
+        const tmp: any = req;
+        tmp.email = sub;
+        return TOKEN_OK;
     }
 
     @log
     hasAnyRole(req: Request, roles: Array<string>): boolean {
-        const auth: string = req.header('Authorization');
-        logger.debug(`Authorization = ${auth}`);
-        // der Wert des Header-Parameters "Authorization" beginnt mit "Bearer "
-        const token: string = auth.substring(7);
-        logger.debug(`Bearer token = ${token}`);
-        const decodedToken: any = jwt.decode(token, {complete: true});
-        logger.debug(`decoded token = ${JSON.stringify(decodedToken)}`);
-        const subject: string = decodedToken.payload.sub;
-
-        const user: any = this._usersService.findByUserName(subject);
-
+        const tmp: any = req;
+        const user: any = this._usersService.findByEmail(tmp.email);
         roles = this._rolesService.getNormalizedRoles(roles);
         return super.userHasAnyRole(user, roles);
     }
 
     toString(): string { return 'IamServiceJwt'; }
+
+    // HMAC = Keyed-Hash MAC (= Message Authentication Code)
+    private _isHMAC(alg: string): boolean { return alg.startsWith('HS'); }
+
+    // RSA = Ron Rivest, Adi Shamir, Leonard Adleman
+    private _isRSA(alg: string): boolean { return alg.startsWith('RS'); }
+
+    // ECDSA = elliptic curve digital signature algorithm
+    private _isECDSA(alg: string): boolean { return alg.startsWith('ES'); }
 }

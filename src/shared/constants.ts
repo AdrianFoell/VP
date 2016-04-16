@@ -21,25 +21,111 @@ import {Connection, connect, connection} from 'mongoose';
 // ----------------------------------------------------------
 // h t t p s
 // ----------------------------------------------------------
-export const host: string = 'localhost';
-export const port: number = 8443;
+export const HOST: string = 'localhost';
+export const PORT: number = 8443;
 
 // https://nodejs.org/api/https.html
 // https://nodejs.org/api/fs.html
-export const httpsKey: Buffer = readFileSync('https/key.pem');
-export const httpsCert: Buffer = readFileSync('https/cert.cer');
+export const HTTPS_KEY: Buffer = readFileSync('https/key.pem');
+export const HTTPS_CERT: Buffer = readFileSync('https/cert.cer');
 
 // ----------------------------------------------------------
 // M I M E
 // ----------------------------------------------------------
-export const contentType: string = 'content-type';
-export const applicationJson: string = 'application/json';
+export const CONTENT_TYPE: string = 'content-type';
+export const APPLICATION_JSON: string = 'application/json';
+
+// ----------------------------------------------------------
+// B u e c h e r
+// ----------------------------------------------------------
+export const MAX_RATING: number = 5;
+
+// ----------------------------------------------------------
+// I A M
+// ----------------------------------------------------------
+export const ROLES_USERS: string = 'files';
+// NICHT implementiert:
+// export const ROLES_USERS: string = 'db';
+// export const ROLES_USERS: string = 'ldap';
+// export const ROLES_USERS: string = 'keycloak';
+
+export const AUTH_METHOD: string = 'jwt';
+// export const IAM: string = 'basic-auth';
+// export const IAM: string = 'oauth2';
+
+export const TYP_JWT: 'JWT' = 'JWT';
+
+// HMAC = Keyed-Hash MAC (= Message Authentication Code)
+// HS256 = HMAC mit SHA-256
+// Bei SHA-3 ist HMAC nicht mehr notwendig.
+// SHA-3 ist bei bei den Algorithmen fuer JWT *NICHT* aufgelistet:
+// https://tools.ietf.org/html/rfc7518
+// export const ALG_JWT: 'HS256'|'RS256'|'ES384' = 'HS256';
+
+// RSA = Ron Rivest, Adi Shamir, Leonard Adleman
+// RS256 = RSA mit SHA-256
+// Google verwendet RS256
+export const ALG_JWT: 'HS256'|'RS256'|'ES384' = 'RS256';
+
+// ECDSA = Elliptic Curve Digital Signature Algorithm
+// ECDSA hat bei gleicher Sicherheit deutlich kuerzere Schluessel, benoetigt
+// aber mehr Rechenleistung. Beachte: die Schluessel werden nicht uebertragen!
+// http://jwt.io kann nur HS256 und RS256
+// export const ALG_JWT: 'HS256'|'RS256'|'ES384' = 'ES384';
+
+// RSASSA-PSS wird durch jws nicht unterstuetzt
+// https://github.com/brianloveswords/node-jws/issues/47
+
+export const ENCODING_JWT: 'utf8' = 'utf8';
+// ggf. als DN (= distinguished name) gemaess LDAP
+export const ISSUER_JWT: string = 'urn:Juergen.Zimmermann';
+export const SECRET_JWT: string|Buffer = 'p';
+export const AUDIENCE_JWT: string = 'http://hska.de/jwt/v1/token';
+export const EXPIRATION_JWT: number = 24 * 60 * 60;  // 1 Tag in Sek.
+export const BEARER_JWT: 'Bearer' = 'Bearer';
+
+// Statuscodes fuer validierte Token
+export const TOKEN_OK: number = 0;
+export const TOKEN_INVALID: number = 1;
+export const TOKEN_EXPIRED: number = 2;
+
+// ----------------------------------------------------------
+// m o n g o o s e
+// ----------------------------------------------------------
+export const MONGO_MOCK: boolean = false;
+
+// In Produktion auf false setzen
+export const AUTO_INDEX: boolean = true;
+
+// http://mongoosejs.com/docs/connections.html
+// https://github.com/mongodb/node-mongodb-native
+// Defaultwerte
+//      Port        27017
+//      Poolsize    5
+const DB_USER: string = 'zimmermann';
+const DB_PASSWORD: string = 'p';
+const DB_HOST: string = '127.0.0.1';
+// const DB_HOST: string = 'localhost';
+const DB_NAME: string = 'mydb';
+const DB_URL: string =
+    `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`;
+
+export let dbConn: Connection = null;
+if (!MONGO_MOCK) {
+    // Voraussetzung: Internet-Verbindung
+    connect(DB_URL);
+    dbConn = connection;
+    dbConn.on(
+        'error',
+        console.error.bind(
+            console, 'FEHLER beim Aufbau der Datenbank-Verbindung:\n'));
+}
 
 // ----------------------------------------------------------
 // w i n s t o n
 // ----------------------------------------------------------
 // https://github.com/winstonjs/winston/blob/master/docs/transports.md
-export const logOptions: any = {
+export const LOG_OPTIONS: any = {
     console: {
         colorize: true,
         prettyPrint: true,
@@ -56,35 +142,3 @@ export const logOptions: any = {
         zippedArchive: true
     }
 };
-
-export const MAX_RATING: number = 5;
-
-// ----------------------------------------------------------
-// m o n g o o s e
-// ----------------------------------------------------------
-export const mongoMock: boolean = false;
-
-// In Produktion auf false setzen
-export const autoIndex: boolean = true;
-
-// http://mongoosejs.com/docs/connections.html
-// https://github.com/mongodb/node-mongodb-native
-// Defaultwerte
-//      Port        27017
-//      Poolsize    5
-const dbUser: string = 'zimmermann';
-const dbPassword: string = 'p';
-const dbHost: string = 'localhost';
-const dbName: string = 'videodb';
-const dbUrl: string = `mongodb://${dbUser}:${dbPassword}@${dbHost}/${dbName}`;
-
-export let dbConn: Connection = null;
-if (!mongoMock) {
-    // Voraussetzung: Internet-Verbindung
-    connect(dbUrl);
-    dbConn = connection;
-    dbConn.on(
-        'error',
-        console.error.bind(
-            console, 'FEHLER beim Aufbau der Datenbank-Verbindung:\n'));
-}
