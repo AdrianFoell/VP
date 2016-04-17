@@ -24,12 +24,6 @@ import {videoMock, videosMock} from './videos_mock';
 import {log, isEmpty, isBlank, isPresent, generateMongoId} from '../../../shared/shared';
 /* tslint:enable:max-line-length */
 
-/*export interface IKanal {
-    _id?: string|ObjectID;
-    name: string;
-    beschreibung: string;
-}*/
-
 export interface IVideo {
     _id?: string|ObjectID;
     titel: string;
@@ -48,7 +42,7 @@ export class VideoMock implements MDocument, IVideo {
     errors: Object;
     schema: Object;
 
-    // wird i.a. nicht direkt aufgerufen, sondern Buch.fromServer oder
+    // wird i.a. nicht direkt aufgerufen, sondern Video.fromServer oder
     // Buch.fromForm
     constructor(
         public _id: string, public titel: string,

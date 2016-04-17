@@ -30,7 +30,7 @@ const videos_mock_1 = require('./videos_mock');
 const shared_1 = require('../../../shared/shared');
 /* tslint:disable:no-empty */
 class VideoMock {
-    // wird i.a. nicht direkt aufgerufen, sondern Buch.fromServer oder
+    // wird i.a. nicht direkt aufgerufen, sondern Video.fromServer oder
     // Buch.fromForm
     constructor(_id, titel, erscheinungsdatum, beschreibung, altersbeschränkung, videopfad, genre) {
         this._id = _id;

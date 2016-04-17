@@ -49,7 +49,7 @@ class VideosService {
             const tmpQuery = video_1.Video.find();
             return tmpQuery.sort('titel');
         }
-        // Buecher zur Query (= JSON-Objekt durch Express) asynchron suchen
+        // Videos zur Query (= JSON-Objekt durch Express) asynchron suchen
         let titelQuery = null;
         const titel = query.titel;
         if (!shared_1.isEmpty(titel)) {
@@ -62,21 +62,12 @@ class VideosService {
         let genreQuery = null;
         const genre = query.genre;
         if (!shared_1.isEmpty(genre)) {
-            // Titel in der Query: Teilstring des Titels,
+            // Genre in der Query: Teilstring des Titels,
             // d.h. "LIKE" als regulaerer Ausdruck
             // 'i': keine Unterscheidung zw. Gross- u. Kleinschreibung
             delete query.genre;
             genreQuery = { genre: new RegExp(genre, 'i') };
         }
-        /*let videopfadQuery: any = null;
-        const videopfad: string = query.videopfad;
-        if (!isEmpty(videopfad)) {
-            // Titel in der Query: Teilstring des Titels,
-            // d.h. "LIKE" als regulaerer Ausdruck
-            // 'i': keine Unterscheidung zw. Gross- u. Kleinschreibung
-            delete query.videopfad;
-            videopfadQuery = {videopfad: new RegExp(videopfad, 'i')};
-        }*/
         if (titelQuery !== null && genreQuery !== null) {
             const tmpQuery = video_1.Video.find();
             return tmpQuery.and([query, titelQuery, genreQuery]);
@@ -90,26 +81,26 @@ class VideosService {
             return (tmpQuery.and([query, genreQuery]));
         }
         return (video_1.Video.find(query));
-        // Buch.findOne(query), falls das Suchkriterium eindeutig ist
+        // Videos.findOne(query), falls das Suchkriterium eindeutig ist
     }
     save(video) {
-        // Das gegebene Buch asynchron neu anlegen
+        // Das gegebene Video asynchron neu anlegen
         return video.save();
     }
     update(video) {
-        // Das gegebene Buch asynchron aktualisieren
+        // Das gegebene Video asynchron aktualisieren
         // __v wird nur erhoeht, durch find() und anschl. update()
         return video_1.Video.findByIdAndUpdate(video._id, video);
         // Weitere Methoden von mongoose fuer Aktualisieren:
-        //    Buch.findOneAndUpdate(bedingung, update)
-        //    buch.update(bedingung)
+        //    Video.findOneAndUpdate(bedingung, update)
+        //    video.update(bedingung)
     }
     remove(id) {
-        // Das Buch zur gegebenen ID asynchron loeschen
+        // Das Video zur gegebenen ID asynchron loeschen
         return video_1.Video.findByIdAndRemove(id);
         // Weitere Methoden von mongoose, um zu loeschen:
-        //    Buch.findOneAndRemove(bedingung)
-        //    Buch.remove(bedingung)
+        //    Video.findOneAndRemove(bedingung)
+        //    Video.remove(bedingung)
     }
     toString() { return 'VideosService'; }
 }

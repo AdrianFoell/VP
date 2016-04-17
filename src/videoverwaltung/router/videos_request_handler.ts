@@ -59,7 +59,7 @@ class VideosRequestHandler {
 
     @log
     getByQuery(req: Request, res: Response): void {
-        // z.B. https://.../buecher?titel=Alpha
+        // z.B. https://.../videos?titel=Alpha
         const query: any = req.query;
         logger.debug(`queryParams = ${JSON.stringify(query)}`);
 
@@ -143,7 +143,7 @@ class VideosRequestHandler {
 
         const video: MDocument = new Video(req.body);
         logger.debug(`Body: ${JSON.stringify(video)}`);
-        // siehe buch.ts, Zeile 77
+        // siehe video.ts, Zeile 77
         const err: any = validateVideo(video);
         if (err !== null) {
             logger.debug('status = 400');

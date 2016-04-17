@@ -52,7 +52,7 @@ export default class VideosService implements IVideosService {
             return <Promise<Array<MDocument>>>tmpQuery.sort('titel');
         }
 
-        // Buecher zur Query (= JSON-Objekt durch Express) asynchron suchen
+        // Videos zur Query (= JSON-Objekt durch Express) asynchron suchen
         let titelQuery: any = null;
         const titel: string = query.titel;
         if (!isEmpty(titel)) {
@@ -65,21 +65,12 @@ export default class VideosService implements IVideosService {
         let genreQuery: any = null;
         const genre: string = query.genre;
         if (!isEmpty(genre)) {
-            // Titel in der Query: Teilstring des Titels,
+            // Genre in der Query: Teilstring des Titels,
             // d.h. "LIKE" als regulaerer Ausdruck
             // 'i': keine Unterscheidung zw. Gross- u. Kleinschreibung
             delete query.genre;
             genreQuery = {genre: new RegExp(genre, 'i')};
         }
-        /*let videopfadQuery: any = null;
-        const videopfad: string = query.videopfad;
-        if (!isEmpty(videopfad)) {
-            // Titel in der Query: Teilstring des Titels,
-            // d.h. "LIKE" als regulaerer Ausdruck
-            // 'i': keine Unterscheidung zw. Gross- u. Kleinschreibung
-            delete query.videopfad;
-            videopfadQuery = {videopfad: new RegExp(videopfad, 'i')};
-        }*/
         if (titelQuery !== null && genreQuery !== null) {
             const tmpQuery: Query<MDocument> = <Query<MDocument>>Video.find();
             return <Promise<Array<MDocument>>>tmpQuery.and(
@@ -95,34 +86,34 @@ export default class VideosService implements IVideosService {
                 tmpQuery.and([query, genreQuery]));
         }
         return <Promise<Array<MDocument>>>(Video.find(query));
-        // Buch.findOne(query), falls das Suchkriterium eindeutig ist
+        // Videos.findOne(query), falls das Suchkriterium eindeutig ist
     }
 
     @log
     save(video: MDocument): Promise<MDocument> {
-        // Das gegebene Buch asynchron neu anlegen
+        // Das gegebene Video asynchron neu anlegen
         return video.save();
     }
 
     @log
     update(video: MDocument): Promise<{}> {
-        // Das gegebene Buch asynchron aktualisieren
+        // Das gegebene Video asynchron aktualisieren
         // __v wird nur erhoeht, durch find() und anschl. update()
         return <Promise<{}>>Video.findByIdAndUpdate(<string>video._id, video);
 
         // Weitere Methoden von mongoose fuer Aktualisieren:
-        //    Buch.findOneAndUpdate(bedingung, update)
-        //    buch.update(bedingung)
+        //    Video.findOneAndUpdate(bedingung, update)
+        //    video.update(bedingung)
     }
 
     @log
     remove(id: string): Promise<{}> {
-        // Das Buch zur gegebenen ID asynchron loeschen
+        // Das Video zur gegebenen ID asynchron loeschen
         return <Promise<{}>>Video.findByIdAndRemove(id);
 
         // Weitere Methoden von mongoose, um zu loeschen:
-        //    Buch.findOneAndRemove(bedingung)
-        //    Buch.remove(bedingung)
+        //    Video.findOneAndRemove(bedingung)
+        //    Video.remove(bedingung)
     }
 
     toString(): string { return 'VideosService'; }

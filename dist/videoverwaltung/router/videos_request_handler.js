@@ -57,7 +57,7 @@ class VideosRequestHandler {
             .catch((err) => { res.sendStatus(500); });
     }
     getByQuery(req, res) {
-        // z.B. https://.../buecher?titel=Alpha
+        // z.B. https://.../videos?titel=Alpha
         const query = req.query;
         shared_1.logger.debug(`queryParams = ${JSON.stringify(query)}`);
         this._videosService
@@ -122,7 +122,7 @@ class VideosRequestHandler {
         }
         const video = new video_1.Video(req.body);
         shared_1.logger.debug(`Body: ${JSON.stringify(video)}`);
-        // siehe buch.ts, Zeile 77
+        // siehe video.ts, Zeile 77
         const err = video_1.validateVideo(video);
         if (err !== null) {
             shared_1.logger.debug('status = 400');

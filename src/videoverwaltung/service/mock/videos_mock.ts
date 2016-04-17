@@ -26,11 +26,6 @@ export const videoMock: IVideo = {
     altersbeschränkung: 0,
     videopfad: 'C:/Videos',
     genre: 'Tierfilm'
-    /*kanal: {
-        _id: new ObjectID('400000000000000000000001'),
-        name: 'BananaCup',
-        beschreibung: 'Das ist ein Kanal für Tierfilme'
-    }*/
 };
 
 export const videosMock: Array<IVideo> = [
@@ -42,11 +37,6 @@ export const videosMock: Array<IVideo> = [
       altersbeschränkung: 12,
       videopfad: 'C:/Videos',
       genre: 'Action'
-      /*kanal: {
-        _id: new ObjectID('400000000000000000000002'),
-        name: 'AppleTree',
-        beschreibung: 'Das ist ein Kanal für Actionfilme'
-      }*/
     },
     {
       _id: new ObjectID('000000000000000000000003'),
@@ -56,11 +46,6 @@ export const videosMock: Array<IVideo> = [
       altersbeschränkung: 18,
       videopfad: 'C:/Videos',
       genre: 'Horror'
-      /*kanal: {
-        _id: new ObjectID('400000000000000000000003'),
-        name: 'GammaTV',
-        beschreibung: 'Das ist ein Kanal für Horrorfilme'
-      }*/
     },
     {
       _id: new ObjectID('000000000000000000000004'),
@@ -70,11 +55,6 @@ export const videosMock: Array<IVideo> = [
       altersbeschränkung: 0,
       videopfad: 'C:/Videos',
       genre: 'Sport'
-      /*kanal: {
-        _id: new ObjectID('400000000000000000000004'),
-        name: 'HugoSport',
-        beschreibung: 'Das ist ein Kanal für Sportvideos'
-      }*/
     },
     {
       _id: new ObjectID('000000000000000000000005'),
@@ -84,11 +64,6 @@ export const videosMock: Array<IVideo> = [
       altersbeschränkung: 0,
       videopfad: 'C:/Videos',
       genre: 'Mode'
-      /* kanal: {
-        _id: new ObjectID('400000000000000000000005'),
-        name: 'BananaCup',
-        beschreibung: 'Das ist ein Kanal für Mode'
-      }*/
     },
     {
       _id: new ObjectID('000000000000000000000006'),
@@ -98,10 +73,5 @@ export const videosMock: Array<IVideo> = [
       altersbeschränkung: 0,
       videopfad: 'C:/Videos',
       genre: 'Tierfilm'
-      /*kanal: {
-        _id: new ObjectID('400000000000000000000006'),
-        name: 'BananaCup',
-        beschreibung: 'Das ist ein Kanal für Tierfilme'
-      }*/
     }
 ];

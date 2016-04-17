@@ -86,10 +86,6 @@ export function validateVideo(video: any): any {
         err.genre = 'Ein Video muss einem Genre zugeordnet sein';
         invalid = true;
     }
-    /*if (isPresent(video.kanal)) {
-        err.kanal = 'Ein Video muss einem Kanal zugeordnet sein';
-        invalid = true;
-    }*/
 
     return invalid ? err : null;
 };
